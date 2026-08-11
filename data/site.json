@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "eyebrow": "Ollioules · Var",
+    "title": "Un lieu où les expertises se rencontrent",
+    "subtitle": "Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger."
+  },
+  "lieu": {
+    "title": "Un espace chaleureux à taille humaine",
+    "text": "Installé à Ollioules, dans le Var et la Provence-Alpes-Côte d'Azur, L'Entre-Elles a été pensé comme un cocon : un lieu où l'on vient se former, s'introspecter, se recentrer, faire avancer son business, en groupe ou en rendez-vous individuel.",
+    "features": [
+      "Salle de formation modulable en atelier ou espace de coworking",
+      "Bureau privé",
+      "Wifi haut débit",
+      "Parking à proximité",
+      "Accessible PMR"
+    ],
+    "photos": [
+      { "image": "", "caption": "espace coworking" },
+      { "image": "", "caption": "salle de formation" },
+      { "image": "", "caption": "bureau privé" },
+      { "image": "", "caption": "accueil et cocon" }
+    ]
+  },
+  "activites": [
+    { "title": "Formations professionnelles", "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe." },
+    { "title": "Accompagnement, consulting & coaching", "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir." },
+    { "title": "Coworking femmes entrepreneures", "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent." },
+    { "title": "Ateliers thématiques", "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager." },
+    { "title": "Événements & réseautage", "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain." },
+    { "title": "Développement personnel", "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle." }
+  ],
+  "fondatrices": {
+    "intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.",
+    "coleen": {
+      "photo": "",
+      "tag": "Formation · Bilan · Innovation · Événementiel",
+      "role": "Julie — Former, accompagner, innover, partager",
+      "desc": "Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.",
+      "instagram": "",
+      "facebook": "",
+      "linkedin": "",
+      "link": "https://coleengroup.fr"
+    },
+    "bizz": {
+      "photo": "",
+      "tag": "Consulting · Coaching · Formation",
+      "role": "Lolita — Ta safe place 100% femmes entrepreneures",
+      "desc": "Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.",
+      "instagram": "https://www.instagram.com/lolitaghilionecoaching/",
+      "facebook": "https://www.facebook.com/lolitaghilione",
+      "linkedin": "",
+      "link": "https://www.lolitaghilione.fr/bizz-de-femmes"
+    }
+  },
+  "privatisation": {
+    "text": "En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles se privatise à la demi-journée ou à la journée pour vos ateliers, séminaires, tournages ou réunions d'équipe.",
+    "capacity": "Capacité : jusqu'à 6 personnes en salle · 2 personnes en bureau privé",
+    "half_day_price": "30 €",
+    "full_day_price": "50 €"
+  },
+  "footer": {
+    "tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.",
+    "address_line1": "293 Route de la Seyne",
+    "address_line2": "Technopole Var Matin — Bâtiment A",
+    "address_line3": "83190 Ollioules",
+    "coleen_email": "julie.requet@coleengroup.fr",
+    "coleen_phone": "07 61 70 78 98",
+    "bizz_email": "formation@lolitaghilione.fr",
+    "bizz_phone": "06 29 99 37 78"
+  }
+}

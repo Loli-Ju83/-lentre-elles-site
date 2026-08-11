@@ -10,6 +10,99 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: "contenu"
+    label: "Contenu de la page"
+    files:
+      - file: "data/site.json"
+        label: "Textes et photos du site"
+        name: "site"
+        fields:
+          - label: "Bandeau d'accueil"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Petit texte au-dessus du titre", name: "eyebrow", widget: "string" }
+              - { label: "Titre principal", name: "title", widget: "string" }
+              - { label: "Sous-titre", name: "subtitle", widget: "text" }
+
+          - label: "Section \"Le lieu\""
+            name: "lieu"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Texte de présentation", name: "text", widget: "text" }
+              - label: "Points forts (liste à puces)"
+                name: "features"
+                widget: "list"
+                field: { label: "Point fort", name: "value", widget: "string" }
+              - label: "Photos du carrousel"
+                name: "photos"
+                widget: "list"
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: "Photo", name: "image", widget: "image", required: false, hint: "Laisse vide pour garder le fond de couleur en attendant la vraie photo." }
+                  - { label: "Légende (facultatif)", name: "caption", widget: "string", required: false }
+
+          - label: "Section \"Activités\" (les 6 cartes)"
+            name: "activites"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titre de l'activité", name: "title", widget: "string" }
+              - { label: "Texte", name: "text", widget: "text" }
+
+          - label: "Section \"Les occupantes\""
+            name: "fondatrices"
+            widget: "object"
+            fields:
+              - { label: "Texte d'introduction", name: "intro", widget: "text" }
+              - label: "Coleen Group (Julie)"
+                name: "coleen"
+                widget: "object"
+                fields:
+                  - { label: "Photo de Julie", name: "photo", widget: "image", required: false }
+                  - { label: "Mots-clés (ex: Formation · Bilan · Innovation)", name: "tag", widget: "string" }
+                  - { label: "Rôle / accroche", name: "role", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Lien Instagram", name: "instagram", widget: "string", required: false }
+                  - { label: "Lien Facebook", name: "facebook", widget: "string", required: false }
+                  - { label: "Lien LinkedIn", name: "linkedin", widget: "string", required: false }
+                  - { label: "Lien vers le site coleengroup.fr", name: "link", widget: "string" }
+              - label: "Bizz de Femmes (Lolita)"
+                name: "bizz"
+                widget: "object"
+                fields:
+                  - { label: "Photo de Lolita", name: "photo", widget: "image", required: false }
+                  - { label: "Mots-clés (ex: Consulting · Coaching · Formation)", name: "tag", widget: "string" }
+                  - { label: "Rôle / accroche", name: "role", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Lien Instagram", name: "instagram", widget: "string", required: false }
+                  - { label: "Lien Facebook", name: "facebook", widget: "string", required: false }
+                  - { label: "Lien LinkedIn", name: "linkedin", widget: "string", required: false }
+                  - { label: "Lien vers le site lolitaghilione.fr", name: "link", widget: "string" }
+
+          - label: "Section \"Privatisation\""
+            name: "privatisation"
+            widget: "object"
+            fields:
+              - { label: "Texte de présentation", name: "text", widget: "text" }
+              - { label: "Ligne de capacité d'accueil", name: "capacity", widget: "string" }
+              - { label: "Tarif demi-journée", name: "half_day_price", widget: "string" }
+              - { label: "Tarif journée complète", name: "full_day_price", widget: "string" }
+
+          - label: "Pied de page"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Phrase d'introduction", name: "tagline", widget: "text" }
+              - { label: "Adresse - ligne 1", name: "address_line1", widget: "string" }
+              - { label: "Adresse - ligne 2", name: "address_line2", widget: "string" }
+              - { label: "Adresse - ligne 3", name: "address_line3", widget: "string" }
+              - { label: "Email Coleen Group", name: "coleen_email", widget: "string" }
+              - { label: "Téléphone Coleen Group", name: "coleen_phone", widget: "string" }
+              - { label: "Email Bizz de Femmes", name: "bizz_email", widget: "string" }
+              - { label: "Téléphone Bizz de Femmes", name: "bizz_phone", widget: "string" }
+
   - name: "evenements"
     label: "Calendrier des événements"
     files:
