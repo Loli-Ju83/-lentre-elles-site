@@ -1,52 +1,12 @@
 {
   "events": [
     {
-      "date": "2026-11-14",
-      "title": "Atelier — Trouver ses premiers clients grâce au neuromarketing",
-      "org": "bizz",
-      "orgLabel": "Bizz de Femmes",
-      "type": "Atelier",
-      "link": "#"
-    },
-    {
-      "date": "2026-11-21",
-      "title": "Journée coworking femmes entrepreneures",
       "org": "both",
+      "title": "Petit-dèj réseautage & Atelier communication",
+      "date": "2026-09-12",
       "orgLabel": "Coleen × Bizz de Femmes",
-      "type": "Coworking",
-      "link": "#"
-    },
-    {
-      "date": "2026-11-28",
-      "title": "Formation — Prévention & santé mentale au travail",
-      "org": "coleen",
-      "orgLabel": "Coleen Group",
-      "type": "Formation",
-      "link": "#"
-    },
-    {
-      "date": "2026-12-05",
-      "title": "Bilan de compétences — session collective d'information",
-      "org": "coleen",
-      "orgLabel": "Coleen Group",
-      "type": "Bilan de compétences",
-      "link": "#"
-    },
-    {
-      "date": "2026-12-12",
-      "title": "Masterclass — Business O'féminin",
-      "org": "bizz",
-      "orgLabel": "Bizz de Femmes",
-      "type": "Masterclass",
-      "link": "#"
-    },
-    {
-      "date": "2026-12-19",
-      "title": "Networking de fin d'année",
-      "org": "both",
-      "orgLabel": "Coleen × Bizz de Femmes",
-      "type": "Événement",
-      "link": "#"
+      "type": "Test",
+      "link": "https://calendly.com/lolitaghilione-formation/audit-de-ta-communication-tes-reseaux-sociaux"
     }
   ]
 }
