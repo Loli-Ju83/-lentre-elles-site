@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Cette ligne évite d'avoir à passer par GitHub directement :
+# l'authentification se fait via Netlify Identity (voir les instructions).
+local_backend: false
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "evenements"
+    label: "Calendrier des événements"
+    files:
+      - file: "data/events.json"
+        label: "Événements"
+        name: "events"
+        fields:
+          - label: "Événements"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: "Titre de l'événement", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - label: "Organisatrice"
+                name: "org"
+                widget: "select"
+                options:
+                  - { label: "Coleen Group", value: "coleen" }
+                  - { label: "Bizz de Femmes", value: "bizz" }
+                  - { label: "Les deux (Coleen × Bizz de Femmes)", value: "both" }
+                  - { label: "Autre intervenante", value: "guest" }
+              - { label: "Nom affiché de l'organisatrice", name: "orgLabel", widget: "string", hint: "Ex: Coleen Group / Bizz de Femmes / Coleen × Bizz de Femmes" }
+              - { label: "Type d'événement", name: "type", widget: "string", hint: "Ex: Formation, Atelier, Coworking, Masterclass, Événement" }
+              - { label: "Lien de réservation", name: "link", widget: "string", hint: "URL vers la page de réservation" }

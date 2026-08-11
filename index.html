@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Entre-Elles — Le lieu de Coleen Group & Bizz de Femmes</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #FBF8F3;
+    --cream-soft: #FFFFFF;
+    --brown-900: #6D402E;
+    --brown-700: #895039;
+    --brown-500: #9C5B41;
+    --brown-300: #BF9484;
+    --brown-100: #E1CEC6;
+    --heading: #46291D;
+    --fuchsia-700: #C43B65;
+    --fuchsia-600: #F54A7E;
+    --fuchsia-200: #FAAEC5;
+    --fuchsia-100: #FDDEE8;
+    --ink: #3A2418;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{ max-width:1160px; margin:0 auto; padding:0 32px; }
+
+  h1,h2,h3{ font-family: var(--font-display); font-weight:500; color:var(--heading); }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fuchsia-700);
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position: sticky; top:0; z-index:50;
+    background: rgba(243,234,217,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--brown-100);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 32px; max-width:1160px; margin:0 auto;
+  }
+  .logo{
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight:600;
+    color: var(--heading);
+    display:flex; align-items:center; gap:8px;
+  }
+  .logo .dot-duo{ display:inline-flex; }
+  .logo .dot-duo span{ width:11px; height:11px; border-radius:50%; display:inline-block; }
+  .logo .dot-duo span:first-child{ background:var(--brown-500); margin-right:-4px; }
+  .logo .dot-duo span:last-child{ background:var(--fuchsia-600); }
+
+  nav ul{ display:flex; gap:28px; list-style:none; }
+  nav a{ font-size:14px; color:var(--brown-700); }
+  nav a:hover{ color:var(--fuchsia-700); }
+  .nav-links{ display:flex; align-items:center; gap:28px; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family: var(--font-body); font-weight:600; font-size:14px;
+    padding: 12px 22px; border-radius: 999px;
+    border: 1px solid var(--brown-900);
+    transition: all .2s ease;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .btn-dark{ background:var(--brown-900); color:var(--cream-soft); }
+  .btn-dark:hover{ background:var(--fuchsia-700); border-color:var(--fuchsia-700); }
+  .btn-outline{ background:transparent; color:var(--brown-900); }
+  .btn-outline:hover{ background:var(--brown-900); color:var(--cream-soft); }
+  .btn-fuchsia{ background:var(--fuchsia-600); border-color:var(--fuchsia-600); color:#fff; }
+  .btn-fuchsia:hover{ background:var(--fuchsia-700); border-color:var(--fuchsia-700); }
+
+  @media (max-width:760px){
+    nav ul{ display:none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding: 90px 0 60px;
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:50px; align-items:center;
+  }
+  .hero h1{
+    font-size: clamp(34px, 4.4vw, 54px);
+    line-height: 1.1;
+    margin: 14px 0 20px;
+    max-width: 620px;
+  }
+  .hero p.lead{
+    font-size: 18px; color: var(--brown-700); max-width: 480px; margin-bottom: 32px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  .venn{
+    position:relative; width:100%; max-width:420px; margin:0 auto; aspect-ratio:1/0.85;
+  }
+
+  @media (max-width:900px){
+    .hero{ grid-template-columns:1fr; padding-top:56px; }
+    .venn{ order:-1; max-width:280px; }
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{ padding: 88px 0; }
+  .section-head{ max-width: 620px; margin-bottom: 48px; }
+  .section-head h2{ font-size: clamp(28px,3vw,38px); margin-top:10px; }
+  .section-head p{ color:var(--brown-700); margin-top:14px; font-size:16px; }
+
+  /* ---------- LE LIEU ---------- */
+  #lieu{ background: var(--cream-soft); border-top:1px solid var(--brown-100); border-bottom:1px solid var(--brown-100); }
+  .lieu-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:center; }
+  .lieu-carousel{
+    position:relative; aspect-ratio: 4/3; border-radius: 18px; overflow:hidden;
+  }
+  .carousel-track{ display:flex; height:100%; transition: transform .45s ease; }
+  .carousel-slide{
+    min-width:100%; height:100%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    color: var(--cream-soft); font-family:var(--font-mono); font-size:13px; text-align:center; padding:24px;
+  }
+  .carousel-slide:nth-child(1){ background: linear-gradient(135deg, var(--brown-300), var(--fuchsia-200)); }
+  .carousel-slide:nth-child(2){ background: linear-gradient(135deg, var(--brown-500), var(--brown-300)); }
+  .carousel-slide:nth-child(3){ background: linear-gradient(135deg, var(--fuchsia-600), var(--fuchsia-200)); }
+  .carousel-slide:nth-child(4){ background: linear-gradient(135deg, var(--brown-700), var(--fuchsia-600)); }
+  .carousel-arrow{
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:38px; height:38px; border-radius:50%; border:none; cursor:pointer;
+    background: rgba(250,245,236,0.9); color: var(--brown-900);
+    display:flex; align-items:center; justify-content:center; font-size:18px;
+    transition: background .2s ease;
+  }
+  .carousel-arrow:hover{ background: var(--cream-soft); }
+  .carousel-arrow.prev{ left:14px; }
+  .carousel-arrow.next{ right:14px; }
+  .carousel-dots{ position:absolute; bottom:16px; left:50%; transform:translateX(-50%); display:flex; gap:7px; }
+  .carousel-dots button{
+    width:8px; height:8px; border-radius:50%; border:none; padding:0; cursor:pointer;
+    background: rgba(255,255,255,0.55); transition: all .2s ease;
+  }
+  .carousel-dots button.active{ width:22px; border-radius:5px; background:#fff; }
+  .feature-list{ margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:12px 16px; }
+  .feature-item{
+    display:flex; gap:12px; align-items:center; font-size:14px; color:var(--brown-900); font-weight:500;
+    background: var(--cream-soft); border: 1px solid var(--brown-100); border-radius: 12px;
+    padding: 14px 16px; line-height:1.35;
+  }
+  .feature-item .icon{
+    width:26px; height:26px; border-radius:50%; background: var(--fuchsia-100); color: var(--fuchsia-700);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  @media (max-width:520px){ .feature-list{ grid-template-columns:1fr; } }
+  @media (max-width:820px){
+    .lieu-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- FONDATRICES ---------- */
+  .founders{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .founder-card{
+    border-radius: 20px; padding: 22px;
+    display:flex; gap:24px; align-items:stretch;
+  }
+  .founder-card.coleen{ background: var(--brown-900); color: var(--cream-soft); }
+  .founder-card.bizz{ background: var(--fuchsia-600); color: #fff; }
+  .founder-card .tag{ font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; opacity:.75; }
+  .founder-card h3{ color:inherit; font-size:26px; margin-top:4px; }
+  .founder-card .role{ font-size:14px; opacity:.85; margin-top:-6px; }
+  .founder-card p.desc{ font-size:15px; line-height:1.65; opacity:.95; }
+  .founder-content{ display:flex; flex-direction:column; gap:10px; flex:1; min-width:0; padding:6px 4px; }
+  .founder-photo{
+    width:38%; flex-shrink:0; border-radius:14px; align-self:stretch;
+    background: rgba(255,255,255,0.14); border:1px dashed rgba(255,255,255,0.4);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-family: var(--font-mono); font-size:11px; padding:10px; opacity:.85; line-height:1.4;
+  }
+  .founder-socials{ display:flex; gap:10px; margin-top:2px; }
+  .founder-socials a{
+    width:42px; height:42px; border-radius:50%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--cream-soft); box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .founder-card.coleen .founder-socials a{ color: var(--brown-900); }
+  .founder-card.bizz .founder-socials a{ color: var(--fuchsia-700); }
+  .founder-socials a:hover{ transform: translateY(-3px) scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+  .founder-cta{
+    display:inline-flex; align-items:center; gap:8px; width:fit-content;
+    font-size:14.5px; font-weight:600; padding:13px 24px; border-radius:999px;
+    margin-top:6px; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .founder-cta:hover{ transform: translateY(-2px); }
+  .founder-card.coleen .founder-cta{ background: var(--fuchsia-600); color:#fff; }
+  .founder-card.bizz .founder-cta{ background: var(--cream-soft); color: var(--fuchsia-700); }
+  @media (max-width:640px){
+    .founder-card{ flex-direction:column; }
+    .founder-photo{ width:100%; aspect-ratio:16/10; }
+  }
+  @media (max-width:820px){ .founders{ grid-template-columns:1fr; } }
+
+  /* ---------- ACTIVITES ---------- */
+  .activities-grid{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:22px;
+  }
+  .activity-card{
+    background: var(--cream-soft); border:1px solid var(--brown-100); border-radius:16px;
+    padding: 28px 24px; transition: border-color .2s ease, transform .2s ease;
+  }
+  .activity-card:hover{ border-color: var(--fuchsia-600); transform: translateY(-3px); }
+  .activity-card .num{ font-family: var(--font-mono); font-size:12px; color:var(--fuchsia-700); }
+  .activity-card h3{ font-size:19px; margin: 10px 0 8px; color:var(--heading); }
+  .activity-card p{ font-size:14px; color:var(--brown-700); }
+  @media (max-width:900px){ .activities-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width:600px){ .activities-grid{ grid-template-columns: 1fr; } }
+
+  /* ---------- CALENDRIER ---------- */
+  #calendrier{ background: var(--brown-900); color: var(--cream-soft); }
+  #calendrier .section-head h2{ color: var(--cream-soft); }
+  #calendrier .section-head p{ color: var(--brown-300); }
+  #calendrier .eyebrow{ color: var(--fuchsia-200); }
+
+  .filters{ display:flex; gap:10px; margin-bottom:32px; flex-wrap:wrap; }
+  .filter-btn{
+    font-family: var(--font-body); font-size:13px; font-weight:600;
+    padding:9px 18px; border-radius:999px; border:1px solid var(--brown-500);
+    background:transparent; color:var(--cream-soft); cursor:pointer;
+    transition: all .2s ease;
+  }
+  .filter-btn.active, .filter-btn:hover{ background:var(--fuchsia-600); border-color:var(--fuchsia-600); color:#fff; }
+
+  .events-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; }
+  .event-card{
+    display:grid; grid-template-columns: 84px 1fr; gap:18px;
+    background: rgba(250,245,236,0.06);
+    border:1px solid rgba(250,245,236,0.14);
+    border-radius:16px; padding:20px;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .event-card:hover{ border-color: var(--fuchsia-600); background: rgba(214,18,127,0.08); }
+  .event-date{
+    font-family: var(--font-mono); text-align:center; align-self:start;
+    background: var(--cream-soft); color: var(--brown-900); border-radius:10px; padding:10px 6px;
+  }
+  .event-date .day{ font-size:22px; font-weight:700; line-height:1; }
+  .event-date .month{ font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin-top:4px; }
+  .event-body .org{
+    display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono);
+    font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px;
+    padding: 3px 9px; border-radius:999px;
+  }
+  .org.coleen{ background: var(--brown-500); color: var(--cream-soft); }
+  .org.bizz{ background: var(--fuchsia-600); color:#fff; }
+  .org.both{ background: linear-gradient(90deg, var(--brown-500) 50%, var(--fuchsia-600) 50%); color:#fff; }
+  .org.guest{ background: var(--brown-300); color: var(--brown-900); }
+  .event-body h3{ color: var(--cream-soft); font-size:17px; margin-bottom:6px; line-height:1.3; }
+  .event-body .meta{ font-size:13px; color: var(--brown-300); margin-bottom:10px; }
+  .event-body .reserve{
+    font-size:13px; font-weight:600; color: var(--fuchsia-200);
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .event-card.hidden{ display:none; }
+
+  @media (max-width:820px){ .events-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- PRIVATISATION ---------- */
+  .priv-grid{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; }
+  .priv-formulas{ display:flex; flex-direction:column; gap:14px; margin-top:28px; }
+  .formula{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 20px; border:1px solid var(--brown-100); border-radius:12px; background:var(--cream-soft);
+  }
+  .formula .label{ font-weight:600; color:var(--brown-900); }
+  .formula .sub{ font-size:13px; color:var(--brown-700); }
+
+  form{ display:flex; flex-direction:column; gap:16px; }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  label{ font-size:13px; font-weight:600; color:var(--brown-900); margin-bottom:6px; display:block; }
+  input, select, textarea{
+    width:100%; font-family: var(--font-body); font-size:14.5px;
+    padding: 12px 14px; border-radius:10px; border:1px solid var(--brown-300);
+    background: var(--cream-soft); color: var(--ink);
+  }
+  input:focus, select:focus, textarea:focus{ outline:2px solid var(--fuchsia-600); outline-offset:1px; border-color:var(--fuchsia-600); }
+  textarea{ resize:vertical; min-height:100px; }
+  @media (max-width:820px){ .priv-grid{ grid-template-columns:1fr; } .form-row{ grid-template-columns:1fr; } }
+
+  .form-note{ font-size:12.5px; color:var(--brown-500); margin-top:-4px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background: var(--brown-900); color: var(--brown-300); padding: 56px 0 32px; }
+  .footer-inner{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:32px; }
+  .footer-inner .logo{ color: var(--cream-soft); }
+  .footer-links{ display:flex; gap:32px; flex-wrap:wrap; }
+  .footer-links a{ font-size:14px; }
+  .footer-links a:hover{ color:var(--fuchsia-200); }
+  .footer-bottom{
+    border-top: 1px solid rgba(250,245,236,0.12); padding-top:22px;
+    font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#" class="logo"><span class="dot-duo"><span></span><span></span></span>L'Entre-Elles</a>
+    <div class="nav-links">
+      <nav>
+        <ul>
+          <li><a href="#lieu">Le lieu</a></li>
+          <li><a href="#activites">Les activités</a></li>
+          <li><a href="#calendrier">Le calendrier</a></li>
+          <li><a href="#fondatrices">Les occupantes</a></li>
+        </ul>
+      </nav>
+      <a href="#calendrier" class="btn btn-dark">Voir le calendrier</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:center;">
+    <div>
+      <span class="eyebrow">Ollioules · Var</span>
+      <h1>Un lieu où les expertises se rencontrent</h1>
+      <p class="lead">Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger.</p>
+      <div class="hero-ctas">
+        <a href="#calendrier" class="btn btn-dark">Voir le calendrier</a>
+        <a href="#privatiser" class="btn btn-outline">Privatiser l'espace</a>
+      </div>
+    </div>
+    <div class="venn" aria-hidden="true">
+      <svg viewBox="0 0 400 340" style="width:100%; height:auto;">
+        <circle cx="150" cy="160" r="120" fill="var(--brown-700)" opacity="0.88"/>
+        <circle cx="255" cy="160" r="120" fill="var(--fuchsia-600)" opacity="0.88" style="mix-blend-mode:multiply;"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="lieu">
+  <div class="wrap lieu-grid">
+    <div class="lieu-carousel">
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-slide">[ photo 1 — espace coworking ]</div>
+        <div class="carousel-slide">[ photo 2 — salle de formation ]</div>
+        <div class="carousel-slide">[ photo 3 — bureau privé ]</div>
+        <div class="carousel-slide">[ photo 4 — accueil et cocon ]</div>
+      </div>
+      <button class="carousel-arrow prev" id="carousel-prev" aria-label="Photo précédente">‹</button>
+      <button class="carousel-arrow next" id="carousel-next" aria-label="Photo suivante">›</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+    <div>
+      <span class="eyebrow">Le lieu</span>
+      <h2 style="margin-top:10px; font-size:32px;">Un espace chaleureux à taille humaine</h2>
+      <p style="color:var(--brown-700); margin-top:14px; font-size:15.5px;">
+        Installé à Ollioules, dans le Var et la Provence-Alpes-Côte d'Azur, L'Entre-Elles a été pensé comme un cocon : un lieu où l'on vient se former, s'introspecter, se recentrer, faire avancer son business, en groupe ou en rendez-vous individuel.
+      </p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Salle de formation modulable en atelier ou espace de coworking
+        </div>
+        <div class="feature-item">
+          <span class="icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Bureau privé
+        </div>
+        <div class="feature-item">
+          <span class="icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Wifi haut débit
+        </div>
+        <div class="feature-item">
+          <span class="icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Parking à proximité
+        </div>
+        <div class="feature-item">
+          <span class="icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Accessible PMR
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="activites" style="background:var(--cream-soft); border-top:1px solid var(--brown-100); border-bottom:1px solid var(--brown-100);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Activités</span>
+      <h2>Ce qu'on peut y faire</h2>
+      <p>Un même lieu, plusieurs façons de le vivre — seule, en groupe, ou lors d'un événement.</p>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-card"><span class="num">01</span><h3>Formations professionnelles</h3><p>Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe.</p></div>
+      <div class="activity-card"><span class="num">02</span><h3>Accompagnement, consulting & coaching</h3><p>Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir.</p></div>
+      <div class="activity-card"><span class="num">03</span><h3>Coworking femmes entrepreneures</h3><p>Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent.</p></div>
+      <div class="activity-card"><span class="num">04</span><h3>Ateliers thématiques</h3><p>Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager.</p></div>
+      <div class="activity-card"><span class="num">05</span><h3>Événements & réseautage</h3><p>S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain.</p></div>
+      <div class="activity-card"><span class="num">06</span><h3>Développement personnel</h3><p>Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="calendrier">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Calendrier</span>
+      <h2>Les prochains événements</h2>
+      <p>Formations, ateliers et journées coworking à venir à L'Entre-Elles, organisés par Julie, Lolita, ou d'autres intervenantes accueillies dans le lieu. Cliquez sur un événement pour réserver votre place.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Tous les événements</button>
+      <button class="filter-btn" data-filter="coleen">Coleen Group</button>
+      <button class="filter-btn" data-filter="bizz">Bizz de Femmes</button>
+      <button class="filter-btn" data-filter="guest">Autres intervenantes</button>
+    </div>
+
+    <div class="events-grid" id="events-grid"></div>
+  </div>
+</section>
+
+<section id="fondatrices">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Les occupantes</span>
+      <h2>Deux entrepreneures, deux amies, deux centres de formation, deux approches, mais une même conviction</h2>
+      <p>L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.</p>
+    </div>
+    <div class="founders">
+      <div class="founder-card coleen">
+        <div class="founder-photo">[ photo de Julie ]</div>
+        <div class="founder-content">
+          <span class="tag">Formation · Bilan · Innovation · Événementiel</span>
+          <h3>Coleen Group</h3>
+          <p class="role">Julie — Former, accompagner, innover, partager</p>
+          <p class="desc">Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.</p>
+          <div class="founder-socials">
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram Coleen Group">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook Coleen Group">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn Coleen Group">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="12" y1="11" x2="12" y2="16"/><path d="M12 13c0-1.5 1-2 2-2s2 .8 2 2v3"/></svg>
+            </a>
+          </div>
+          <a class="founder-cta" href="https://coleengroup.fr" target="_blank" rel="noopener">Découvrir Coleen Group →</a>
+        </div>
+      </div>
+      <div class="founder-card bizz">
+        <div class="founder-photo">[ photo de Lolita ]</div>
+        <div class="founder-content">
+          <span class="tag">Consulting · Coaching · Formation</span>
+          <h3>Bizz de Femmes</h3>
+          <p class="role">Lolita — Ta safe place 100% femmes entrepreneures</p>
+          <p class="desc">Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.</p>
+          <div class="founder-socials">
+            <a href="https://www.instagram.com/lolitaghilionecoaching/" target="_blank" rel="noopener" aria-label="Instagram Bizz de Femmes">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="https://www.facebook.com/lolitaghilione" target="_blank" rel="noopener" aria-label="Facebook Bizz de Femmes">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn Bizz de Femmes">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="12" y1="11" x2="12" y2="16"/><path d="M12 13c0-1.5 1-2 2-2s2 .8 2 2v3"/></svg>
+            </a>
+          </div>
+          <a class="founder-cta" href="https://www.lolitaghilione.fr/bizz-de-femmes" target="_blank" rel="noopener">Découvrir Bizz de Femmes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privatiser">
+  <div class="wrap priv-grid">
+    <div>
+      <span class="eyebrow">Privatisation</span>
+      <h2 style="margin-top:10px; font-size:32px;">Privatisez l'espace pour votre propre événement</h2>
+      <p style="color:var(--brown-700); margin-top:14px; font-size:15.5px;">
+        En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles se privatise à la demi-journée ou à la journée pour vos ateliers, séminaires, tournages ou réunions d'équipe.
+      </p>
+      <p style="color:var(--brown-500); margin-top:10px; font-size:13.5px; font-family:var(--font-mono);">
+        Capacité : jusqu'à 6 personnes en salle · 2 personnes en bureau privé
+      </p>
+      <div class="priv-formulas">
+        <div class="formula"><div><div class="label">À la demi-journée</div><div class="sub">Matin ou après-midi</div></div><div>30 €</div></div>
+        <div class="formula"><div><div class="label">À la journée</div><div class="sub">De 9h à 18h</div></div><div>50 €</div></div>
+      </div>
+    </div>
+
+    <div>
+      <form id="contact-form">
+        <div class="form-row">
+          <div>
+            <label for="nom">Nom et prénom</label>
+            <input type="text" id="nom" name="nom" placeholder="Camille Dupont" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="camille@monentreprise.fr" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="formule">Formule souhaitée</label>
+            <select id="formule" name="formule">
+              <option value="Demi-journée">Demi-journée — 30 €</option>
+              <option value="Journée">Journée complète — 50 €</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Date souhaitée</label>
+            <input type="date" id="date" name="date">
+          </div>
+        </div>
+        <div>
+          <label for="personnes">Nombre de personnes</label>
+          <input type="number" id="personnes" name="personnes" min="1" placeholder="8">
+        </div>
+        <div>
+          <label for="message">Votre demande</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre projet, vos besoins (matériel, restauration, horaires...)"></textarea>
+        </div>
+        <button type="submit" class="btn btn-fuchsia" style="justify-content:center;">Envoyer ma demande</button>
+        <p class="form-note">En envoyant ce formulaire, votre messagerie s'ouvrira avec votre demande pré-remplie à destination de L'Entre-Elles.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="logo"><span class="dot-duo"><span></span><span></span></span>L'Entre-Elles</a>
+        <p style="margin-top:12px; font-size:13.5px; max-width:280px;">Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.</p>
+      </div>
+      <div>
+        <span class="eyebrow" style="color:var(--fuchsia-200);">Adresse</span>
+        <p style="margin-top:10px; font-size:13.5px; max-width:240px; line-height:1.6;">
+          293 Route de la Seyne<br>
+          Technopole Var Matin — Bâtiment A<br>
+          83190 Ollioules
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#lieu">Le lieu</a>
+        <a href="#fondatrices">Les occupantes</a>
+        <a href="#activites">Activités</a>
+        <a href="#calendrier">Calendrier</a>
+        <a href="#privatiser">Privatiser</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 L'Entre-Elles — Coleen Group × Bizz de Femmes</span>
+      <span>Coleen Group : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Bizz de Femmes : formation@lolitaghilione.fr · 06 29 99 37 78</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Carrousel photo du lieu ----
+  const track = document.getElementById('carousel-track');
+  const slides = track ? track.querySelectorAll('.carousel-slide') : [];
+  const dotsWrap = document.getElementById('carousel-dots');
+  let current = 0;
+
+  if (track && slides.length){
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      if (i === 0) dot.classList.add('active');
+      dot.setAttribute('aria-label', 'Aller à la photo ' + (i + 1));
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    function goToSlide(i){
+      current = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dotsWrap.querySelectorAll('button').forEach((d, idx) => d.classList.toggle('active', idx === current));
+    }
+
+    document.getElementById('carousel-prev').addEventListener('click', () => goToSlide(current - 1));
+    document.getElementById('carousel-next').addEventListener('click', () => goToSlide(current + 1));
+
+    let autoplay = setInterval(() => goToSlide(current + 1), 5000);
+    const carouselEl = document.querySelector('.lieu-carousel');
+    carouselEl.addEventListener('mouseenter', () => clearInterval(autoplay));
+    carouselEl.addEventListener('mouseleave', () => { autoplay = setInterval(() => goToSlide(current + 1), 5000); });
+  }
+</script>
+
+<script>
+  // ---- Les événements sont chargés depuis data/events.json ----
+  // Ce fichier est modifiable soit à la main, soit via l'espace de gestion (/admin) une fois activé.
+  let events = [];
+
+  const months = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+
+  function renderEvents(list){
+    const grid = document.getElementById('events-grid');
+    grid.innerHTML = '';
+
+    if (!list.length){
+      grid.innerHTML = '<p style="color:var(--brown-300); font-size:14px;">Aucun événement à afficher pour le moment.</p>';
+      return;
+    }
+
+    list.forEach(ev => {
+      const d = new Date(ev.date + 'T00:00:00');
+      const day = d.getDate();
+      const month = months[d.getMonth()];
+
+      const card = document.createElement('a');
+      card.href = ev.link;
+      card.target = "_blank";
+      card.rel = "noopener";
+      card.className = 'event-card';
+      card.dataset.org = ev.org;
+      card.innerHTML = `
+        <div class="event-date"><div class="day">${day}</div><div class="month">${month}</div></div>
+        <div class="event-body">
+          <span class="org ${ev.org}">${ev.orgLabel}</span>
+          <h3>${ev.title}</h3>
+          <div class="meta">${ev.type} · Ollioules</div>
+          <span class="reserve">Réserver ma place →</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function applyActiveFilter(){
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const f = activeBtn ? activeBtn.dataset.filter : 'all';
+    const filtered = f === 'all' ? events : events.filter(ev => ev.org === f || ev.org === 'both');
+    renderEvents(filtered);
+  }
+
+  fetch('data/events.json')
+    .then(r => r.json())
+    .then(data => {
+      events = (data.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+      applyActiveFilter();
+    })
+    .catch(() => {
+      document.getElementById('events-grid').innerHTML =
+        '<p style="color:var(--brown-300); font-size:14px;">Impossible de charger le calendrier pour le moment.</p>';
+    });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyActiveFilter();
+    });
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(this);
+    const subject = encodeURIComponent("Demande de privatisation — L'Entre-Elles");
+    const body = encodeURIComponent(
+      "Nom : " + data.get('nom') + "\n" +
+      "Email : " + data.get('email') + "\n" +
+      "Formule : " + data.get('formule') + "\n" +
+      "Date souhaitée : " + data.get('date') + "\n" +
+      "Nombre de personnes : " + data.get('personnes') + "\n\n" +
+      "Message :\n" + data.get('message')
+    );
+    window.location.href = "mailto:bonjour@coleengroup.fr?subject=" + subject + "&body=" + body;
+  });
+</script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
