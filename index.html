@@ -3,11 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'Entre-Elles — Le lieu de Coleen Group & Bizz de Femmes</title>
+<title>L'Entre-Elles — Coworking, formations et communauté de femmes entrepreneures à Ollioules (Var)</title>
+<meta name="description" content="L'Entre-Elles, un lieu à Ollioules (Var) pour se former, faire du coworking et rejoindre une communauté de femmes entrepreneures. Formations, ateliers, consulting et événements par Coleen Group et Bizz de Femmes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.lentre-elles.fr/">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/seo/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/seo/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L'Entre-Elles">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="L'Entre-Elles — Coworking et communauté de femmes entrepreneures à Ollioules">
+<meta property="og:description" content="Formations, consulting, coworking, ateliers et communauté de femmes entrepreneures à Ollioules, dans le Var.">
+<meta property="og:url" content="https://www.lentre-elles.fr/">
+<meta property="og:image" content="https://www.lentre-elles.fr/assets/seo/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="L'Entre-Elles — Ollioules, Var">
+<meta name="twitter:description" content="Formations, consulting, coworking et communauté de femmes entrepreneures à Ollioules.">
+<meta name="twitter:image" content="https://www.lentre-elles.fr/assets/seo/og-image.jpg">
+
+<script type="application/ld+json" id="ld-localbusiness">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "L'Entre-Elles",
+  "description": "Un lieu à Ollioules pour se former, faire du coworking et rejoindre une communauté de femmes entrepreneures.",
+  "url": "https://www.lentre-elles.fr/",
+  "image": "https://www.lentre-elles.fr/assets/seo/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "293 Route de la Seyne, Technopole Var Matin - Bâtiment A",
+    "addressLocality": "Ollioules",
+    "postalCode": "83190",
+    "addressRegion": "Provence-Alpes-Côte d'Azur",
+    "addressCountry": "FR"
+  }
+}
+</script>
+
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css">
 <style>
   :root{
     --cream: #FBF8F3;
@@ -101,6 +141,33 @@
 
   @media (max-width:760px){
     nav ul{ display:none; }
+    .nav-cta-desktop{ display:none; }
+  }
+
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer;
+    color: var(--brown-900); padding:6px; flex-shrink:0;
+  }
+  @media (max-width:760px){
+    .menu-toggle{ display:flex; }
+  }
+
+  .mobile-menu{
+    display:none; flex-direction:column; gap:2px;
+    padding: 12px 32px 20px; border-top:1px solid var(--brown-100);
+    background: var(--cream);
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{
+    padding:12px 4px; font-size:15px; color:var(--brown-900);
+    border-bottom:1px solid var(--brown-100);
+  }
+  .mobile-menu a:last-child{ border-bottom:none; }
+
+  @media (max-width:400px){
+    .wrap{ padding:0 20px; }
+    .month-label{ min-width:auto; font-size:17px; }
+    .month-nav{ gap:10px; }
   }
 
   /* ---------- HERO ---------- */
@@ -245,6 +312,19 @@
   #calendrier .section-head p{ color: var(--brown-300); }
   #calendrier .eyebrow{ color: var(--fuchsia-200); }
 
+  .month-nav{
+    display:flex; align-items:center; gap:16px; margin-bottom:22px;
+  }
+  .month-nav .carousel-arrow{
+    background: rgba(250,245,236,0.14); color: var(--cream-soft);
+  }
+  .month-nav .carousel-arrow:hover{ background: rgba(250,245,236,0.28); }
+  .month-nav .carousel-arrow:disabled{ opacity:0.3; cursor:default; }
+  .month-nav .carousel-arrow:disabled:hover{ background: rgba(250,245,236,0.14); }
+  .month-label{
+    font-family: var(--font-display); font-size:20px; color: var(--cream-soft);
+    min-width:170px; text-align:center; text-transform:capitalize;
+  }
   .filters{ display:flex; gap:10px; margin-bottom:32px; flex-wrap:wrap; }
   .filter-btn{
     font-family: var(--font-body); font-size:13px; font-weight:600;
@@ -256,6 +336,7 @@
 
   .events-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; }
   .event-card{
+    position:relative;
     display:grid; grid-template-columns: 84px 1fr; gap:18px;
     background: rgba(250,245,236,0.06);
     border:1px solid rgba(250,245,236,0.14);
@@ -265,28 +346,119 @@
   .event-card:hover{ border-color: var(--fuchsia-600); background: rgba(214,18,127,0.08); }
   .event-date{
     font-family: var(--font-mono); text-align:center; align-self:start;
-    background: var(--cream-soft); color: var(--brown-900); border-radius:10px; padding:10px 6px;
+    background: var(--cream-soft); color: var(--brown-900); border-radius:10px; padding:10px 4px;
   }
-  .event-date .day{ font-size:22px; font-weight:700; line-height:1; }
+  .event-date .day{ font-size:19px; font-weight:700; line-height:1.15; }
   .event-date .month{ font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin-top:4px; }
-  .event-body .org{
+  .event-body .orgs{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+  .org-badge{
     display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono);
-    font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px;
-    padding: 3px 9px; border-radius:999px;
+    font-size:10.5px; text-transform:uppercase; letter-spacing:.06em;
+    padding: 3px 9px; border-radius:999px; transition: opacity .2s ease;
   }
-  .org.coleen{ background: var(--brown-500); color: var(--cream-soft); }
-  .org.bizz{ background: var(--fuchsia-600); color:#fff; }
-  .org.both{ background: linear-gradient(90deg, var(--brown-500) 50%, var(--fuchsia-600) 50%); color:#fff; }
-  .org.guest{ background: var(--brown-300); color: var(--brown-900); }
+  .org-badge:hover{ opacity:.8; }
+  .org-badge.brown{ background: var(--brown-500); color: var(--cream-soft); }
+  .org-badge.fuchsia{ background: var(--fuchsia-600); color:#fff; }
+  .org-badge.neutral{ background: var(--brown-300); color: var(--brown-900); }
   .event-body h3{ color: var(--cream-soft); font-size:17px; margin-bottom:6px; line-height:1.3; }
-  .event-body .meta{ font-size:13px; color: var(--brown-300); margin-bottom:10px; }
+  .event-body .meta{ font-size:13px; color: var(--brown-300); margin-bottom:6px; }
+  .event-body .price-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+  .event-price{ font-size:13px; font-weight:600; color: var(--cream-soft); }
+  .funding-badge{
+    font-size:10.5px; font-family:var(--font-mono); color: var(--fuchsia-200);
+    border:1px solid var(--fuchsia-200); border-radius:999px; padding:2px 8px;
+  }
   .event-body .reserve{
     font-size:13px; font-weight:600; color: var(--fuchsia-200);
     display:inline-flex; align-items:center; gap:6px;
   }
   .event-card.hidden{ display:none; }
 
+  .event-tooltip{
+    position:absolute; left:20px; right:20px; top:100%; margin-top:8px;
+    background: var(--brown-900); color: var(--cream-soft);
+    border:1px solid var(--fuchsia-600); border-radius:12px; padding:14px 16px;
+    font-size:13px; line-height:1.55;
+    opacity:0; visibility:hidden; transform:translateY(-4px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+    pointer-events:none; z-index:20;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  }
+  .event-card:hover .event-tooltip{ opacity:1; visibility:visible; transform:translateY(0); }
+
   @media (max-width:820px){ .events-grid{ grid-template-columns:1fr; } }
+  @media (hover:none){ .event-tooltip{ display:none; } }
+
+  /* ---------- MEMBRES ---------- */
+  .members-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .member-card{
+    border-radius: 20px; padding: 22px; scroll-margin-top: 100px;
+    display:flex; gap:22px; align-items:stretch;
+  }
+  .member-card.brown{ background: var(--brown-900); color: var(--cream-soft); }
+  .member-card.fuchsia{ background: var(--fuchsia-600); color: #fff; }
+  .member-card.neutral{ background: var(--cream-soft); color: var(--heading); border:1px solid var(--brown-100); }
+  .member-card .photo{
+    width:36%; flex-shrink:0; border-radius:14px; align-self:stretch;
+    background: rgba(0,0,0,0.08); border:1px dashed rgba(0,0,0,0.2);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-family: var(--font-mono); font-size:11px; padding:10px; opacity:.75; line-height:1.4;
+  }
+  .member-card.brown .photo, .member-card.fuchsia .photo{
+    background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.4);
+  }
+  .member-card .content{ display:flex; flex-direction:column; gap:10px; flex:1; min-width:0; padding:6px 4px; }
+  .member-card .role{ font-size:14px; opacity:.85; margin-top:-6px; }
+  .member-card h3{ color:inherit; font-size:24px; }
+  .member-card .desc{ font-size:14.5px; line-height:1.6; opacity:.95; }
+  .member-card .socials{ display:flex; gap:10px; margin-top:2px; }
+  .member-card .socials a{
+    width:38px; height:38px; border-radius:50%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--cream-soft); box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform .2s ease;
+  }
+  .member-card.neutral .socials a{ background: var(--brown-100); }
+  .member-card.brown .socials a{ color: var(--brown-900); }
+  .member-card.fuchsia .socials a{ color: var(--fuchsia-700); }
+  .member-card.neutral .socials a{ color: var(--heading); }
+  .member-card .socials a:hover{ transform: translateY(-3px) scale(1.05); }
+  .member-card .cta{
+    display:inline-flex; align-items:center; gap:8px; width:fit-content;
+    font-size:14px; font-weight:600; padding:12px 22px; border-radius:999px; margin-top:4px;
+    transition: transform .15s ease;
+  }
+  .member-card .cta:hover{ transform: translateY(-2px); }
+  .member-card.brown .cta{ background: var(--fuchsia-600); color:#fff; }
+  .member-card.fuchsia .cta{ background: var(--cream-soft); color: var(--fuchsia-700); }
+  .member-card.neutral .cta{ background: var(--heading); color: var(--cream-soft); }
+  @media (max-width:820px){ .members-grid{ grid-template-columns:1fr; } }
+  @media (max-width:640px){
+    .member-card{ flex-direction:column; }
+    .member-card .photo{ width:100%; aspect-ratio:16/10; }
+  }
+
+  /* ---------- APERÇU COMMUNAUTÉ (accueil) ---------- */
+  .preview-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; margin-top:36px; }
+  .preview-card{
+    background: var(--cream-soft); border:1px solid var(--brown-100); border-radius:18px;
+    padding:20px; text-align:center; transition: transform .2s ease, border-color .2s ease;
+  }
+  .preview-card:hover{ transform: translateY(-3px); border-color: var(--fuchsia-600); }
+  .preview-card .photo{
+    width:84px; height:84px; border-radius:50%; margin:0 auto 14px; overflow:hidden;
+    background: var(--brown-100); border:1px dashed var(--brown-300);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-family: var(--font-mono); font-size:9.5px; color:var(--brown-500); padding:6px; line-height:1.3;
+  }
+  .preview-card h3{ font-size:17px; margin-bottom:2px; }
+  .preview-card .role{ font-size:12.5px; color:var(--brown-500); margin-bottom:10px; }
+  .preview-card .next-event{
+    font-size:11.5px; font-family:var(--font-mono); color:var(--fuchsia-700);
+    background: var(--fuchsia-100); border-radius:8px; padding:7px 10px; margin-top:6px; line-height:1.4;
+  }
+  @media (max-width:820px){ .preview-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width:520px){ .preview-grid{ grid-template-columns: 1fr; } }
 
   /* ---------- PRIVATISATION ---------- */
   .priv-grid{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; }
@@ -316,6 +488,14 @@
   footer{ background: var(--brown-900); color: var(--brown-300); padding: 56px 0 32px; }
   .footer-inner{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:32px; }
   .footer-inner .logo{ color: var(--cream-soft); }
+  .footer-socials{ display:flex; gap:10px; margin-top:14px; }
+  .footer-socials a{
+    width:34px; height:34px; border-radius:50%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background: rgba(250,245,236,0.14); color: var(--cream-soft);
+    transition: background .2s ease, transform .2s ease;
+  }
+  .footer-socials a:hover{ background: rgba(250,245,236,0.28); transform: translateY(-2px); }
   .footer-links{ display:flex; gap:32px; flex-wrap:wrap; }
   .footer-links a{ font-size:14px; }
   .footer-links a:hover{ color:var(--fuchsia-200); }
@@ -323,6 +503,7 @@
     border-top: 1px solid rgba(250,245,236,0.12); padding-top:22px;
     font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
   }
+
 </style>
 </head>
 <body>
@@ -337,12 +518,40 @@
           <li><a href="#activites">Les activités</a></li>
           <li><a href="#calendrier">Le calendrier</a></li>
           <li><a href="#fondatrices">Les occupantes</a></li>
+          <li><a href="communaute.html">Communauté</a></li>
         </ul>
       </nav>
-      <a href="#calendrier" class="btn btn-dark">Voir le calendrier</a>
+      <a href="#calendrier" class="btn btn-dark nav-cta-desktop">Voir le calendrier</a>
     </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#lieu">Le lieu</a>
+    <a href="#activites">Les activités</a>
+    <a href="#calendrier">Le calendrier</a>
+    <a href="#fondatrices">Les occupantes</a>
+    <a href="communaute.html">Communauté</a>
+    <a href="#calendrier" class="btn btn-dark" style="justify-content:center; margin-top:6px;">Voir le calendrier</a>
+  </nav>
 </header>
+
+<script>
+  (function(){
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  })();
+</script>
 
 <section class="hero">
   <div class="wrap" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:center;">
@@ -352,7 +561,7 @@
       <p class="lead" id="hero-subtitle">Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger.</p>
       <div class="hero-ctas">
         <a href="#calendrier" class="btn btn-dark">Voir le calendrier</a>
-        <a href="#privatiser" class="btn btn-outline">Privatiser l'espace</a>
+        <a href="#privatiser" class="btn btn-outline">Disposer de l'espace</a>
       </div>
     </div>
     <div class="venn" aria-hidden="true">
@@ -432,17 +641,28 @@
     <div class="section-head">
       <span class="eyebrow">Calendrier</span>
       <h2>Les prochains événements</h2>
-      <p>Formations, ateliers et journées coworking à venir à L'Entre-Elles, organisés par Julie, Lolita, ou d'autres intervenantes accueillies dans le lieu. Cliquez sur un événement pour réserver votre place.</p>
+      <p>Formations, ateliers et journées coworking à venir à L'Entre-Elles. Survolez un événement pour en voir le détail, cliquez sur une intervenante pour découvrir sa fiche, ou sur "Réserver" pour vous inscrire.</p>
     </div>
 
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">Tous les événements</button>
-      <button class="filter-btn" data-filter="coleen">Coleen Group</button>
-      <button class="filter-btn" data-filter="bizz">Bizz de Femmes</button>
-      <button class="filter-btn" data-filter="guest">Autres intervenantes</button>
+    <div class="month-nav">
+      <button class="carousel-arrow" id="month-prev" aria-label="Mois précédent" style="position:static;">‹</button>
+      <span class="month-label" id="month-label">Mois</span>
+      <button class="carousel-arrow" id="month-next" aria-label="Mois suivant" style="position:static;">›</button>
     </div>
 
-    <div class="events-grid" id="events-grid"></div>
+    <div id="event-category-block" style="margin-bottom:18px; display:none;">
+      <div class="eyebrow" style="color:var(--fuchsia-200); margin-bottom:8px;">Catégorie</div>
+      <div class="filters" id="event-category-filters"></div>
+    </div>
+
+    <div id="event-org-block" style="margin-bottom:0;">
+      <div class="eyebrow" style="color:var(--fuchsia-200); margin-bottom:8px;">Intervenante</div>
+      <div class="filters" id="event-filters">
+        <button class="filter-btn active" data-filter="all">Tous les événements</button>
+      </div>
+    </div>
+
+    <div class="events-grid" id="events-grid" style="margin-top:28px;"></div>
   </div>
 </section>
 
@@ -500,25 +720,43 @@
   </div>
 </section>
 
+<section id="communaute-apercu" style="background:var(--cream-soft); border-top:1px solid var(--brown-100); border-bottom:1px solid var(--brown-100);">
+  <div class="wrap">
+    <div class="section-head" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+      <div>
+        <span class="eyebrow">Communauté</span>
+        <h2>Elles font vivre L'Entre-Elles</h2>
+        <p>Un aperçu des femmes entrepreneures de la communauté — l'annuaire complet est juste à côté.</p>
+      </div>
+      <a href="communaute.html" class="btn btn-outline" style="flex-shrink:0;">Voir toute la communauté →</a>
+    </div>
+    <div class="preview-grid" id="communaute-preview-grid"></div>
+  </div>
+</section>
+
 <section id="privatiser">
   <div class="wrap priv-grid">
     <div>
-      <span class="eyebrow">Privatisation</span>
-      <h2 style="margin-top:10px; font-size:32px;">Privatisez l'espace pour votre propre événement</h2>
+      <span class="eyebrow">Disposer de l'espace</span>
+      <h2 style="margin-top:10px; font-size:32px;">Disposez de l'espace pour votre propre événement</h2>
       <p style="color:var(--brown-700); margin-top:14px; font-size:15.5px;" id="priv-text">
-        En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles se privatise à la demi-journée ou à la journée pour vos ateliers, séminaires, tournages ou réunions d'équipe.
+        En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles peut être mise à disposition à la demi-journée, à la journée ou en soirée pour vos ateliers, séminaires, tournages ou réunions d'équipe.
       </p>
       <p style="color:var(--brown-500); margin-top:10px; font-size:13.5px; font-family:var(--font-mono);" id="priv-capacity">
-        Capacité : jusqu'à 6 personnes en salle · 2 personnes en bureau privé
+        Capacité : jusqu'à 8 personnes en salle · 2 personnes en bureau privé
       </p>
       <div class="priv-formulas">
-        <div class="formula"><div><div class="label">À la demi-journée</div><div class="sub">Matin ou après-midi</div></div><div id="priv-half-price">30 €</div></div>
-        <div class="formula"><div><div class="label">À la journée</div><div class="sub">De 9h à 18h</div></div><div id="priv-full-price">50 €</div></div>
+        <div class="formula"><div><div class="label">Demi-journée — matin</div><div class="sub">9h à 13h</div></div><div id="priv-half-price">30 €</div></div>
+        <div class="formula"><div><div class="label">Demi-journée — après-midi</div><div class="sub">14h à 18h</div></div><div id="priv-half-price-2">30 €</div></div>
+        <div class="formula"><div><div class="label">Journée complète</div><div class="sub">9h à 18h</div></div><div id="priv-full-price">50 €</div></div>
+        <div class="formula"><div><div class="label">Soirée</div><div class="sub">19h à 22h</div></div><div id="priv-evening-price">30 €</div></div>
       </div>
     </div>
 
     <div>
-      <form id="contact-form">
+      <form id="contact-form" name="privatisation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="privatisation">
+        <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
         <div class="form-row">
           <div>
             <label for="nom">Nom et prénom</label>
@@ -529,12 +767,18 @@
             <input type="email" id="email" name="email" placeholder="camille@monentreprise.fr" required>
           </div>
         </div>
+        <div>
+          <label for="telephone">Téléphone portable</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
+        </div>
         <div class="form-row">
           <div>
             <label for="formule">Formule souhaitée</label>
             <select id="formule" name="formule">
-              <option value="Demi-journée">Demi-journée — 30 €</option>
-              <option value="Journée">Journée complète — 50 €</option>
+              <option value="Demi-journée — matin (9h–13h)">Demi-journée — matin (9h–13h)</option>
+              <option value="Demi-journée — après-midi (14h–18h)">Demi-journée — après-midi (14h–18h)</option>
+              <option value="Journée complète (9h–18h)">Journée complète (9h–18h)</option>
+              <option value="Soirée (19h–22h)">Soirée (19h–22h)</option>
             </select>
           </div>
           <div>
@@ -551,7 +795,8 @@
           <textarea id="message" name="message" placeholder="Décrivez votre projet, vos besoins (matériel, restauration, horaires...)"></textarea>
         </div>
         <button type="submit" class="btn btn-fuchsia" style="justify-content:center;">Envoyer ma demande</button>
-        <p class="form-note">En envoyant ce formulaire, votre messagerie s'ouvrira avec votre demande pré-remplie à destination de L'Entre-Elles.</p>
+        <p class="form-note" id="form-note">Votre demande sera transmise directement à L'Entre-Elles.</p>
+        <p class="form-note" style="margin-top:8px;">Les informations recueillies via ce formulaire sont utilisées uniquement pour traiter votre demande de disposition de l'espace, et ne sont ni revendues ni transmises à des tiers. Vous pouvez demander leur suppression à tout moment en écrivant à <a href="mailto:julie.requet@coleengroup.fr" style="text-decoration:underline;">julie.requet@coleengroup.fr</a>. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="text-decoration:underline;">mentions légales</a>.</p>
       </form>
     </div>
   </div>
@@ -563,6 +808,17 @@
       <div>
         <a href="#" class="logo"><span class="dot-duo"><span></span><span></span></span>L'Entre-Elles</a>
         <p style="margin-top:12px; font-size:13.5px; max-width:280px;" id="footer-tagline">Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.</p>
+        <div class="footer-socials">
+          <a href="#" id="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram L'Entre-Elles">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" id="footer-facebook" target="_blank" rel="noopener" aria-label="Facebook L'Entre-Elles">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8z"/></svg>
+          </a>
+          <a href="#" id="footer-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn L'Entre-Elles">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="12" y1="11" x2="12" y2="16"/><path d="M12 13c0-1.5 1-2 2-2s2 .8 2 2v3"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <span class="eyebrow" style="color:var(--fuchsia-200);">Adresse</span>
@@ -575,9 +831,11 @@
       <div class="footer-links">
         <a href="#lieu">Le lieu</a>
         <a href="#fondatrices">Les occupantes</a>
+        <a href="communaute.html">Communauté</a>
         <a href="#activites">Activités</a>
         <a href="#calendrier">Calendrier</a>
-        <a href="#privatiser">Privatiser</a>
+        <a href="#privatiser">Disposer de l'espace</a>
+        <a href="mentions-legales.html">Mentions légales</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -614,7 +872,7 @@
     if (data.link){ const cta = document.getElementById(prefix + '-cta'); if (cta) cta.href = data.link; }
     if (data.photo){
       const photoEl = document.getElementById(prefix + '-photo');
-      if (photoEl) photoEl.innerHTML = '<img src="' + data.photo + '" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">';
+      if (photoEl) photoEl.innerHTML = '<img src="' + data.photo + '" alt="' + (data.role || prefix) + '" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">';
     }
   }
 
@@ -660,7 +918,9 @@
       setText('priv-text', data.privatisation.text);
       setText('priv-capacity', data.privatisation.capacity);
       setText('priv-half-price', data.privatisation.half_day_price);
+      setText('priv-half-price-2', data.privatisation.half_day_price);
       setText('priv-full-price', data.privatisation.full_day_price);
+      setText('priv-evening-price', data.privatisation.evening_price);
     }
     if (data.footer){
       setText('footer-tagline', data.footer.tagline);
@@ -675,7 +935,29 @@
           'Coleen Group : ' + (data.footer.coleen_email || '') + ' · ' + (data.footer.coleen_phone || '') +
           ' &nbsp;|&nbsp; Bizz de Femmes : ' + (data.footer.bizz_email || '') + ' · ' + (data.footer.bizz_phone || '');
       }
+      setLink('footer-instagram', data.footer.instagram);
+      setLink('footer-facebook', data.footer.facebook);
+      setLink('footer-linkedin', data.footer.linkedin);
+      updateLocalBusinessJsonLd(data.footer);
     }
+  }
+
+  function updateLocalBusinessJsonLd(footer){
+    const el = document.getElementById('ld-localbusiness');
+    if (!el) return;
+    try {
+      const json = JSON.parse(el.textContent);
+      const street = [footer.address_line1, footer.address_line2].filter(Boolean).join(', ');
+      if (street) json.address.streetAddress = street;
+      if (footer.address_line3){
+        const match = footer.address_line3.match(/(\d{4,5})\s*(.*)/);
+        if (match){
+          json.address.postalCode = match[1];
+          json.address.addressLocality = match[2].trim();
+        }
+      }
+      el.textContent = JSON.stringify(json);
+    } catch (e) { /* laisser le JSON-LD par défaut si le parsing échoue */ }
   }
 
   // ---- Carrousel photo du lieu ----
@@ -723,7 +1005,18 @@
       carouselEl.addEventListener('mouseleave', () => { autoplay = setInterval(() => goToSlide(current + 1), 5000); });
     }
   }
+</script>
 
+<script>
+  // ---- Copie de secours des données, utilisée si le chargement réseau échoue ----
+  // (aperçu en local, ou fichier data/*.json momentanément inaccessible). Sur le vrai site en ligne,
+  // c'est toujours data/site.json, data/events.json et data/members.json qui font foi.
+  window.__FALLBACK_SITE__ = {"hero": {"eyebrow": "Ollioules · Var", "title": "Un lieu où les expertises se rencontrent", "subtitle": "Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger."}, "lieu": {"title": "Un espace chaleureux à taille humaine", "text": "Installé à Ollioules, dans le Var et la Provence-Alpes-Côte d'Azur, L'Entre-Elles a été pensé comme un cocon : un lieu où l'on vient se former, s'introspecter, se recentrer, faire avancer son business, en groupe ou en rendez-vous individuel.", "features": ["Salle de formation modulable en atelier ou espace de coworking", "Bureau privé", "Wifi haut débit", "Parking à proximité", "Accessible PMR"], "photos": [{"image": "", "caption": "espace coworking"}, {"image": "", "caption": "salle de formation"}, {"image": "", "caption": "bureau privé"}, {"image": "", "caption": "accueil et cocon"}]}, "activites": [{"title": "Formations professionnelles", "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe."}, {"title": "Accompagnement, consulting & coaching", "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir."}, {"title": "Coworking femmes entrepreneures", "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent."}, {"title": "Ateliers thématiques", "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager."}, {"title": "Événements & réseautage", "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain."}, {"title": "Développement personnel", "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle."}], "fondatrices": {"intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.", "coleen": {"photo": "", "tag": "Formation · Bilan · Innovation · Événementiel", "role": "Julie — Former, accompagner, innover, partager", "desc": "Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.", "instagram": "", "facebook": "", "linkedin": "", "link": "https://coleengroup.fr"}, "bizz": {"photo": "", "tag": "Consulting · Coaching · Formation", "role": "Lolita — Ta safe place 100% femmes entrepreneures", "desc": "Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.", "instagram": "https://www.instagram.com/lolitaghilionecoaching/", "facebook": "https://www.facebook.com/lolitaghilione", "linkedin": "", "link": "https://www.lolitaghilione.fr/bizz-de-femmes"}}, "privatisation": {"text": "En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles peut être mise à disposition à la demi-journée, à la journée ou en soirée pour vos ateliers, séminaires, tournages ou réunions d'équipe.", "capacity": "Capacité : jusqu'à 8 personnes en salle · 2 personnes en bureau privé", "half_day_price": "30 €", "full_day_price": "50 €", "evening_price": "30 €"}, "footer": {"tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.", "address_line1": "293 Route de la Seyne", "address_line2": "Technopole Var Matin — Bâtiment A", "address_line3": "83190 Ollioules", "coleen_email": "julie.requet@coleengroup.fr", "coleen_phone": "07 61 70 78 98", "bizz_email": "formation@lolitaghilione.fr", "bizz_phone": "06 29 99 37 78", "instagram": "", "facebook": "", "linkedin": ""}};
+  window.__FALLBACK_EVENTS__ = {"events": [{"title": "Atelier — Trouver ses premiers clients grâce au neuromarketing", "start_date": "2026-11-14", "end_date": "2026-11-14", "start_time": "09:30", "end_time": "12:30", "price_type": "amount", "price_amount": "35 €", "funding_available": false, "description": "Un atelier pratique pour comprendre les biais de décision de vos clients et adapter votre discours commercial en conséquence. Places limitées, en petit groupe.", "organizers": ["Bizz de Femmes"], "link": "#", "categories": ["Atelier"]}, {"title": "Journée coworking femmes entrepreneures", "start_date": "2026-11-21", "end_date": "2026-11-21", "start_time": "09:00", "end_time": "18:00", "price_type": "amount", "price_amount": "10 €", "funding_available": false, "description": "Une journée pour travailler entourée, avec un temps d'échange informel autour d'un café en milieu de matinée.", "organizers": ["Coleen Group", "Bizz de Femmes"], "link": "#", "categories": ["Coworking"]}, {"title": "Formation — Prévention & santé mentale au travail", "start_date": "2026-11-26", "end_date": "2026-11-27", "start_time": "09:00", "end_time": "17:00", "price_type": "quote", "price_amount": "", "funding_available": true, "description": "Formation certifiante sur deux jours, éligible à plusieurs dispositifs de financement (OPCO, CPF selon profil). Contactez-nous pour un devis personnalisé.", "organizers": ["Coleen Group"], "link": "#", "categories": ["Formation"]}, {"title": "Bilan de compétences — session collective d'information", "start_date": "2026-12-05", "end_date": "2026-12-05", "start_time": "14:00", "end_time": "15:30", "price_type": "free", "price_amount": "", "funding_available": true, "description": "Une session gratuite pour comprendre le déroulé d'un bilan de compétences et les possibilités de prise en charge.", "organizers": ["Coleen Group"], "link": "#", "categories": ["Information"]}, {"title": "Masterclass — Business O'féminin", "start_date": "2026-12-12", "end_date": "2026-12-12", "start_time": "18:30", "end_time": "20:30", "price_type": "amount", "price_amount": "25 €", "funding_available": false, "description": "Une soirée pour reprendre confiance dans son positionnement business, avec temps de questions/réponses.", "organizers": ["Bizz de Femmes"], "link": "#", "categories": ["Masterclass"]}, {"title": "Networking de fin d'année", "start_date": "2026-12-19", "end_date": "2026-12-19", "start_time": "18:00", "end_time": "21:00", "price_type": "free", "price_amount": "", "funding_available": false, "description": "Un moment convivial pour clôturer l'année entre entrepreneures du lieu et de la communauté élargie.", "organizers": ["Coleen Group", "Bizz de Femmes"], "link": "#", "categories": ["Événement"]}]};
+  window.__FALLBACK_MEMBERS__ = {"members": []};
+</script>
+
+<script>
   fetch('data/site.json')
     .then(r => r.json())
     .then(data => {
@@ -731,90 +1024,337 @@
       initCarousel(data && data.lieu ? data.lieu.photos : null);
     })
     .catch(() => {
-      // En cas d'échec, on garde le contenu déjà présent dans la page et on initialise juste le carrousel tel quel.
-      initCarousel(null);
+      applySiteContent(window.__FALLBACK_SITE__);
+      initCarousel(window.__FALLBACK_SITE__.lieu.photos);
     });
 </script>
 
 <script>
-  // ---- Les événements sont chargés depuis data/events.json ----
-  // Ce fichier est modifiable soit à la main, soit via l'espace de gestion (/admin) une fois activé.
+  // ---- Les événements sont chargés depuis data/events.json, les intervenantes depuis data/members.json ----
+  // Ces fichiers sont modifiables à la main ou via l'espace de gestion (/admin).
   let events = [];
+  let membersByName = {};
 
   const months = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+  const monthsFull = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+
+  let monthOffset = null; // null = vue par défaut "Prochains événements" (les 4 plus proches, tous mois confondus)
+
+  function getSelectedMonthDate(){
+    const d = new Date();
+    d.setDate(1);
+    d.setMonth(d.getMonth() + (monthOffset || 0));
+    return d;
+  }
+
+  function eventInSelectedMonth(ev){
+    const monthDate = getSelectedMonthDate();
+    const monthStart = new Date(monthDate.getFullYear(), monthDate.getMonth(), 1);
+    const monthEnd = new Date(monthDate.getFullYear(), monthDate.getMonth() + 1, 0, 23, 59, 59);
+    const evStart = new Date(ev.start_date + 'T00:00:00');
+    const evEnd = new Date((ev.end_date || ev.start_date) + 'T23:59:59');
+    return evStart <= monthEnd && evEnd >= monthStart;
+  }
+
+  function updateMonthNav(){
+    const label = document.getElementById('month-label');
+    const prevBtn = document.getElementById('month-prev');
+    if (monthOffset === null){
+      label.textContent = 'Prochains événements';
+      prevBtn.disabled = true;
+    } else {
+      const d = getSelectedMonthDate();
+      label.textContent = monthsFull[d.getMonth()] + ' ' + d.getFullYear();
+      prevBtn.disabled = false;
+    }
+  }
+
+  function slugify(str){
+    return (str || '')
+      .toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  }
+
+  updateMonthNav();
+
+  function formatDateRange(startStr, endStr){
+    const start = new Date(startStr + 'T00:00:00');
+    const end = new Date((endStr || startStr) + 'T00:00:00');
+    if (startStr === endStr || !endStr){
+      return { day: String(start.getDate()), month: months[start.getMonth()] };
+    }
+    if (start.getMonth() === end.getMonth()){
+      return { day: start.getDate() + '–' + end.getDate(), month: months[end.getMonth()] };
+    }
+    return { day: start.getDate() + ' ' + months[start.getMonth()].replace('.', '') + ' – ' + end.getDate(), month: months[end.getMonth()] };
+  }
+
+  function formatPrice(ev){
+    if (ev.price_type === 'free') return 'Gratuit';
+    if (ev.price_type === 'quote') return 'Sur devis';
+    return ev.price_amount || 'Sur devis';
+  }
 
   function renderEvents(list){
     const grid = document.getElementById('events-grid');
     grid.innerHTML = '';
 
     if (!list.length){
-      grid.innerHTML = '<p style="color:var(--brown-300); font-size:14px;">Aucun événement à afficher pour le moment.</p>';
+      const msg = monthOffset === null
+        ? 'Aucun événement à venir pour le moment.'
+        : 'Aucun événement prévu ce mois-ci pour le moment.';
+      grid.innerHTML = '<p style="color:var(--brown-300); font-size:14px;">' + msg + '</p>';
       return;
     }
 
     list.forEach(ev => {
-      const d = new Date(ev.date + 'T00:00:00');
-      const day = d.getDate();
-      const month = months[d.getMonth()];
+      const { day, month } = formatDateRange(ev.start_date, ev.end_date);
+      const timeRange = ev.start_time && ev.end_time ? (ev.start_time + '–' + ev.end_time) : '';
+      const price = formatPrice(ev);
 
-      const card = document.createElement('a');
-      card.href = ev.link;
-      card.target = "_blank";
-      card.rel = "noopener";
+      const FOUNDERS = { 'coleen group': 'brown', 'bizz de femmes': 'fuchsia' };
+
+      const orgBadges = (ev.organizers || []).map(name => {
+        const key = name.trim().toLowerCase();
+        if (FOUNDERS[key]){
+          return '<a class="org-badge ' + FOUNDERS[key] + '" href="index.html#fondatrices">' + name + '</a>';
+        }
+        const member = membersByName[key];
+        if (member){
+          const fullName = (member.prenom || '') + ' ' + (member.nom || '');
+          return '<a class="org-badge neutral" href="communaute.html#' + slugify(fullName) + '">' + name + '</a>';
+        }
+        return '<span class="org-badge neutral">' + name + '</span>';
+      }).join('');
+
+      const card = document.createElement('div');
       card.className = 'event-card';
-      card.dataset.org = ev.org;
+      card.dataset.orgs = (ev.organizers || []).map(n => n.trim().toLowerCase()).join('|');
+
       card.innerHTML = `
         <div class="event-date"><div class="day">${day}</div><div class="month">${month}</div></div>
         <div class="event-body">
-          <span class="org ${ev.org}">${ev.orgLabel}</span>
+          <div class="orgs">${orgBadges}</div>
           <h3>${ev.title}</h3>
-          <div class="meta">${ev.type} · Ollioules</div>
-          <span class="reserve">Réserver ma place →</span>
+          <div class="meta">${(ev.categories || []).join(' · ')}${timeRange ? ' · ' + timeRange : ''} · Ollioules</div>
+          <div class="price-row">
+            <span class="event-price">${price}</span>
+            ${ev.funding_available ? '<span class="funding-badge">Financement possible</span>' : ''}
+          </div>
+          <a class="reserve" href="${ev.link}" target="_blank" rel="noopener">Réserver ma place →</a>
         </div>
+        ${ev.description ? '<div class="event-tooltip">' + ev.description + '</div>' : ''}
       `;
       grid.appendChild(card);
     });
   }
 
+  function buildFilterRow(wrapId, blockId, getValues){
+    const wrap = document.getElementById(wrapId);
+    const block = blockId ? document.getElementById(blockId) : null;
+    const seen = new Map();
+    events.forEach(ev => getValues(ev).forEach(val => {
+      const key = (val || '').trim().toLowerCase();
+      if (!key || seen.has(key)) return;
+      seen.set(key, val.trim());
+    }));
+    if (block) block.style.display = seen.size ? '' : 'none';
+    let html = '<button class="filter-btn active" data-filter="all">Tous</button>';
+    seen.forEach((label, key) => { html += '<button class="filter-btn" data-filter="' + key + '">' + label + '</button>'; });
+    wrap.innerHTML = html;
+    wrap.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyActiveFilter();
+      });
+    });
+  }
+
+  function buildFilters(){
+    buildFilterRow('event-filters', 'event-org-block', ev => ev.organizers || []);
+    buildFilterRow('event-category-filters', 'event-category-block', ev => ev.categories || []);
+  }
+
   function applyActiveFilter(){
-    const activeBtn = document.querySelector('.filter-btn.active');
-    const f = activeBtn ? activeBtn.dataset.filter : 'all';
-    const filtered = f === 'all' ? events : events.filter(ev => ev.org === f || ev.org === 'both');
+    const activeOrg = document.querySelector('#event-filters .filter-btn.active');
+    const orgFilter = activeOrg ? activeOrg.dataset.filter : 'all';
+    const activeCategory = document.querySelector('#event-category-filters .filter-btn.active');
+    const categoryFilter = activeCategory ? activeCategory.dataset.filter : 'all';
+
+    let filtered = events;
+    if (orgFilter !== 'all') filtered = filtered.filter(ev => (ev.organizers || []).some(n => n.trim().toLowerCase() === orgFilter));
+    if (categoryFilter !== 'all') filtered = filtered.filter(ev => (ev.categories || []).some(c => c.trim().toLowerCase() === categoryFilter));
+
+    if (monthOffset === null){
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      filtered = filtered
+        .filter(ev => new Date(ev.end_date || ev.start_date) >= today)
+        .slice(0, 4);
+    } else {
+      filtered = filtered.filter(eventInSelectedMonth);
+    }
+
+    updateMonthNav();
     renderEvents(filtered);
   }
 
-  fetch('data/events.json')
-    .then(r => r.json())
-    .then(data => {
-      events = (data.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
-      applyActiveFilter();
-    })
-    .catch(() => {
-      document.getElementById('events-grid').innerHTML =
-        '<p style="color:var(--brown-300); font-size:14px;">Impossible de charger le calendrier pour le moment.</p>';
+  document.getElementById('month-prev').addEventListener('click', () => {
+    if (monthOffset === null) return;
+    monthOffset = monthOffset <= 0 ? null : monthOffset - 1;
+    applyActiveFilter();
+  });
+  document.getElementById('month-next').addEventListener('click', () => {
+    monthOffset = monthOffset === null ? 0 : monthOffset + 1;
+    applyActiveFilter();
+  });
+
+  function nextInterventionFor(fullName, eventsList){
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const upcoming = eventsList
+      .filter(ev => (ev.organizers || []).some(n => n.trim().toLowerCase() === fullName.trim().toLowerCase()))
+      .filter(ev => new Date(ev.end_date || ev.start_date) >= today)
+      .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+    return upcoming[0] || null;
+  }
+
+  function renderCommunautePreview(allMembers, allEvents){
+    const grid = document.getElementById('communaute-preview-grid');
+    const section = document.getElementById('communaute-apercu');
+    if (!grid) return;
+
+    if (!allMembers.length){ section.style.display = 'none'; return; }
+
+    const withNext = allMembers
+      .filter(m => m.is_speaker)
+      .map(m => ({ m, next: nextInterventionFor((m.prenom || '') + ' ' + (m.nom || ''), allEvents) }))
+      .filter(x => x.next)
+      .sort((a, b) => new Date(a.next.start_date) - new Date(b.next.start_date));
+
+    const chosen = withNext.slice(0, 3);
+    const chosenNames = new Set(chosen.map(x => x.m));
+    if (chosen.length < 3){
+      allMembers.filter(m => !chosenNames.has(m)).slice(0, 3 - chosen.length).forEach(m => chosen.push({ m, next: null }));
+    }
+
+    grid.innerHTML = chosen.map(({ m, next }) => {
+      const fullName = (m.prenom || '') + ' ' + (m.nom || '');
+      const photo = m.photo
+        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover;">'
+        : '[ photo ]';
+      let nextHtml = '';
+      if (next){
+        const d = new Date(next.start_date + 'T00:00:00');
+        nextHtml = '<div class="next-event">Prochaine intervention<br>' + d.getDate() + ' ' + months[d.getMonth()] + '</div>';
+      }
+      return `
+        <a class="preview-card" href="communaute.html#${slugify(fullName)}">
+          <div class="photo">${photo}</div>
+          <h3>${fullName}</h3>
+          <p class="role">${m.titre || ''}</p>
+          ${nextHtml}
+        </a>
+      `;
+    }).join('');
+  }
+
+  function injectEventsJsonLd(eventsList){
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const upcoming = eventsList.filter(ev => new Date(ev.end_date || ev.start_date) >= today);
+    if (!upcoming.length) return;
+
+    const items = upcoming.map(ev => {
+      const item = {
+        "@type": "Event",
+        "name": ev.title,
+        "startDate": ev.start_date + (ev.start_time ? 'T' + ev.start_time : ''),
+        "endDate": (ev.end_date || ev.start_date) + (ev.end_time ? 'T' + ev.end_time : ''),
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "L'Entre-Elles",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "293 Route de la Seyne, Technopole Var Matin - Bâtiment A",
+            "addressLocality": "Ollioules",
+            "postalCode": "83190",
+            "addressCountry": "FR"
+          }
+        }
+      };
+      if (ev.description) item.description = ev.description;
+      if (ev.organizers && ev.organizers.length){
+        item.organizer = { "@type": "Organization", "name": ev.organizers.join(' × ') };
+      }
+      if (ev.price_type === 'amount' && ev.price_amount){
+        const priceNum = parseFloat((ev.price_amount || '').replace(',', '.').replace(/[^\d.]/g, ''));
+        if (!isNaN(priceNum)){
+          item.offers = { "@type": "Offer", "price": priceNum, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" };
+        }
+      } else if (ev.price_type === 'free'){
+        item.offers = { "@type": "Offer", "price": 0, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" };
+      }
+      return item;
     });
 
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      applyActiveFilter();
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'ld-events';
+    script.textContent = JSON.stringify(items.length === 1 ? items[0] : items);
+    document.head.appendChild(script);
+  }
+
+  Promise.all([
+    fetch('data/events.json').then(r => r.json()).catch(() => window.__FALLBACK_EVENTS__),
+    fetch('data/members.json').then(r => r.json()).catch(() => window.__FALLBACK_MEMBERS__)
+  ]).then(([eventsData, membersData]) => {
+    (membersData.members || []).forEach(m => {
+      const fullName = ((m.prenom || '') + ' ' + (m.nom || '')).trim().toLowerCase();
+      if (fullName) membersByName[fullName] = m;
     });
+    events = (eventsData.events || []).slice().sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+    buildFilters();
+    applyActiveFilter();
+    renderCommunautePreview(membersData.members || [], events);
+    injectEventsJsonLd(events);
+  }).catch(() => {
+    document.getElementById('events-grid').innerHTML =
+      '<p style="color:var(--brown-300); font-size:14px;">Impossible de charger le calendrier pour le moment.</p>';
+    const section = document.getElementById('communaute-apercu');
+    if (section) section.style.display = 'none';
   });
 
   document.getElementById('contact-form').addEventListener('submit', function(e){
     e.preventDefault();
-    const data = new FormData(this);
-    const subject = encodeURIComponent("Demande de privatisation — L'Entre-Elles");
-    const body = encodeURIComponent(
-      "Nom : " + data.get('nom') + "\n" +
-      "Email : " + data.get('email') + "\n" +
-      "Formule : " + data.get('formule') + "\n" +
-      "Date souhaitée : " + data.get('date') + "\n" +
-      "Nombre de personnes : " + data.get('personnes') + "\n\n" +
-      "Message :\n" + data.get('message')
-    );
-    window.location.href = "mailto:julie.requet@coleengroup.fr?subject=" + subject + "&body=" + body;
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const note = document.getElementById('form-note');
+    const formData = new FormData(form);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours...';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => {
+        form.reset();
+        form.style.display = 'none';
+        note.textContent = 'Merci ! Votre demande a bien été envoyée, nous revenons vers vous rapidement.';
+        note.style.color = 'var(--fuchsia-700)';
+        note.style.fontWeight = '600';
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer ma demande';
+        note.textContent = "L'envoi a échoué — vérifiez votre connexion et réessayez, ou écrivez-nous directement par email.";
+        note.style.color = 'var(--fuchsia-700)';
+      });
   });
 </script>
 

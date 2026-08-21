@@ -87,8 +87,9 @@ collections:
             fields:
               - { label: "Texte de présentation", name: "text", widget: "text" }
               - { label: "Ligne de capacité d'accueil", name: "capacity", widget: "string" }
-              - { label: "Tarif demi-journée", name: "half_day_price", widget: "string" }
+              - { label: "Tarif demi-journée", name: "half_day_price", widget: "string", hint: "Appliqué au matin (9h-13h) et à l'après-midi (14h-18h)." }
               - { label: "Tarif journée complète", name: "full_day_price", widget: "string" }
+              - { label: "Tarif soirée", name: "evening_price", widget: "string" }
 
           - label: "Pied de page"
             name: "footer"
@@ -102,6 +103,9 @@ collections:
               - { label: "Téléphone Coleen Group", name: "coleen_phone", widget: "string" }
               - { label: "Email Bizz de Femmes", name: "bizz_email", widget: "string" }
               - { label: "Téléphone Bizz de Femmes", name: "bizz_phone", widget: "string" }
+              - { label: "Instagram de L'Entre-Elles", name: "instagram", widget: "string", required: false, hint: "Le compte Instagram du lieu (à distinguer de ceux de Coleen Group / Bizz de Femmes)." }
+              - { label: "Facebook de L'Entre-Elles", name: "facebook", widget: "string", required: false }
+              - { label: "LinkedIn de L'Entre-Elles", name: "linkedin", widget: "string", required: false }
 
   - name: "evenements"
     label: "Calendrier des événements"
@@ -113,18 +117,107 @@ collections:
           - label: "Événements"
             name: "events"
             widget: "list"
-            summary: "{{fields.date}} — {{fields.title}}"
+            summary: "{{fields.start_date}} — {{fields.title}}"
             fields:
               - { label: "Titre de l'événement", name: "title", widget: "string" }
-              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
-              - label: "Organisatrice"
-                name: "org"
+              - { label: "Date de début", name: "start_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { label: "Date de fin", name: "end_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true, hint: "Identique à la date de début pour un événement d'un seul jour." }
+              - { label: "Heure de début", name: "start_time", widget: "string", hint: "Format 09:00" }
+              - { label: "Heure de fin", name: "end_time", widget: "string", hint: "Format 17:00" }
+              - label: "Catégories de l'événement"
+                name: "categories"
+                widget: "list"
+                field: { label: "Catégorie", name: "value", widget: "string" }
+                hint: "Ex: Formation, Atelier, Cercle de femmes, Développement personnel. Va d'abord voir l'onglet \"Catégories d'événements\" pour réutiliser une catégorie existante, ou en créer une nouvelle ET l'ajouter aussi là-bas. Un événement peut avoir plusieurs catégories."
+              - label: "Tarif"
+                name: "price_type"
                 widget: "select"
                 options:
-                  - { label: "Coleen Group", value: "coleen" }
-                  - { label: "Bizz de Femmes", value: "bizz" }
-                  - { label: "Les deux (Coleen × Bizz de Femmes)", value: "both" }
-                  - { label: "Autre intervenante", value: "guest" }
-              - { label: "Nom affiché de l'organisatrice", name: "orgLabel", widget: "string", hint: "Ex: Coleen Group / Bizz de Femmes / Coleen × Bizz de Femmes" }
-              - { label: "Type d'événement", name: "type", widget: "string", hint: "Ex: Formation, Atelier, Coworking, Masterclass, Événement" }
+                  - { label: "Montant précis", value: "amount" }
+                  - { label: "Gratuit", value: "free" }
+                  - { label: "Sur devis", value: "quote" }
+              - { label: "Montant (si \"Montant précis\" choisi ci-dessus)", name: "price_amount", widget: "string", required: false, hint: "Ex: 35 €" }
+              - { label: "Financement possible (OPCO, CPF...)", name: "funding_available", widget: "boolean", default: false }
+              - { label: "Description (affichée au survol de la carte)", name: "description", widget: "text", required: false }
+              - label: "Intervenantes / organisatrices"
+                name: "organizers"
+                widget: "list"
+                field: { label: "Nom", name: "value", widget: "string" }
+                hint: "Ajoute une ligne par intervenante. Tape \"Coleen Group\" ou \"Bizz de Femmes\" pour lier vers la section Les occupantes, ou le prénom + nom exact d'une fiche de la Communauté pour lier vers sa page."
               - { label: "Lien de réservation", name: "link", widget: "string", hint: "URL vers la page de réservation" }
+
+  - name: "membres"
+    label: "Communauté"
+    files:
+      - file: "data/members.json"
+        label: "Annuaire des membres"
+        name: "members"
+        fields:
+          - label: "Membres de la communauté"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.prenom}} {{fields.nom}}"
+            fields:
+              - { label: "Prénom", name: "prenom", widget: "string" }
+              - { label: "Nom", name: "nom", widget: "string" }
+              - { label: "Titre (métier / activité)", name: "titre", widget: "string", hint: "Ex: Coach en neuromarketing, Fondatrice de AIO Studio..." }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Lien Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Lien Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Lien LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "Site internet", name: "website", widget: "string", required: false }
+              - label: "Ville(s)"
+                name: "villes"
+                widget: "list"
+                field: { label: "Ville", name: "value", widget: "string" }
+                hint: "Ajoute une ou plusieurs villes où elle exerce (ex: Toulon, La Seyne-sur-Mer)."
+              - label: "Catégorie/Métier"
+                name: "mots_cles"
+                widget: "list"
+                field: { label: "Catégorie/Métier", name: "value", widget: "string" }
+                hint: "Ce qu'elle est / ce qu'elle fait (ex: Photographe, Coach). Va d'abord voir l'onglet \"Catégorie/Métier\" pour réutiliser une catégorie existante, ou en créer une nouvelle ET l'ajouter aussi là-bas."
+              - label: "Besoins sur lesquels elle peut aider"
+                name: "besoins"
+                widget: "list"
+                field: { label: "Besoin", name: "value", widget: "string" }
+                hint: "Ce sur quoi elle peut vous aider, du point de vue de la personne qui cherche (ex: \"Trouver des clients\", \"Prendre confiance en soi\", \"Structurer sa compta\"). Va d'abord voir l'onglet \"Besoins\" pour réutiliser un besoin existant, ou en créer un nouveau ET l'ajouter aussi là-bas."
+              - { label: "Est intervenante", name: "is_speaker", widget: "boolean", default: false, hint: "Si coché, et qu'un événement du calendrier la cite comme intervenante (prénom + nom recopié à l'identique), sa prochaine intervention s'affichera automatiquement sur sa fiche." }
+
+  - name: "categories"
+    label: "Catégorie/Métier"
+    files:
+      - file: "data/categories.json"
+        label: "Liste des catégories"
+        name: "categories"
+        fields:
+          - label: "Catégories/métiers utilisés dans l'annuaire"
+            name: "categories"
+            widget: "list"
+            field: { label: "Catégorie/Métier", name: "value", widget: "string" }
+            hint: "La liste de référence des catégories/mots-clés à utiliser pour les fiches membres. Ajoute-en une nouvelle ici avant de l'utiliser sur une fiche, pour garder une liste cohérente et éviter les doublons (ex: \"Coaching\" et \"coaching\" créeraient deux catégories différentes sur le site)."
+
+  - name: "besoins"
+    label: "Besoins"
+    files:
+      - file: "data/besoins.json"
+        label: "Liste des besoins"
+        name: "besoins"
+        fields:
+          - label: "Besoins utilisés dans l'annuaire"
+            name: "besoins"
+            widget: "list"
+            field: { label: "Besoin", name: "value", widget: "string" }
+            hint: "La liste de référence des besoins (ce sur quoi les membres peuvent aider) à utiliser pour les fiches membres. Ajoute-en un nouveau ici avant de l'utiliser sur une fiche, pour garder une liste cohérente."
+
+  - name: "event_categories"
+    label: "Catégories d'événements"
+    files:
+      - file: "data/event_categories.json"
+        label: "Liste des catégories d'événements"
+        name: "categories"
+        fields:
+          - label: "Catégories utilisées pour les événements"
+            name: "categories"
+            widget: "list"
+            field: { label: "Catégorie", name: "value", widget: "string" }
+            hint: "La liste de référence des catégories à utiliser pour les événements du calendrier (ex: Formation, Atelier, Cercle de femmes, Développement personnel). Ajoute-en une nouvelle ici avant de l'utiliser sur un événement, pour garder une liste cohérente."
