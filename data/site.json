@@ -15,19 +15,49 @@
       "Accessible PMR"
     ],
     "photos": [
-      { "image": "", "caption": "espace coworking" },
-      { "image": "", "caption": "salle de formation" },
-      { "image": "", "caption": "bureau privé" },
-      { "image": "", "caption": "accueil et cocon" }
+      {
+        "image": "",
+        "caption": "espace coworking"
+      },
+      {
+        "image": "",
+        "caption": "salle de formation"
+      },
+      {
+        "image": "",
+        "caption": "bureau privé"
+      },
+      {
+        "image": "",
+        "caption": "accueil et cocon"
+      }
     ]
   },
   "activites": [
-    { "title": "Formations professionnelles", "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe." },
-    { "title": "Accompagnement, consulting & coaching", "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir." },
-    { "title": "Coworking femmes entrepreneures", "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent." },
-    { "title": "Ateliers thématiques", "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager." },
-    { "title": "Événements & réseautage", "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain." },
-    { "title": "Développement personnel", "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle." }
+    {
+      "title": "Formations professionnelles",
+      "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe."
+    },
+    {
+      "title": "Accompagnement, consulting & coaching",
+      "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir."
+    },
+    {
+      "title": "Coworking femmes entrepreneures",
+      "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent."
+    },
+    {
+      "title": "Ateliers thématiques",
+      "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager."
+    },
+    {
+      "title": "Événements & réseautage",
+      "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain."
+    },
+    {
+      "title": "Développement personnel",
+      "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle."
+    }
   ],
   "fondatrices": {
     "intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.",
@@ -36,27 +66,27 @@
       "tag": "Formation · Bilan · Innovation · Événementiel",
       "role": "Julie — Former, accompagner, innover, partager",
       "desc": "Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/coleengroup",
       "facebook": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/company/coleen-group/",
       "link": "https://coleengroup.fr"
     },
     "bizz": {
-      "photo": "",
+      "photo": "/images/uploads/aad08458.jpg",
       "tag": "Consulting · Coaching · Formation",
       "role": "Lolita — Ta safe place 100% femmes entrepreneures",
       "desc": "Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.",
-      "instagram": "https://www.instagram.com/lolitaghilionecoaching/",
-      "facebook": "https://www.facebook.com/lolitaghilione",
-      "linkedin": "",
+      "instagram": "https://www.instagram.com/bizzdefemmes/",
+      "facebook": "https://www.facebook.com/bizzdefemmes",
+      "linkedin": "https://www.linkedin.com/in/lolita-ghilione-communication-mindset-insta/",
       "link": "https://www.lolitaghilione.fr/bizz-de-femmes"
     }
   },
   "privatisation": {
     "text": "En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles se privatise à la demi-journée ou à la journée pour vos ateliers, séminaires, tournages ou réunions d'équipe.",
     "capacity": "Capacité : jusqu'à 6 personnes en salle · 2 personnes en bureau privé",
-    "half_day_price": "30 €",
-    "full_day_price": "50 €"
+    "half_day_price": "40 €",
+    "full_day_price": "70 €"
   },
   "footer": {
     "tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.",
