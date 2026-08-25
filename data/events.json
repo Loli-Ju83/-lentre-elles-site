@@ -20,6 +20,25 @@
       "founders_organizers": [
         "Bizz de Femmes"
       ]
+    },
+    {
+      "organizers": [
+        "manon-souyris"
+      ],
+      "funding_available": false,
+      "start_time": "10:00",
+      "start_date": "2026-10-03",
+      "price_amount": "40,00 €",
+      "price_type": "amount",
+      "end_time": "11:00",
+      "end_date": "2026-10-03",
+      "organized_by": "intervenante",
+      "title": "Test",
+      "link": "Test",
+      "categories": [
+        "developpement-personnel"
+      ],
+      "description": "Test"
     }
   ]
 }
