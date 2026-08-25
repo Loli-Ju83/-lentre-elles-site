@@ -1,3 +1,25 @@
 {
-  "events": []
+  "events": [
+    {
+      "funding_available": false,
+      "start_time": "09:30",
+      "start_date": "2026-09-12",
+      "price_type": "free",
+      "end_time": "12:00",
+      "end_date": "2026-09-12",
+      "organized_by": "entre_elles",
+      "title": "Bien utiliser les réseaux sociaux en 2026",
+      "link": "test",
+      "categories": [
+        "atelier",
+        "communication",
+        "marketing",
+        "réseaux-sociaux"
+      ],
+      "description": "Pour les femmes entrepreneures de l’aire toulonnaise qui savent que les réseaux sociaux peuvent les aider à développer leur activité, mais qui ne savent pas où publier, quoi partager, ni comment les utiliser pour attirer des clients et convertir sans perdre leur temps et leur énergie.",
+      "founders_organizers": [
+        "Bizz de Femmes"
+      ]
+    }
+  ]
 }
