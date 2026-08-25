@@ -62,31 +62,31 @@
   "fondatrices": {
     "intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.",
     "coleen": {
-      "photo": "",
+      "photo": "/images/uploads/whatsapp-image-2026-08-25-at-16.45.26.jpeg",
       "tag": "Formation · Bilan · Innovation · Événementiel",
       "role": "Julie — Former, accompagner, innover, partager",
       "desc": "Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/coleengroup",
       "facebook": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/company/coleen-group/",
       "link": "https://coleengroup.fr"
     },
     "bizz": {
-      "photo": "",
+      "photo": "/images/uploads/aad08458.jpg",
       "tag": "Consulting · Coaching · Formation",
       "role": "Lolita — Ta safe place 100% femmes entrepreneures",
       "desc": "Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.",
-      "instagram": "https://www.instagram.com/lolitaghilionecoaching/",
-      "facebook": "https://www.facebook.com/lolitaghilione",
-      "linkedin": "",
+      "instagram": "https://www.instagram.com/bizzdefemmes/",
+      "facebook": "https://www.facebook.com/bizzdefemmes",
+      "linkedin": "https://www.linkedin.com/in/lolita-ghilione-communication-mindset-insta/",
       "link": "https://www.lolitaghilione.fr/bizz-de-femmes"
     }
   },
   "privatisation": {
-    "text": "En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles peut être mise à disposition à la demi-journée, à la journée ou en soirée pour vos ateliers, séminaires, tournages ou réunions d'équipe.",
+    "text": "L'Entre-Elles peut être mise à disposition à la demi-journée, à la journée ou en soirée pour vos ateliers, séminaires, tournages ou réunions d'équipe.",
     "capacity": "Capacité : jusqu'à 8 personnes en salle · 2 personnes en bureau privé",
-    "half_day_price": "30 €",
-    "full_day_price": "50 €",
+    "half_day_price": "40 €",
+    "full_day_price": "80 €",
     "evening_price": "30 €"
   },
   "calendrier": {
@@ -103,10 +103,10 @@
     "bizz_email": "formation@lolitaghilione.fr",
     "facebook": "",
     "coleen_email": "julie.requet@coleengroup.fr",
-    "tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.",
+    "tagline": "Un lieu partagé, un espace ressource",
     "address_line1": "293 Route de la Seyne",
     "instagram": "",
-    "address_line2": "Technopole Var Matin — Bâtiment A, Porte 1A",
+    "address_line2": "Technopole Var Matin — Bât A, Porte 1A",
     "address_line3": "83190 Ollioules",
     "bizz_phone": "06 29 99 37 78",
     "coleen_phone": "07 61 70 78 98",
