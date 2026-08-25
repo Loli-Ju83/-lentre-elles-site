@@ -194,6 +194,8 @@ collections:
     label: "Communauté"
     folder: "data/members"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     identifier_field: "nom"
     summary: "{{prenom}} {{nom}}"
@@ -238,6 +240,8 @@ collections:
     label: "Catégorie/Métier"
     folder: "data/categories"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     identifier_field: "name"
     summary: "{{name}}"
@@ -248,6 +252,8 @@ collections:
     label: "Besoins"
     folder: "data/besoins"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     identifier_field: "name"
     summary: "{{name}}"
@@ -258,6 +264,8 @@ collections:
     label: "Catégories d'événements"
     folder: "data/event_categories"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     identifier_field: "name"
     summary: "{{name}}"
