@@ -896,8 +896,7 @@
     if (data.photo){
       const photoEl = document.getElementById(prefix + '-photo');
       if (photoEl){
-        photoEl.classList.add('has-photo');
-        photoEl.innerHTML = '<img src="' + data.photo + '" alt="' + (data.role || prefix) + '" style="width:100%; height:100%; object-fit:cover;">';
+        photoEl.innerHTML = '<img src="' + data.photo + '" alt="' + (data.role || prefix) + '" style="width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .2s ease;" onload="this.style.opacity=1; this.parentElement.classList.add(\'has-photo\');">';
       }
     }
   }
@@ -1343,9 +1342,9 @@
     grid.innerHTML = chosen.map(({ m, next }) => {
       const fullName = (m.prenom || '') + ' ' + (m.nom || '');
       const photo = m.photo
-        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover;">'
+        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .2s ease;" onload="this.style.opacity=1; this.parentElement.classList.add(\'has-photo\');">'
         : '[ photo ]';
-      const photoClass = m.photo ? 'photo has-photo' : 'photo';
+      const photoClass = 'photo';
       let nextHtml = '';
       if (next){
         const d = new Date(next.start_date + 'T00:00:00');
