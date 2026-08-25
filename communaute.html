@@ -615,9 +615,9 @@
     grid.innerHTML = members.map(m => {
       const fullName = (m.prenom || '') + ' ' + (m.nom || '');
       const photo = m.photo
-        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover;">'
+        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .2s ease;" onload="this.style.opacity=1; this.parentElement.classList.add(\'has-photo\');">'
         : '[ photo à ajouter ]';
-      const photoClass = m.photo ? 'photo has-photo' : 'photo';
+      const photoClass = 'photo';
       const socials = ['instagram', 'facebook', 'linkedin']
         .filter(k => m[k])
         .map(k => '<a href="' + m[k] + '" target="_blank" rel="noopener" aria-label="' + k + ' ' + fullName + '">' + socialIcon(k) + '</a>')
