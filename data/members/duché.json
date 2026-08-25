@@ -1,12 +1,24 @@
 {
-  "is_speaker": false,
-  "prenom": "Dora",
-  "nom": "DUCHÉ",
-  "titre": "Photographe & accompagnante en image de soi",
-  "instagram": "https://www.instagram.com/doraphotographe/",
-  "website": "https://dhphotographe.com/",
   "villes": [
     "La Valette du Var",
     "Toulon"
-  ]
+  ],
+  "prenom": "Dora",
+  "is_speaker": true,
+  "nom": "DUCHÉ",
+  "besoins": [
+    "renforcer-son-estime-de-soi",
+    "se-réconcilier-avec-son-image",
+    "valoriser-son-activité-professionnelle-et-son-image",
+    "créer-des-souvenirs"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-4-.png",
+  "titre": "Photographe & accompagnante en image de soi",
+  "instagram": "https://www.instagram.com/doraphotographe/",
+  "mots_cles": [
+    "photographe",
+    "photothérapie",
+    "développement-personnel"
+  ],
+  "website": "https://dhphotographe.com/"
 }
