@@ -1,14 +1,25 @@
 {
-  "prenom": "Manon",
-  "nom": "SOUYRIS",
-  "titre": "Créatrice de papeterie & coach mariage",
-  "photo": "",
-  "instagram": "",
+  "villes": [
+    "Toulon",
+    "Hyères",
+    "Marseille"
+  ],
   "facebook": "",
-  "linkedin": "",
+  "prenom": "Manon",
+  "is_speaker": true,
+  "nom": "SOUYRIS",
+  "besoins": [
+    "créer-une-papeterie-personnalisée",
+    "organiser-son-mariage"
+  ],
+  "photo": "/images/uploads/whatsapp-image-2026-08-21-at-11.44.05.jpeg",
+  "titre": "Créatrice de papeterie & coach mariage",
+  "instagram": "https://www.instagram.com/lafeedesfuturesmariees",
+  "mots_cles": [
+    "mariage",
+    "papeterie",
+    "organisation"
+  ],
   "website": "",
-  "villes": ["Toulon", "Hyères", "Marseille"],
-  "mots_cles": ["mariage", "papeterie", "organisation"],
-  "besoins": ["creer-une-papeterie-personnalisee", "organiser-son-mariage"],
-  "is_speaker": true
+  "linkedin": "https://www.linkedin.com/in/manon-robert-souyris-creatricepapeterie-mariage-organisation"
 }
