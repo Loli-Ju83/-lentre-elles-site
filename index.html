@@ -266,7 +266,9 @@
     background: rgba(255,255,255,0.14); border:1px dashed rgba(255,255,255,0.4);
     display:flex; align-items:center; justify-content:center; text-align:center;
     font-family: var(--font-mono); font-size:11px; padding:10px; opacity:.85; line-height:1.4;
+    overflow:hidden;
   }
+  .founder-photo.has-photo{ padding:0; border:none; background:none; opacity:1; }
   .founder-socials{ display:flex; gap:10px; margin-top:2px; }
   .founder-socials a{
     width:42px; height:42px; border-radius:50%; flex-shrink:0;
@@ -470,6 +472,7 @@
     display:flex; align-items:center; justify-content:center; text-align:center;
     font-family: var(--font-mono); font-size:9.5px; color:var(--brown-500); padding:6px; line-height:1.3;
   }
+  .preview-card .photo.has-photo{ padding:0; border:none; }
   .preview-card .photo img{ display:block; border-radius:50%; }
   .preview-card h3{ font-size:17px; margin-bottom:2px; }
   .preview-card .role{ font-size:12.5px; color:var(--brown-500); margin-bottom:10px; }
@@ -892,7 +895,10 @@
     if (data.link){ const cta = document.getElementById(prefix + '-cta'); if (cta) cta.href = data.link; }
     if (data.photo){
       const photoEl = document.getElementById(prefix + '-photo');
-      if (photoEl) photoEl.innerHTML = '<img src="' + data.photo + '" alt="' + (data.role || prefix) + '" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">';
+      if (photoEl){
+        photoEl.classList.add('has-photo');
+        photoEl.innerHTML = '<img src="' + data.photo + '" alt="' + (data.role || prefix) + '" style="width:100%; height:100%; object-fit:cover;">';
+      }
     }
   }
 
@@ -1337,8 +1343,9 @@
     grid.innerHTML = chosen.map(({ m, next }) => {
       const fullName = (m.prenom || '') + ' ' + (m.nom || '');
       const photo = m.photo
-        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">'
+        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover;">'
         : '[ photo ]';
+      const photoClass = m.photo ? 'photo has-photo' : 'photo';
       let nextHtml = '';
       if (next){
         const d = new Date(next.start_date + 'T00:00:00');
@@ -1346,7 +1353,7 @@
       }
       return `
         <a class="preview-card" href="communaute.html#${m.slug}">
-          <div class="photo">${photo}</div>
+          <div class="${photoClass}">${photo}</div>
           <h3>${fullName}</h3>
           <p class="role">${m.titre || ''}</p>
           ${nextHtml}
