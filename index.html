@@ -217,6 +217,7 @@
   .carousel-slide:nth-child(2){ background: linear-gradient(135deg, var(--brown-500), var(--brown-300)); }
   .carousel-slide:nth-child(3){ background: linear-gradient(135deg, var(--fuchsia-600), var(--fuchsia-200)); }
   .carousel-slide:nth-child(4){ background: linear-gradient(135deg, var(--brown-700), var(--fuchsia-600)); }
+  .carousel-slide.has-photo{ padding:0; background:none; }
   .carousel-arrow{
     position:absolute; top:50%; transform:translateY(-50%);
     width:38px; height:38px; border-radius:50%; border:none; cursor:pointer;
@@ -992,20 +993,33 @@
   function initCarousel(photos){
     const track = document.getElementById('carousel-track');
     const dotsWrap = document.getElementById('carousel-dots');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
     if (!track || !dotsWrap) return;
 
-    if (photos && photos.length){
-      track.innerHTML = photos.map(p =>
-        p.image
-          ? '<div class="carousel-slide"><img src="' + p.image + '" alt="' + (p.caption || '') + '" style="width:100%; height:100%; object-fit:cover;"></div>'
-          : '<div class="carousel-slide">' + (p.caption ? '[ ' + p.caption + ' ]' : '[ photo à ajouter ]') + '</div>'
-      ).join('');
+    const realPhotos = (photos || []).filter(p => p && p.image);
+
+    if (!realPhotos.length){
+      track.innerHTML = '<div class="carousel-slide">[ photos à ajouter ]</div>';
+      dotsWrap.innerHTML = '';
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      return;
     }
+
+    track.innerHTML = realPhotos.map(p =>
+      '<div class="carousel-slide has-photo"><img src="' + p.image + '" alt="' + (p.caption || '') + '" style="width:100%; height:100%; object-fit:cover;"></div>'
+    ).join('');
 
     const slides = track.querySelectorAll('.carousel-slide');
     if (!slides.length) return;
     let current = 0;
     dotsWrap.innerHTML = '';
+
+    const multiplePhotos = slides.length > 1;
+    if (prevBtn) prevBtn.style.display = multiplePhotos ? '' : 'none';
+    if (nextBtn) nextBtn.style.display = multiplePhotos ? '' : 'none';
+    if (!multiplePhotos) return;
 
     slides.forEach((_, i) => {
       const dot = document.createElement('button');
@@ -1021,8 +1035,6 @@
       dotsWrap.querySelectorAll('button').forEach((d, idx) => d.classList.toggle('active', idx === current));
     }
 
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
     if (prevBtn) prevBtn.onclick = () => goToSlide(current - 1);
     if (nextBtn) nextBtn.onclick = () => goToSlide(current + 1);
 
