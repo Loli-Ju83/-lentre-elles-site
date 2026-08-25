@@ -15,19 +15,49 @@
       "Accessible PMR"
     ],
     "photos": [
-      { "image": "", "caption": "espace coworking" },
-      { "image": "", "caption": "salle de formation" },
-      { "image": "", "caption": "bureau privé" },
-      { "image": "", "caption": "accueil et cocon" }
+      {
+        "image": "",
+        "caption": "espace coworking"
+      },
+      {
+        "image": "",
+        "caption": "salle de formation"
+      },
+      {
+        "image": "",
+        "caption": "bureau privé"
+      },
+      {
+        "image": "",
+        "caption": "accueil et cocon"
+      }
     ]
   },
   "activites": [
-    { "title": "Formations professionnelles", "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe." },
-    { "title": "Accompagnement, consulting & coaching", "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir." },
-    { "title": "Coworking femmes entrepreneures", "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent." },
-    { "title": "Ateliers thématiques", "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager." },
-    { "title": "Événements & réseautage", "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain." },
-    { "title": "Développement personnel", "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle." }
+    {
+      "title": "Formations professionnelles, accompagnement & coaching",
+      "text": "Des parcours individuels ou collectifs pour développer tes compétences, structurer ton activité et faire évoluer ton projet professionnel."
+    },
+    {
+      "title": "Ateliers thématiques",
+      "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager."
+    },
+    {
+      "title": "Événements & réseautage",
+      "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain."
+    },
+    {
+      "title": "Coworking femmes entrepreneures",
+      "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent."
+    },
+    {
+      "title": "Espace de création de contenu",
+      "text": "Un espace équipé pour créer facilement tes photos, vidéos et contenus pour les réseaux sociaux."
+    },
+    {
+      "title": "Développement personnel",
+      "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle."
+    }
   ],
   "fondatrices": {
     "intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.",
@@ -70,16 +100,16 @@
     "credits": ""
   },
   "footer": {
+    "bizz_email": "formation@lolitaghilione.fr",
+    "facebook": "",
+    "coleen_email": "julie.requet@coleengroup.fr",
     "tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.",
     "address_line1": "293 Route de la Seyne",
+    "instagram": "",
     "address_line2": "Technopole Var Matin — Bâtiment A, Porte 1A",
     "address_line3": "83190 Ollioules",
-    "coleen_email": "julie.requet@coleengroup.fr",
-    "coleen_phone": "07 61 70 78 98",
-    "bizz_email": "formation@lolitaghilione.fr",
     "bizz_phone": "06 29 99 37 78",
-    "instagram": "",
-    "facebook": "",
+    "coleen_phone": "07 61 70 78 98",
     "linkedin": ""
   }
 }
