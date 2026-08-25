@@ -4,10 +4,23 @@
   ],
   "facebook": "https://www.facebook.com/laura.joly.378/",
   "prenom": "Joly ",
-  "is_speaker": false,
+  "is_speaker": true,
   "nom": "Laura",
-  "titre": "Stomathérapeute ",
+  "besoins": [
+    "comprendre-et-sortir-de-ses-schémas-répétitifs",
+    "guérir-de-ses-traumatismes-et-blessures-d’enfance",
+    "mieux-se-comprendre-et-mieux-accueillir-ses-émotions",
+    "renforcer-son-estime-de-soi"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-3-.png",
+  "titre": "Somatothérapeute ",
   "instagram": "https://www.instagram.com/laurasomato/",
+  "mots_cles": [
+    "développement-personnel",
+    "pratique-psycho-corporelle",
+    "thérapie",
+    "massage"
+  ],
   "website": "https://www.somatotherapiemassage.com/",
   "linkedin": "https://www.linkedin.com/in/laura-joly-1916001b9/"
 }
