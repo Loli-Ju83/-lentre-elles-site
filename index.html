@@ -374,6 +374,25 @@
   }
   .event-card.hidden{ display:none; }
 
+  .event-type-badge{
+    display:inline-block; font-family:var(--font-mono); font-size:10px; text-transform:uppercase;
+    letter-spacing:.05em; padding:3px 9px; border-radius:999px; margin-bottom:8px;
+  }
+  .event-type-badge.entre-elles{ background: var(--fuchsia-600); color:#fff; }
+  .event-type-badge.intervenante{ background: var(--brown-100); color: var(--brown-900); }
+
+  .event-card.event-card-intervenante{
+    background: var(--cream-soft);
+    border: 1px solid var(--fuchsia-200);
+  }
+  .event-card.event-card-intervenante:hover{ border-color: var(--fuchsia-600); background: var(--fuchsia-100); }
+  .event-card.event-card-intervenante .event-date{ background: var(--fuchsia-100); color: var(--fuchsia-700); }
+  .event-card.event-card-intervenante .event-body h3{ color: var(--heading); }
+  .event-card.event-card-intervenante .event-body .meta{ color: var(--brown-500); }
+  .event-card.event-card-intervenante .event-price{ color: var(--heading); }
+  .event-card.event-card-intervenante .event-body .reserve{ color: var(--fuchsia-700); }
+  .event-card.event-card-intervenante .org-badge.neutral{ background: var(--brown-900); color: var(--cream-soft); }
+
   .event-tooltip{
     position:absolute; left:20px; right:20px; top:100%; margin-top:8px;
     background: var(--brown-900); color: var(--cream-soft);
@@ -451,6 +470,7 @@
     display:flex; align-items:center; justify-content:center; text-align:center;
     font-family: var(--font-mono); font-size:9.5px; color:var(--brown-500); padding:6px; line-height:1.3;
   }
+  .preview-card .photo img{ display:block; border-radius:50%; }
   .preview-card h3{ font-size:17px; margin-bottom:2px; }
   .preview-card .role{ font-size:12.5px; color:var(--brown-500); margin-bottom:10px; }
   .preview-card .next-event{
@@ -641,7 +661,7 @@
     <div class="section-head">
       <span class="eyebrow">Calendrier</span>
       <h2>Les prochains événements</h2>
-      <p>Formations, ateliers et journées coworking à venir à L'Entre-Elles. Survolez un événement pour en voir le détail, cliquez sur une intervenante pour découvrir sa fiche, ou sur "Réserver" pour vous inscrire.</p>
+      <p id="calendrier-intro">Formations, ateliers et journées coworking à venir à L'Entre-Elles. Survolez un événement pour en voir le détail, cliquez sur une intervenante pour découvrir sa fiche, ou sur "Réserver" pour vous inscrire.</p>
     </div>
 
     <div class="month-nav">
@@ -656,7 +676,7 @@
     </div>
 
     <div id="event-org-block" style="margin-bottom:0;">
-      <div class="eyebrow" style="color:var(--fuchsia-200); margin-bottom:8px;">Intervenante</div>
+      <div class="eyebrow" style="color:var(--fuchsia-200); margin-bottom:8px;">Intervenants</div>
       <div class="filters" id="event-filters">
         <button class="filter-btn active" data-filter="all">Tous les événements</button>
       </div>
@@ -839,8 +859,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 L'Entre-Elles — Coleen Group × Bizz de Femmes</span>
-      <span id="footer-contacts">Coleen Group : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Bizz de Femmes : formation@lolitaghilione.fr · 06 29 99 37 78</span>
+      <span>© 2026 L'Entre-Elles</span>
+      <span id="footer-contacts">Julie : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Lolita : formation@lolitaghilione.fr · 06 29 99 37 78</span>
     </div>
   </div>
 </footer>
@@ -922,6 +942,9 @@
       setText('priv-full-price', data.privatisation.full_day_price);
       setText('priv-evening-price', data.privatisation.evening_price);
     }
+    if (data.calendrier){
+      setText('calendrier-intro', data.calendrier.intro);
+    }
     if (data.footer){
       setText('footer-tagline', data.footer.tagline);
       const addr = [data.footer.address_line1, data.footer.address_line2, data.footer.address_line3].filter(Boolean);
@@ -932,8 +955,8 @@
       const contactsEl = document.getElementById('footer-contacts');
       if (contactsEl && (data.footer.coleen_email || data.footer.bizz_email)){
         contactsEl.innerHTML =
-          'Coleen Group : ' + (data.footer.coleen_email || '') + ' · ' + (data.footer.coleen_phone || '') +
-          ' &nbsp;|&nbsp; Bizz de Femmes : ' + (data.footer.bizz_email || '') + ' · ' + (data.footer.bizz_phone || '');
+          'Julie : ' + (data.footer.coleen_email || '') + ' · ' + (data.footer.coleen_phone || '') +
+          ' &nbsp;|&nbsp; Lolita : ' + (data.footer.bizz_email || '') + ' · ' + (data.footer.bizz_phone || '');
       }
       setLink('footer-instagram', data.footer.instagram);
       setLink('footer-facebook', data.footer.facebook);
@@ -1011,9 +1034,10 @@
   // ---- Copie de secours des données, utilisée si le chargement réseau échoue ----
   // (aperçu en local, ou fichier data/*.json momentanément inaccessible). Sur le vrai site en ligne,
   // c'est toujours data/site.json, data/events.json et data/members.json qui font foi.
-  window.__FALLBACK_SITE__ = {"hero": {"eyebrow": "Ollioules · Var", "title": "Un lieu où les expertises se rencontrent", "subtitle": "Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger."}, "lieu": {"title": "Un espace chaleureux à taille humaine", "text": "Installé à Ollioules, dans le Var et la Provence-Alpes-Côte d'Azur, L'Entre-Elles a été pensé comme un cocon : un lieu où l'on vient se former, s'introspecter, se recentrer, faire avancer son business, en groupe ou en rendez-vous individuel.", "features": ["Salle de formation modulable en atelier ou espace de coworking", "Bureau privé", "Wifi haut débit", "Parking à proximité", "Accessible PMR"], "photos": [{"image": "", "caption": "espace coworking"}, {"image": "", "caption": "salle de formation"}, {"image": "", "caption": "bureau privé"}, {"image": "", "caption": "accueil et cocon"}]}, "activites": [{"title": "Formations professionnelles", "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe."}, {"title": "Accompagnement, consulting & coaching", "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir."}, {"title": "Coworking femmes entrepreneures", "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent."}, {"title": "Ateliers thématiques", "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager."}, {"title": "Événements & réseautage", "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain."}, {"title": "Développement personnel", "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle."}], "fondatrices": {"intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.", "coleen": {"photo": "", "tag": "Formation · Bilan · Innovation · Événementiel", "role": "Julie — Former, accompagner, innover, partager", "desc": "Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.", "instagram": "", "facebook": "", "linkedin": "", "link": "https://coleengroup.fr"}, "bizz": {"photo": "", "tag": "Consulting · Coaching · Formation", "role": "Lolita — Ta safe place 100% femmes entrepreneures", "desc": "Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.", "instagram": "https://www.instagram.com/lolitaghilionecoaching/", "facebook": "https://www.facebook.com/lolitaghilione", "linkedin": "", "link": "https://www.lolitaghilione.fr/bizz-de-femmes"}}, "privatisation": {"text": "En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles peut être mise à disposition à la demi-journée, à la journée ou en soirée pour vos ateliers, séminaires, tournages ou réunions d'équipe.", "capacity": "Capacité : jusqu'à 8 personnes en salle · 2 personnes en bureau privé", "half_day_price": "30 €", "full_day_price": "50 €", "evening_price": "30 €"}, "footer": {"tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.", "address_line1": "293 Route de la Seyne", "address_line2": "Technopole Var Matin — Bâtiment A", "address_line3": "83190 Ollioules", "coleen_email": "julie.requet@coleengroup.fr", "coleen_phone": "07 61 70 78 98", "bizz_email": "formation@lolitaghilione.fr", "bizz_phone": "06 29 99 37 78", "instagram": "", "facebook": "", "linkedin": ""}};
-  window.__FALLBACK_EVENTS__ = {"events": [{"title": "Atelier — Trouver ses premiers clients grâce au neuromarketing", "start_date": "2026-11-14", "end_date": "2026-11-14", "start_time": "09:30", "end_time": "12:30", "price_type": "amount", "price_amount": "35 €", "funding_available": false, "description": "Un atelier pratique pour comprendre les biais de décision de vos clients et adapter votre discours commercial en conséquence. Places limitées, en petit groupe.", "organizers": ["Bizz de Femmes"], "link": "#", "categories": ["Atelier"]}, {"title": "Journée coworking femmes entrepreneures", "start_date": "2026-11-21", "end_date": "2026-11-21", "start_time": "09:00", "end_time": "18:00", "price_type": "amount", "price_amount": "10 €", "funding_available": false, "description": "Une journée pour travailler entourée, avec un temps d'échange informel autour d'un café en milieu de matinée.", "organizers": ["Coleen Group", "Bizz de Femmes"], "link": "#", "categories": ["Coworking"]}, {"title": "Formation — Prévention & santé mentale au travail", "start_date": "2026-11-26", "end_date": "2026-11-27", "start_time": "09:00", "end_time": "17:00", "price_type": "quote", "price_amount": "", "funding_available": true, "description": "Formation certifiante sur deux jours, éligible à plusieurs dispositifs de financement (OPCO, CPF selon profil). Contactez-nous pour un devis personnalisé.", "organizers": ["Coleen Group"], "link": "#", "categories": ["Formation"]}, {"title": "Bilan de compétences — session collective d'information", "start_date": "2026-12-05", "end_date": "2026-12-05", "start_time": "14:00", "end_time": "15:30", "price_type": "free", "price_amount": "", "funding_available": true, "description": "Une session gratuite pour comprendre le déroulé d'un bilan de compétences et les possibilités de prise en charge.", "organizers": ["Coleen Group"], "link": "#", "categories": ["Information"]}, {"title": "Masterclass — Business O'féminin", "start_date": "2026-12-12", "end_date": "2026-12-12", "start_time": "18:30", "end_time": "20:30", "price_type": "amount", "price_amount": "25 €", "funding_available": false, "description": "Une soirée pour reprendre confiance dans son positionnement business, avec temps de questions/réponses.", "organizers": ["Bizz de Femmes"], "link": "#", "categories": ["Masterclass"]}, {"title": "Networking de fin d'année", "start_date": "2026-12-19", "end_date": "2026-12-19", "start_time": "18:00", "end_time": "21:00", "price_type": "free", "price_amount": "", "funding_available": false, "description": "Un moment convivial pour clôturer l'année entre entrepreneures du lieu et de la communauté élargie.", "organizers": ["Coleen Group", "Bizz de Femmes"], "link": "#", "categories": ["Événement"]}]};
-  window.__FALLBACK_MEMBERS__ = {"members": []};
+  window.__FALLBACK_SITE__ = {"hero": {"eyebrow": "Ollioules · Var", "title": "Un lieu où les expertises se rencontrent", "subtitle": "Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger."}, "lieu": {"title": "Un espace chaleureux à taille humaine", "text": "Installé à Ollioules, dans le Var et la Provence-Alpes-Côte d'Azur, L'Entre-Elles a été pensé comme un cocon : un lieu où l'on vient se former, s'introspecter, se recentrer, faire avancer son business, en groupe ou en rendez-vous individuel.", "features": ["Salle de formation modulable en atelier ou espace de coworking", "Bureau privé", "Wifi haut débit", "Parking à proximité", "Accessible PMR"], "photos": [{"image": "", "caption": "espace coworking"}, {"image": "", "caption": "salle de formation"}, {"image": "", "caption": "bureau privé"}, {"image": "", "caption": "accueil et cocon"}]}, "activites": [{"title": "Formations professionnelles", "text": "Des parcours sur-mesure pour développer une expertise, monter en compétences ou se professionnaliser, en individuel ou en groupe."}, {"title": "Accompagnement, consulting & coaching", "text": "Des rendez-vous individuels pour faire le point, structurer son business et sa communication, évoluer, se reconvertir."}, {"title": "Coworking femmes entrepreneures", "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent."}, {"title": "Ateliers thématiques", "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager."}, {"title": "Événements & réseautage", "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain."}, {"title": "Développement personnel", "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle."}], "fondatrices": {"intro": "L'Entre-Elles est partagé au quotidien par Julie (Coleen Group) et Lolita (Bizz de Femmes), qui y font vivre leurs activités respectives et des temps communs.", "coleen": {"photo": "", "tag": "Formation · Bilan · Innovation · Événementiel", "role": "Julie — Former, accompagner, innover, partager", "desc": "Coleen Group réunit quatre expertises au service des métiers de l'humain : formation professionnelle, bilan de compétences, innovation pédagogique et événementiel.", "instagram": "", "facebook": "", "linkedin": "", "link": "https://coleengroup.fr"}, "bizz": {"photo": "", "tag": "Consulting · Coaching · Formation", "role": "Lolita — Ta safe place 100% femmes entrepreneures", "desc": "Formatrice en communication, spécialisée en neuromarketing et experte en vente, Lolita accompagne les femmes entrepreneures pour structurer et développer leur business et dépasser leurs blocages à la visibilité.", "instagram": "https://www.instagram.com/lolitaghilionecoaching/", "facebook": "https://www.facebook.com/lolitaghilione", "linkedin": "", "link": "https://www.lolitaghilione.fr/bizz-de-femmes"}}, "privatisation": {"text": "En dehors des temps forts de Coleen Group et Bizz de Femmes, L'Entre-Elles peut être mise à disposition à la demi-journée, à la journée ou en soirée pour vos ateliers, séminaires, tournages ou réunions d'équipe.", "capacity": "Capacité : jusqu'à 8 personnes en salle · 2 personnes en bureau privé", "half_day_price": "30 €", "full_day_price": "50 €", "evening_price": "30 €"}, "calendrier": {"intro": "Formations, ateliers et journées coworking à venir à L'Entre-Elles. Survolez un événement pour en voir le détail, cliquez sur une intervenante pour découvrir sa fiche, ou sur \"Réserver\" pour vous inscrire."}, "mentions_legales": {"forme_juridique": "Association loi 1901 en cours de constitution", "rna": "", "siret": "", "representant": "", "credits": ""}, "footer": {"tagline": "Un lieu partagé par Coleen Group et Bizz de Femmes, pour les femmes qui entreprennent.", "address_line1": "293 Route de la Seyne", "address_line2": "Technopole Var Matin — Bâtiment A, Porte 1A", "address_line3": "83190 Ollioules", "coleen_email": "julie.requet@coleengroup.fr", "coleen_phone": "07 61 70 78 98", "bizz_email": "formation@lolitaghilione.fr", "bizz_phone": "06 29 99 37 78", "instagram": "", "facebook": "", "linkedin": ""}};
+  window.__FALLBACK_EVENTS__ = {"events": [{"title": "Atelier — Trouver ses premiers clients grâce au neuromarketing", "start_date": "2026-11-14", "end_date": "2026-11-14", "start_time": "09:30", "end_time": "12:30", "price_type": "amount", "price_amount": "35 €", "funding_available": false, "description": "Un atelier pratique pour comprendre les biais de décision de vos clients et adapter votre discours commercial en conséquence. Places limitées, en petit groupe.", "organized_by": "entre_elles", "founders_organizers": ["Bizz de Femmes"], "organizers": [], "link": "#", "categories": ["atelier"]}, {"title": "Journée coworking femmes entrepreneures", "start_date": "2026-11-21", "end_date": "2026-11-21", "start_time": "09:00", "end_time": "18:00", "price_type": "amount", "price_amount": "10 €", "funding_available": false, "description": "Une journée pour travailler entourée, avec un temps d'échange informel autour d'un café en milieu de matinée.", "organized_by": "entre_elles", "founders_organizers": ["Coleen Group", "Bizz de Femmes"], "organizers": [], "link": "#", "categories": ["coworking"]}, {"title": "Formation — Prévention & santé mentale au travail", "start_date": "2026-11-26", "end_date": "2026-11-27", "start_time": "09:00", "end_time": "17:00", "price_type": "quote", "price_amount": "", "funding_available": true, "description": "Formation certifiante sur deux jours, éligible à plusieurs dispositifs de financement (OPCO, CPF selon profil). Contactez-nous pour un devis personnalisé.", "organized_by": "entre_elles", "founders_organizers": ["Coleen Group"], "organizers": [], "link": "#", "categories": ["formation"]}, {"title": "Bilan de compétences — session collective d'information", "start_date": "2026-12-05", "end_date": "2026-12-05", "start_time": "14:00", "end_time": "15:30", "price_type": "free", "price_amount": "", "funding_available": true, "description": "Une session gratuite pour comprendre le déroulé d'un bilan de compétences et les possibilités de prise en charge.", "organized_by": "entre_elles", "founders_organizers": ["Coleen Group"], "organizers": [], "link": "#", "categories": ["information"]}, {"title": "Atelier — Créer sa papeterie personnalisée", "start_date": "2026-12-08", "end_date": "2026-12-08", "start_time": "14:00", "end_time": "17:00", "price_type": "amount", "price_amount": "45 €", "funding_available": false, "description": "Un atelier animé par Manon pour repartir avec les bases de votre propre papeterie personnalisée. Manon loue l'espace pour cet atelier.", "organized_by": "intervenante", "founders_organizers": [], "organizers": ["manon-souyris"], "link": "#", "categories": ["atelier"]}, {"title": "Masterclass — Business O'féminin", "start_date": "2026-12-12", "end_date": "2026-12-12", "start_time": "18:30", "end_time": "20:30", "price_type": "amount", "price_amount": "25 €", "funding_available": false, "description": "Une soirée pour reprendre confiance dans son positionnement business, avec temps de questions/réponses.", "organized_by": "entre_elles", "founders_organizers": ["Bizz de Femmes"], "organizers": [], "link": "#", "categories": ["masterclass"]}, {"title": "Networking de fin d'année", "start_date": "2026-12-19", "end_date": "2026-12-19", "start_time": "18:00", "end_time": "21:00", "price_type": "free", "price_amount": "", "funding_available": false, "description": "Un moment convivial pour clôturer l'année entre entrepreneures du lieu et de la communauté élargie.", "organized_by": "entre_elles", "founders_organizers": ["Coleen Group", "Bizz de Femmes"], "organizers": [], "link": "#", "categories": ["evenement"]}]};
+  window.__FALLBACK_MEMBERS__ = {"members": [{"slug": "manon-souyris", "prenom": "Manon", "nom": "SOUYRIS", "titre": "Créatrice de papeterie & coach mariage", "photo": "", "instagram": "", "facebook": "", "linkedin": "", "website": "", "villes": ["Toulon", "Hyères", "Marseille"], "mots_cles": ["mariage", "papeterie", "organisation"], "besoins": ["creer-une-papeterie-personnalisee", "organiser-son-mariage"], "is_speaker": true}]};
+  window.__FALLBACK_EVENT_CATEGORIES__ = {"categories": [{"slug": "atelier", "name": "Atelier"}, {"slug": "cercle-de-femmes", "name": "Cercle de femmes"}, {"slug": "coworking", "name": "Coworking"}, {"slug": "developpement-personnel", "name": "Développement personnel"}, {"slug": "evenement", "name": "Événement"}, {"slug": "formation", "name": "Formation"}, {"slug": "information", "name": "Information"}, {"slug": "masterclass", "name": "Masterclass"}]};
 </script>
 
 <script>
@@ -1031,14 +1055,18 @@
 
 <script>
   // ---- Les événements sont chargés depuis data/events.json, les intervenantes depuis data/members.json ----
-  // Ces fichiers sont modifiables à la main ou via l'espace de gestion (/admin).
+  // Les catégories d'événements viennent de data/event_categories.json.
+  // Ces fichiers sont générés automatiquement à chaque publication à partir de ce que vous saisissez dans /admin.
   let events = [];
-  let membersByName = {};
+  let membersBySlug = {};
+  let eventCategoriesBySlug = {};
 
   const months = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
   const monthsFull = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
 
   let monthOffset = null; // null = vue par défaut "Prochains événements" (les 4 plus proches, tous mois confondus)
+  let activeCategoryFilters = new Set();
+  let activeOrgFilters = new Set();
 
   function getSelectedMonthDate(){
     const d = new Date();
@@ -1097,6 +1125,44 @@
     return ev.price_amount || 'Sur devis';
   }
 
+  const FOUNDERS_COLOR = { 'coleen group': 'brown', 'bizz de femmes': 'fuchsia' };
+
+  function eventOrgEntries(ev){
+    // Renvoie une liste unifiée {key, label, href, colorClass} pour badges et filtres,
+    // en combinant les organisatrices "fondatrices" et les intervenantes de la Communauté.
+    const entries = [];
+    (ev.founders_organizers || []).forEach(name => {
+      const key = name.trim().toLowerCase();
+      entries.push({
+        key: key,
+        label: name,
+        href: 'index.html#fondatrices',
+        colorClass: FOUNDERS_COLOR[key] || 'neutral'
+      });
+    });
+    (ev.organizers || []).forEach(slug => {
+      const m = membersBySlug[slug];
+      const fullName = m ? ((m.prenom || '') + ' ' + (m.nom || '')).trim() : slug;
+      entries.push({
+        key: slug,
+        label: fullName,
+        href: 'communaute.html#' + slug,
+        colorClass: 'neutral'
+      });
+    });
+    return entries;
+  }
+
+  function eventTypeMention(ev){
+    if (ev.organized_by === 'intervenante'){
+      const firstSlug = (ev.organizers || [])[0];
+      const m = firstSlug ? membersBySlug[firstSlug] : null;
+      const name = m ? ((m.prenom || '') + ' ' + (m.nom || '')).trim() : 'une intervenante';
+      return '<span class="event-type-badge intervenante">Organisé par ' + name + '</span>';
+    }
+    return '<span class="event-type-badge entre-elles">Proposé par L\'Entre-Elles</span>';
+  }
+
   function renderEvents(list){
     const grid = document.getElementById('events-grid');
     grid.innerHTML = '';
@@ -1113,32 +1179,23 @@
       const { day, month } = formatDateRange(ev.start_date, ev.end_date);
       const timeRange = ev.start_time && ev.end_time ? (ev.start_time + '–' + ev.end_time) : '';
       const price = formatPrice(ev);
+      const categoryNames = (ev.categories || []).map(slug => (eventCategoriesBySlug[slug] || {}).name || slug);
 
-      const FOUNDERS = { 'coleen group': 'brown', 'bizz de femmes': 'fuchsia' };
+      const orgEntries = eventOrgEntries(ev);
+      const orgBadges = orgEntries.map(e => '<a class="org-badge ' + e.colorClass + '" href="' + e.href + '">' + e.label + '</a>').join('');
 
-      const orgBadges = (ev.organizers || []).map(name => {
-        const key = name.trim().toLowerCase();
-        if (FOUNDERS[key]){
-          return '<a class="org-badge ' + FOUNDERS[key] + '" href="index.html#fondatrices">' + name + '</a>';
-        }
-        const member = membersByName[key];
-        if (member){
-          const fullName = (member.prenom || '') + ' ' + (member.nom || '');
-          return '<a class="org-badge neutral" href="communaute.html#' + slugify(fullName) + '">' + name + '</a>';
-        }
-        return '<span class="org-badge neutral">' + name + '</span>';
-      }).join('');
-
+      const isIntervenante = ev.organized_by === 'intervenante';
       const card = document.createElement('div');
-      card.className = 'event-card';
-      card.dataset.orgs = (ev.organizers || []).map(n => n.trim().toLowerCase()).join('|');
+      card.className = 'event-card' + (isIntervenante ? ' event-card-intervenante' : '');
+      card.dataset.orgs = orgEntries.map(e => e.key).join('|');
 
       card.innerHTML = `
         <div class="event-date"><div class="day">${day}</div><div class="month">${month}</div></div>
         <div class="event-body">
+          ${eventTypeMention(ev)}
           <div class="orgs">${orgBadges}</div>
           <h3>${ev.title}</h3>
-          <div class="meta">${(ev.categories || []).join(' · ')}${timeRange ? ' · ' + timeRange : ''} · Ollioules</div>
+          <div class="meta">${categoryNames.join(' · ')}${timeRange ? ' · ' + timeRange : ''} · Ollioules</div>
           <div class="price-row">
             <span class="event-price">${price}</span>
             ${ev.funding_available ? '<span class="funding-badge">Financement possible</span>' : ''}
@@ -1151,42 +1208,59 @@
     });
   }
 
-  function buildFilterRow(wrapId, blockId, getValues){
+  function buildToggleFilterRow(wrapId, blockId, getEntries, activeSet){
     const wrap = document.getElementById(wrapId);
     const block = blockId ? document.getElementById(blockId) : null;
     const seen = new Map();
-    events.forEach(ev => getValues(ev).forEach(val => {
-      const key = (val || '').trim().toLowerCase();
-      if (!key || seen.has(key)) return;
-      seen.set(key, val.trim());
+    events.forEach(ev => getEntries(ev).forEach(entry => {
+      if (!entry.key || seen.has(entry.key)) return;
+      seen.set(entry.key, entry.label);
     }));
     if (block) block.style.display = seen.size ? '' : 'none';
     let html = '<button class="filter-btn active" data-filter="all">Tous</button>';
     seen.forEach((label, key) => { html += '<button class="filter-btn" data-filter="' + key + '">' + label + '</button>'; });
     wrap.innerHTML = html;
+
+    function refreshActiveClasses(){
+      wrap.querySelectorAll('.filter-btn').forEach(btn => {
+        const f = btn.dataset.filter;
+        const isActive = f === 'all' ? activeSet.size === 0 : activeSet.has(f);
+        btn.classList.toggle('active', isActive);
+      });
+    }
+    refreshActiveClasses();
+
     wrap.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        wrap.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        if (f === 'all'){
+          activeSet.clear();
+        } else if (activeSet.has(f)){
+          activeSet.delete(f);
+        } else {
+          activeSet.add(f);
+        }
+        refreshActiveClasses();
         applyActiveFilter();
       });
     });
   }
 
   function buildFilters(){
-    buildFilterRow('event-filters', 'event-org-block', ev => ev.organizers || []);
-    buildFilterRow('event-category-filters', 'event-category-block', ev => ev.categories || []);
+    buildToggleFilterRow('event-filters', 'event-org-block', eventOrgEntries, activeOrgFilters);
+    buildToggleFilterRow('event-category-filters', 'event-category-block', ev => (ev.categories || []).map(slug => ({
+      key: slug, label: (eventCategoriesBySlug[slug] || {}).name || slug
+    })), activeCategoryFilters);
   }
 
   function applyActiveFilter(){
-    const activeOrg = document.querySelector('#event-filters .filter-btn.active');
-    const orgFilter = activeOrg ? activeOrg.dataset.filter : 'all';
-    const activeCategory = document.querySelector('#event-category-filters .filter-btn.active');
-    const categoryFilter = activeCategory ? activeCategory.dataset.filter : 'all';
-
     let filtered = events;
-    if (orgFilter !== 'all') filtered = filtered.filter(ev => (ev.organizers || []).some(n => n.trim().toLowerCase() === orgFilter));
-    if (categoryFilter !== 'all') filtered = filtered.filter(ev => (ev.categories || []).some(c => c.trim().toLowerCase() === categoryFilter));
+    if (activeOrgFilters.size){
+      filtered = filtered.filter(ev => eventOrgEntries(ev).some(e => activeOrgFilters.has(e.key)));
+    }
+    if (activeCategoryFilters.size){
+      filtered = filtered.filter(ev => (ev.categories || []).some(c => activeCategoryFilters.has(c)));
+    }
 
     if (monthOffset === null){
       const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -1211,13 +1285,29 @@
     applyActiveFilter();
   });
 
-  function nextInterventionFor(fullName, eventsList){
+  function nextInterventionFor(slug, eventsList){
     const today = new Date(); today.setHours(0, 0, 0, 0);
     const upcoming = eventsList
-      .filter(ev => (ev.organizers || []).some(n => n.trim().toLowerCase() === fullName.trim().toLowerCase()))
+      .filter(ev => (ev.organizers || []).includes(slug))
       .filter(ev => new Date(ev.end_date || ev.start_date) >= today)
       .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
     return upcoming[0] || null;
+  }
+
+  function todaySeed(){
+    const d = new Date();
+    return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+  }
+
+  function seededShuffle(arr, seed){
+    const a = arr.slice();
+    let s = seed;
+    function rand(){ s = (s * 9301 + 49297) % 233280; return s / 233280; }
+    for (let i = a.length - 1; i > 0; i--){
+      const j = Math.floor(rand() * (i + 1));
+      const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
   }
 
   function renderCommunautePreview(allMembers, allEvents){
@@ -1227,22 +1317,27 @@
 
     if (!allMembers.length){ section.style.display = 'none'; return; }
 
+    // Priorité aux intervenantes qui ont un événement à venir.
     const withNext = allMembers
       .filter(m => m.is_speaker)
-      .map(m => ({ m, next: nextInterventionFor((m.prenom || '') + ' ' + (m.nom || ''), allEvents) }))
+      .map(m => ({ m: m, next: nextInterventionFor(m.slug, allEvents) }))
       .filter(x => x.next)
       .sort((a, b) => new Date(a.next.start_date) - new Date(b.next.start_date));
 
     const chosen = withNext.slice(0, 3);
-    const chosenNames = new Set(chosen.map(x => x.m));
+    const chosenSlugs = new Set(chosen.map(x => x.m.slug));
+
+    // Les places restantes sont tirées au sort, avec un tirage qui ne change qu'une fois par jour.
     if (chosen.length < 3){
-      allMembers.filter(m => !chosenNames.has(m)).slice(0, 3 - chosen.length).forEach(m => chosen.push({ m, next: null }));
+      const remaining = allMembers.filter(m => !chosenSlugs.has(m.slug));
+      const shuffled = seededShuffle(remaining, todaySeed());
+      shuffled.slice(0, 3 - chosen.length).forEach(m => chosen.push({ m: m, next: null }));
     }
 
     grid.innerHTML = chosen.map(({ m, next }) => {
       const fullName = (m.prenom || '') + ' ' + (m.nom || '');
       const photo = m.photo
-        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover;">'
+        ? '<img src="' + m.photo + '" alt="' + fullName + '" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">'
         : '[ photo ]';
       let nextHtml = '';
       if (next){
@@ -1250,7 +1345,7 @@
         nextHtml = '<div class="next-event">Prochaine intervention<br>' + d.getDate() + ' ' + months[d.getMonth()] + '</div>';
       }
       return `
-        <a class="preview-card" href="communaute.html#${slugify(fullName)}">
+        <a class="preview-card" href="communaute.html#${m.slug}">
           <div class="photo">${photo}</div>
           <h3>${fullName}</h3>
           <p class="role">${m.titre || ''}</p>
@@ -1266,6 +1361,7 @@
     if (!upcoming.length) return;
 
     const items = upcoming.map(ev => {
+      const orgLabels = eventOrgEntries(ev).map(e => e.label);
       const item = {
         "@type": "Event",
         "name": ev.title,
@@ -1278,7 +1374,7 @@
           "name": "L'Entre-Elles",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "293 Route de la Seyne, Technopole Var Matin - Bâtiment A",
+            "streetAddress": "293 Route de la Seyne, Technopole Var Matin - Bâtiment A, Porte 1A",
             "addressLocality": "Ollioules",
             "postalCode": "83190",
             "addressCountry": "FR"
@@ -1286,8 +1382,8 @@
         }
       };
       if (ev.description) item.description = ev.description;
-      if (ev.organizers && ev.organizers.length){
-        item.organizer = { "@type": "Organization", "name": ev.organizers.join(' × ') };
+      if (orgLabels.length){
+        item.organizer = { "@type": "Organization", "name": orgLabels.join(' × ') };
       }
       if (ev.price_type === 'amount' && ev.price_amount){
         const priceNum = parseFloat((ev.price_amount || '').replace(',', '.').replace(/[^\d.]/g, ''));
@@ -1309,12 +1405,11 @@
 
   Promise.all([
     fetch('data/events.json').then(r => r.json()).catch(() => window.__FALLBACK_EVENTS__),
-    fetch('data/members.json').then(r => r.json()).catch(() => window.__FALLBACK_MEMBERS__)
-  ]).then(([eventsData, membersData]) => {
-    (membersData.members || []).forEach(m => {
-      const fullName = ((m.prenom || '') + ' ' + (m.nom || '')).trim().toLowerCase();
-      if (fullName) membersByName[fullName] = m;
-    });
+    fetch('data/members.json').then(r => r.json()).catch(() => window.__FALLBACK_MEMBERS__),
+    fetch('data/event_categories.json').then(r => r.json()).catch(() => window.__FALLBACK_EVENT_CATEGORIES__)
+  ]).then(([eventsData, membersData, eventCategoriesData]) => {
+    (membersData.members || []).forEach(m => { if (m.slug) membersBySlug[m.slug] = m; });
+    (eventCategoriesData.categories || []).forEach(c => { if (c.slug) eventCategoriesBySlug[c.slug] = c; });
     events = (eventsData.events || []).slice().sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
     buildFilters();
     applyActiveFilter();
@@ -1357,6 +1452,7 @@
       });
   });
 </script>
+
 
 <script>
   if (window.netlifyIdentity) {

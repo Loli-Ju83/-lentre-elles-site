@@ -293,8 +293,8 @@
   .filters{ display:flex; gap:10px; margin-bottom:32px; flex-wrap:wrap; }
   .filter-btn{
     font-family: var(--font-body); font-size:13px; font-weight:600;
-    padding:9px 18px; border-radius:999px; border:1px solid var(--brown-500);
-    background:transparent; color:var(--cream-soft); cursor:pointer;
+    padding:9px 18px; border-radius:999px; border:1px solid var(--brown-300);
+    background: var(--cream-soft); color:var(--brown-900); cursor:pointer;
     transition: all .2s ease;
   }
   .filter-btn.active, .filter-btn:hover{ background:var(--fuchsia-600); border-color:var(--fuchsia-600); color:#fff; }
@@ -558,8 +558,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 L'Entre-Elles — Coleen Group × Bizz de Femmes</span>
-      <span id="footer-contacts">Coleen Group : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Bizz de Femmes : formation@lolitaghilione.fr · 06 29 99 37 78</span>
+      <span>© 2026 L'Entre-Elles</span>
+      <span id="footer-contacts">Julie : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Lolita : formation@lolitaghilione.fr · 06 29 99 37 78</span>
     </div>
   </div>
 </footer>
@@ -745,8 +745,8 @@
     const contactsEl = document.getElementById('footer-contacts');
     if (contactsEl && (footer.coleen_email || footer.bizz_email)){
       contactsEl.innerHTML =
-        'Coleen Group : ' + (footer.coleen_email || '') + ' · ' + (footer.coleen_phone || '') +
-        ' &nbsp;|&nbsp; Bizz de Femmes : ' + (footer.bizz_email || '') + ' · ' + (footer.bizz_phone || '');
+        'Julie : ' + (footer.coleen_email || '') + ' · ' + (footer.coleen_phone || '') +
+        ' &nbsp;|&nbsp; Lolita : ' + (footer.bizz_email || '') + ' · ' + (footer.bizz_phone || '');
     }
     setFooterLink('footer-instagram', footer.instagram);
     setFooterLink('footer-facebook', footer.facebook);

@@ -1,5 +1,36 @@
 {
   "categories": [
-    "ATELIER"
+    {
+      "slug": "atelier",
+      "name": "Atelier"
+    },
+    {
+      "slug": "cercle-de-femmes",
+      "name": "Cercle de femmes"
+    },
+    {
+      "slug": "coworking",
+      "name": "Coworking"
+    },
+    {
+      "slug": "developpement-personnel",
+      "name": "Développement personnel"
+    },
+    {
+      "slug": "evenement",
+      "name": "Événement"
+    },
+    {
+      "slug": "formation",
+      "name": "Formation"
+    },
+    {
+      "slug": "information",
+      "name": "Information"
+    },
+    {
+      "slug": "masterclass",
+      "name": "Masterclass"
+    }
   ]
 }

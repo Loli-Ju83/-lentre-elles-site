@@ -1,5 +1,16 @@
 {
   "categories": [
-    "TEST"
+    {
+      "slug": "mariage",
+      "name": "Mariage"
+    },
+    {
+      "slug": "organisation",
+      "name": "Organisation"
+    },
+    {
+      "slug": "papeterie",
+      "name": "Papeterie"
+    }
   ]
 }

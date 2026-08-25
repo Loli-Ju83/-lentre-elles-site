@@ -1,3 +1,12 @@
 {
-  "besoins": []
+  "besoins": [
+    {
+      "slug": "creer-une-papeterie-personnalisee",
+      "name": "Créer une papeterie personnalisée"
+    },
+    {
+      "slug": "organiser-son-mariage",
+      "name": "Organiser son mariage"
+    }
+  ]
 }

@@ -501,18 +501,18 @@
       <h2>Éditeur du site</h2>
       <p>
         Le site L'Entre-Elles est édité par l'association <strong>L'Entre-Elles</strong>,
-        association loi 1901 <span class="to-fill">[en cours de constitution — statut à confirmer]</span>,
+        <span id="ml-forme-juridique">association loi 1901 <span class="to-fill">[en cours de constitution — statut à confirmer]</span></span>,
         dont le siège social est situé :
       </p>
-      <p>
+      <p id="ml-adresse">
         293 Route de la Seyne, Technopole Var Matin — Bâtiment A, 83190 Ollioules
       </p>
       <p>
-        Numéro RNA (Répertoire National des Associations) : <span class="to-fill">[à compléter une fois l'association déclarée en préfecture]</span><br>
-        Numéro SIRET (le cas échéant) : <span class="to-fill">[à compléter si l'association en obtient un]</span>
+        Numéro RNA (Répertoire National des Associations) : <span id="ml-rna" class="to-fill">[à compléter une fois l'association déclarée en préfecture]</span><br>
+        Numéro SIRET (le cas échéant) : <span id="ml-siret" class="to-fill">[à compléter si l'association en obtient un]</span>
       </p>
       <p>
-        Directeur·rice de la publication : <span class="to-fill">[nom du/de la président·e ou représentant·e légal·e]</span>
+        Directeur·rice de la publication : <span id="ml-representant" class="to-fill">[nom du/de la président·e ou représentant·e légal·e]</span>
       </p>
       <p>
         Contact : <a href="mailto:julie.requet@coleengroup.fr" style="text-decoration:underline;">julie.requet@coleengroup.fr</a>
@@ -553,8 +553,8 @@
       </p>
 
       <h2>Crédits</h2>
-      <p>
-        Conception et développement du site : <span class="to-fill">[à compléter si vous souhaitez créditer quelqu'un]</span>
+      <p id="ml-credits-wrap">
+        Conception et développement du site : <span id="ml-credits" class="to-fill">[à compléter si vous souhaitez créditer quelqu'un]</span>
       </p>
     </div>
   </div>
@@ -595,8 +595,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 L'Entre-Elles — Coleen Group × Bizz de Femmes</span>
-      <span id="footer-contacts">Coleen Group : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Bizz de Femmes : formation@lolitaghilione.fr · 06 29 99 37 78</span>
+      <span>© 2026 L'Entre-Elles</span>
+      <span id="footer-contacts">Julie : julie.requet@coleengroup.fr · 07 61 70 78 98 &nbsp;|&nbsp; Lolita : formation@lolitaghilione.fr · 06 29 99 37 78</span>
     </div>
   </div>
 </footer>
@@ -605,28 +605,58 @@
   fetch('data/site.json')
     .then(r => r.json())
     .then(data => {
-      if (!data.footer) return;
-      const footer = data.footer;
-      const taglineEl = document.getElementById('footer-tagline');
-      if (taglineEl && footer.tagline) taglineEl.textContent = footer.tagline;
-      const addr = [footer.address_line1, footer.address_line2, footer.address_line3].filter(Boolean);
-      const addrEl = document.getElementById('footer-address');
-      if (addrEl && addr.length) addrEl.innerHTML = addr.join('<br>');
-      const contactsEl = document.getElementById('footer-contacts');
-      if (contactsEl && (footer.coleen_email || footer.bizz_email)){
-        contactsEl.innerHTML =
-          'Coleen Group : ' + (footer.coleen_email || '') + ' · ' + (footer.coleen_phone || '') +
-          ' &nbsp;|&nbsp; Bizz de Femmes : ' + (footer.bizz_email || '') + ' · ' + (footer.bizz_phone || '');
+      if (data.footer){
+        const footer = data.footer;
+        const taglineEl = document.getElementById('footer-tagline');
+        if (taglineEl && footer.tagline) taglineEl.textContent = footer.tagline;
+        const addr = [footer.address_line1, footer.address_line2, footer.address_line3].filter(Boolean);
+        const addrEl = document.getElementById('footer-address');
+        if (addrEl && addr.length) addrEl.innerHTML = addr.join('<br>');
+        const mlAddrEl = document.getElementById('ml-adresse');
+        if (mlAddrEl && addr.length) mlAddrEl.textContent = addr.join(', ');
+        const contactsEl = document.getElementById('footer-contacts');
+        if (contactsEl && (footer.coleen_email || footer.bizz_email)){
+          contactsEl.innerHTML =
+            'Julie : ' + (footer.coleen_email || '') + ' · ' + (footer.coleen_phone || '') +
+            ' &nbsp;|&nbsp; Lolita : ' + (footer.bizz_email || '') + ' · ' + (footer.bizz_phone || '');
+        }
+        const setFooterLink = (id, value) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          if (value){ el.href = value; el.style.display = ''; }
+          else { el.style.display = 'none'; }
+        };
+        setFooterLink('footer-instagram', footer.instagram);
+        setFooterLink('footer-facebook', footer.facebook);
+        setFooterLink('footer-linkedin', footer.linkedin);
       }
-      const setFooterLink = (id, value) => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        if (value){ el.href = value; el.style.display = ''; }
-        else { el.style.display = 'none'; }
-      };
-      setFooterLink('footer-instagram', footer.instagram);
-      setFooterLink('footer-facebook', footer.facebook);
-      setFooterLink('footer-linkedin', footer.linkedin);
+
+      if (data.mentions_legales){
+        const ml = data.mentions_legales;
+        if (ml.forme_juridique){
+          const el = document.getElementById('ml-forme-juridique');
+          if (el) el.textContent = ml.forme_juridique;
+        }
+        if (ml.rna){
+          const el = document.getElementById('ml-rna');
+          if (el){ el.textContent = ml.rna; el.classList.remove('to-fill'); }
+        }
+        if (ml.siret){
+          const el = document.getElementById('ml-siret');
+          if (el){ el.textContent = ml.siret; el.classList.remove('to-fill'); }
+        }
+        if (ml.representant){
+          const el = document.getElementById('ml-representant');
+          if (el){ el.textContent = ml.representant; el.classList.remove('to-fill'); }
+        }
+        if (ml.credits){
+          const el = document.getElementById('ml-credits');
+          if (el){ el.textContent = ml.credits; el.classList.remove('to-fill'); }
+        } else {
+          const wrap = document.getElementById('ml-credits-wrap');
+          if (wrap) wrap.style.display = 'none';
+        }
+      }
     })
     .catch(() => {});
 </script>
