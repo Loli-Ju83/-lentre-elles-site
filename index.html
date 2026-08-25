@@ -217,7 +217,7 @@
   .carousel-slide:nth-child(2){ background: linear-gradient(135deg, var(--brown-500), var(--brown-300)); }
   .carousel-slide:nth-child(3){ background: linear-gradient(135deg, var(--fuchsia-600), var(--fuchsia-200)); }
   .carousel-slide:nth-child(4){ background: linear-gradient(135deg, var(--brown-700), var(--fuchsia-600)); }
-  .carousel-slide.has-photo{ padding:0; background:none; }
+  .carousel-slide.has-photo{ padding:0; background:var(--brown-900); }
   .carousel-arrow{
     position:absolute; top:50%; transform:translateY(-50%);
     width:38px; height:38px; border-radius:50%; border:none; cursor:pointer;
@@ -1008,7 +1008,7 @@
     }
 
     track.innerHTML = realPhotos.map(p =>
-      '<div class="carousel-slide has-photo"><img src="' + p.image + '" alt="' + (p.caption || '') + '" style="width:100%; height:100%; object-fit:cover;"></div>'
+      '<div class="carousel-slide has-photo"><img src="' + p.image + '" alt="' + (p.caption || '') + '" style="width:100%; height:100%; object-fit:contain;"></div>'
     ).join('');
 
     const slides = track.querySelectorAll('.carousel-slide');
