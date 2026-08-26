@@ -1,0 +1,31 @@
+{
+  "villes": [
+    "Cassis",
+    "Toulon",
+    "Marseille"
+  ],
+  "facebook": "https://www.facebook.com/Tiph75",
+  "prenom": "Tiphaine",
+  "is_speaker": true,
+  "nom": "ZAKINE",
+  "besoins": [
+    "sortir-de-l’isolement",
+    "valoriser-son-activité-professionnelle-et-son-image",
+    "se-reconvertir",
+    "oser-prendre-sa-place",
+    "renforcer-son-estime-de-soi",
+    "gagner-en-liberté-financière",
+    "développer-sa-confiance-en-soi"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-6-.png",
+  "titre": "Fondatrice du mouvement OSE",
+  "instagram": "https://www.instagram.com/tiphaine_zakine",
+  "mots_cles": [
+    "communauté",
+    "entrepreneuriat",
+    "développement-personnel",
+    "réseautage",
+    "formation"
+  ],
+  "website": "https://www.lesdinersose.com"
+}
