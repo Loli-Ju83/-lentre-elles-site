@@ -1,0 +1,26 @@
+{
+  "villes": [
+    "La Farlède",
+    "Toulon"
+  ],
+  "prenom": "ESPINOZA",
+  "is_speaker": true,
+  "nom": "Mélanie",
+  "besoins": [
+    "trouver-des-produits-de-beauté-adaptés-à-ses-besoin",
+    "se-sentir-belle",
+    "se-reconvertir",
+    "se-lancer-dans-l’entrepreneuriat",
+    "générer-un-complément-de-revenus",
+    "gagner-en-liberté-financière",
+    "apprendre-les-étapes-d’une-routine-beauté"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-7-.png",
+  "titre": "Conseillère parfums & cosmétiques",
+  "instagram": "https://www.instagram.com/mcaudacieuse",
+  "mots_cles": [
+    "beauté",
+    "cosmétiques",
+    "entrepreneuriat"
+  ]
+}
