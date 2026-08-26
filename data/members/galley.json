@@ -1,0 +1,31 @@
+{
+  "villes": [
+    "Sanary-Sur-Mer",
+    "Toulon",
+    "Le Beausset",
+    "La Ciotat"
+  ],
+  "facebook": "https://www.facebook.com/sandrine.galley.1",
+  "prenom": "Sandrine",
+  "is_speaker": true,
+  "nom": "GALLEY",
+  "besoins": [
+    "renforcer-son-estime-de-soi",
+    "oser-prendre-sa-place",
+    "se-reconnecter-à-soi-et-à-son-corps",
+    "mieux-se-comprendre-et-mieux-accueillir-ses-émotions",
+    "guérir-de-ses-traumatismes-et-blessures-d’enfance",
+    "comprendre-et-sortir-de-ses-schémas-répétitifs",
+    "apaiser-sa-surcharge-mentale",
+    "gagner-en-clarté",
+    "développer-sa-confiance-en-soi"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-9-.png",
+  "titre": "Créatrice de tambours et communicatrice d’âme",
+  "instagram": "https://www.instagram.com/sandrine.galley/",
+  "mots_cles": [
+    "développement-personnel",
+    "thérapie"
+  ],
+  "website": "www.sandrinegalley.com"
+}
