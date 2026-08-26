@@ -1,0 +1,30 @@
+{
+  "villes": [
+    "Le Castellet",
+    "Toulon",
+    "Marseille"
+  ],
+  "facebook": "https://www.facebook.com/p/Bm-Make-Up-Artist-Maquilleuse-Professionnelle-100086008620316/",
+  "prenom": "Bérangère",
+  "is_speaker": true,
+  "nom": "Miault",
+  "besoins": [
+    "se-sentir-belle",
+    "se-reconnecter-à-soi-et-à-son-corps",
+    "se-réconcilier-avec-son-image",
+    "développer-sa-confiance-en-soi"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-5-1-.png",
+  "titre": "Maquilleuse professionnelle",
+  "instagram": "https://www.instagram.com/bm_make_up_artist",
+  "mots_cles": [
+    "maquillage",
+    "coiffure",
+    "mariage",
+    "massage",
+    "formation",
+    "soins-visage"
+  ],
+  "website": "https://bmmakeupartist.fr/",
+  "linkedin": "https://www.linkedin.com/in/b%C3%A9rang%C3%A8re-miault-743057106/"
+}
