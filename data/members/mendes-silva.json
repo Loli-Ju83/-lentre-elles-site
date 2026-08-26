@@ -1,0 +1,25 @@
+{
+  "villes": [
+    "Cannes",
+    "Lyon"
+  ],
+  "prenom": "Sara",
+  "is_speaker": true,
+  "nom": "MENDES SILVA",
+  "besoins": [
+    "protéger-ses-revenus",
+    "préparer-sa-retraite",
+    "optimiser-sa-fiscalité"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-12-.png",
+  "titre": "Experte en assurance de personnes",
+  "instagram": "https://www.instagram.com/prevoyancebysara/",
+  "mots_cles": [
+    "assurance-de-personnes",
+    "entrepreneuriat",
+    "gestion-de-patrimoine",
+    "mutuelle-et-complémentaire-santé",
+    "optimisation-fiscale"
+  ],
+  "linkedin": "https://www.linkedin.com/in/sara-mendes-silva-9998a49b/"
+}
