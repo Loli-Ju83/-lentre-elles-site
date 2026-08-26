@@ -1,0 +1,25 @@
+{
+  "villes": [
+    "Toulon"
+  ],
+  "prenom": "Marie",
+  "is_speaker": true,
+  "nom": "BENOIT",
+  "besoins": [
+    "gagner-en-clarté",
+    "trouver-du-sens-et-de-l’alignement",
+    "dépasser-ses-blocages",
+    "comprendre-et-sortir-de-ses-schémas-répétitifs"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-10-.png",
+  "titre": "Praticienne en arts divinatoires",
+  "instagram": "https://www.instagram.com/madame_eso",
+  "mots_cles": [
+    "arts-divinatoires",
+    "astrologie",
+    "cartomancie",
+    "numérologie",
+    "développement-personnel"
+  ],
+  "website": "Http://madameeso.fr "
+}
