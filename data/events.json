@@ -20,6 +20,26 @@
       "founders_organizers": [
         "Bizz de Femmes"
       ]
+    },
+    {
+      "organizers": [
+        "levec"
+      ],
+      "funding_available": false,
+      "start_time": "08:30",
+      "start_date": "2026-09-10",
+      "price_type": "free",
+      "end_time": "11:00",
+      "end_date": "2026-09-10",
+      "organized_by": "entre_elles",
+      "title": "Prête pour la facturation électronique ?",
+      "link": "https://calendly.com/lentre-elles/facturation-electronique",
+      "categories": [
+        "atelier",
+        "administratif",
+        "comptabilité"
+      ],
+      "description": "Pour les femmes entrepreneures qui entendent parler de la facturation électronique, mais qui ne savent pas encore précisément ce qui va changer pour leur entreprise, ni comment s’y préparer."
     }
   ]
 }
