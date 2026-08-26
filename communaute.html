@@ -291,6 +291,35 @@
   #calendrier .eyebrow{ color: var(--fuchsia-200); }
 
   .filters{ display:flex; gap:10px; margin-bottom:32px; flex-wrap:wrap; }
+
+  .filter-dropdowns{ display:flex; gap:12px; flex-wrap:wrap; }
+  .filter-dropdown{ position:relative; }
+  .filter-dropdown-btn{
+    font-family: var(--font-body); font-size:14px; font-weight:600;
+    padding:11px 18px; border-radius:999px; border:1px solid var(--brown-300);
+    background: var(--cream-soft); color:var(--brown-900); cursor:pointer;
+    display:flex; align-items:center; gap:8px; transition: border-color .2s ease;
+  }
+  .filter-dropdown-btn:hover{ border-color: var(--fuchsia-600); }
+  .filter-dropdown-btn.has-selection{ background: var(--fuchsia-600); border-color: var(--fuchsia-600); color:#fff; }
+  .filter-dropdown-btn .chevron{ font-size:12px; opacity:.7; }
+  .filter-dropdown-panel{
+    display:none; position:absolute; top:calc(100% + 8px); left:0; z-index:30;
+    background: var(--cream-soft); border:1px solid var(--brown-100); border-radius:14px;
+    padding:10px; min-width:260px; max-width:320px; max-height:340px; overflow-y:auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+  .filter-dropdown-panel.open{ display:block; }
+  .filter-dropdown-panel label{
+    display:flex; align-items:center; gap:9px; font-size:13.5px; color:var(--brown-900);
+    padding:8px 6px; border-radius:8px; cursor:pointer; font-weight:400;
+  }
+  .filter-dropdown-panel label:hover{ background: var(--brown-100); }
+  .filter-dropdown-panel input[type="checkbox"]{ accent-color: var(--fuchsia-600); width:15px; height:15px; flex-shrink:0; }
+  .filter-dropdown-panel .clear-link{
+    display:block; text-align:right; font-size:12.5px; color:var(--fuchsia-700); font-weight:600;
+    padding:6px; cursor:pointer; border-top:1px solid var(--brown-100); margin-top:4px;
+  }
   .filter-btn{
     font-family: var(--font-body); font-size:13px; font-weight:600;
     padding:9px 18px; border-radius:999px; border:1px solid var(--brown-300);
@@ -512,13 +541,15 @@
       <input type="text" id="member-search" placeholder="Rechercher par nom, métier, ville, catégorie ou besoin..."
         style="width:100%; max-width:420px; font-family:var(--font-body); font-size:14.5px; padding:13px 16px; border-radius:999px; border:1px solid var(--brown-300); background:var(--cream-soft); color:var(--ink);">
     </div>
-    <div id="category-filter-block" style="margin-bottom:18px; display:none;">
-      <div class="eyebrow" style="margin-bottom:8px;">Catégorie/Métier</div>
-      <div class="filters" id="member-filters"></div>
-    </div>
-    <div id="besoin-filter-block" style="margin-bottom:28px; display:none;">
-      <div class="eyebrow" style="margin-bottom:8px;">Besoin</div>
-      <div class="filters" id="besoin-filters"></div>
+    <div class="filter-dropdowns" style="margin-bottom:28px;">
+      <div class="filter-dropdown" id="category-filter-block" style="display:none;">
+        <button type="button" class="filter-dropdown-btn" id="category-dropdown-btn">Catégorie/Métier <span class="chevron">▾</span></button>
+        <div class="filter-dropdown-panel" id="category-dropdown-panel"></div>
+      </div>
+      <div class="filter-dropdown" id="besoin-filter-block" style="display:none;">
+        <button type="button" class="filter-dropdown-btn" id="besoin-dropdown-btn">Besoin <span class="chevron">▾</span></button>
+        <div class="filter-dropdown-panel" id="besoin-dropdown-panel"></div>
+      </div>
     </div>
     <div class="members-grid" id="members-grid"></div>
   </div>
@@ -670,8 +701,12 @@
     }
   }
 
-  function buildFilterRow(wrapId, blockId, field, labelFn){
-    const wrap = document.getElementById(wrapId);
+  let selectedCategories = new Set();
+  let selectedBesoins = new Set();
+
+  function buildDropdown(btnId, panelId, blockId, field, labelFn, selectedSet){
+    const btn = document.getElementById(btnId);
+    const panel = document.getElementById(panelId);
     const block = document.getElementById(blockId);
     const seen = new Map();
     allMembers.forEach(m => (m[field] || []).forEach(tag => {
@@ -679,23 +714,53 @@
       if (!key || seen.has(key)) return;
       seen.set(key, labelFn ? labelFn(key) : key);
     }));
-    if (!seen.size){ block.style.display = 'none'; wrap.innerHTML = ''; return; }
+    if (!seen.size){ block.style.display = 'none'; return; }
     block.style.display = '';
-    let html = '<button class="filter-btn active" data-filter="all">Tous</button>';
-    seen.forEach((label, key) => { html += '<button class="filter-btn" data-filter="' + key + '">' + label + '</button>'; });
-    wrap.innerHTML = html;
-    wrap.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        wrap.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+
+    const entries = Array.from(seen.entries()).sort((a, b) => a[1].localeCompare(b[1], 'fr'));
+
+    panel.innerHTML = entries.map(([key, label]) =>
+      '<label><input type="checkbox" value="' + key + '" ' + (selectedSet.has(key) ? 'checked' : '') + '> ' + label + '</label>'
+    ).join('') + '<span class="clear-link">Tout désélectionner</span>';
+
+    panel.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (cb.checked) selectedSet.add(cb.value); else selectedSet.delete(cb.value);
+        updateDropdownLabel(btn, selectedSet.size);
         applyMemberFilters();
       });
     });
+    panel.querySelector('.clear-link').addEventListener('click', () => {
+      selectedSet.clear();
+      panel.querySelectorAll('input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+      updateDropdownLabel(btn, 0);
+      applyMemberFilters();
+    });
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      const isOpen = panel.classList.contains('open');
+      document.querySelectorAll('.filter-dropdown-panel.open').forEach(p => p.classList.remove('open'));
+      if (!isOpen) panel.classList.add('open');
+    };
   }
 
+  function updateDropdownLabel(btn, count){
+    const baseLabel = btn.dataset.baseLabel || btn.textContent.replace(/\s*\(\d+\)\s*▾$/, '').replace(/\s*▾$/, '').trim();
+    btn.dataset.baseLabel = baseLabel;
+    btn.innerHTML = baseLabel + (count ? ' (' + count + ')' : '') + ' <span class="chevron">▾</span>';
+    btn.classList.toggle('has-selection', count > 0);
+  }
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.filter-dropdown-panel.open').forEach(p => p.classList.remove('open'));
+  });
+
   function buildMemberFilters(){
-    buildFilterRow('member-filters', 'category-filter-block', 'mots_cles', categoryLabel);
-    buildFilterRow('besoin-filters', 'besoin-filter-block', 'besoins', besoinLabel);
+    buildDropdown('category-dropdown-btn', 'category-dropdown-panel', 'category-filter-block', 'mots_cles', categoryLabel, selectedCategories);
+    buildDropdown('besoin-dropdown-btn', 'besoin-dropdown-panel', 'besoin-filter-block', 'besoins', besoinLabel, selectedBesoins);
+    updateDropdownLabel(document.getElementById('category-dropdown-btn'), selectedCategories.size);
+    updateDropdownLabel(document.getElementById('besoin-dropdown-btn'), selectedBesoins.size);
   }
 
   function matchesSearch(m, query){
@@ -708,14 +773,13 @@
   }
 
   function applyMemberFilters(){
-    const activeCategory = document.querySelector('#member-filters .filter-btn.active');
-    const categoryFilter = activeCategory ? activeCategory.dataset.filter : 'all';
-    const activeBesoin = document.querySelector('#besoin-filters .filter-btn.active');
-    const besoinFilter = activeBesoin ? activeBesoin.dataset.filter : 'all';
     const query = document.getElementById('member-search').value.trim();
-    const filtered = allMembers.filter(m => {
-      const categoryOk = categoryFilter === 'all' || (m.mots_cles || []).some(t => t.trim() === categoryFilter);
-      const besoinOk = besoinFilter === 'all' || (m.besoins || []).some(t => t.trim() === besoinFilter);
+    const sorted = allMembers.slice().sort((a, b) =>
+      ((a.nom || '') + (a.prenom || '')).localeCompare((b.nom || '') + (b.prenom || ''), 'fr')
+    );
+    const filtered = sorted.filter(m => {
+      const categoryOk = !selectedCategories.size || (m.mots_cles || []).some(t => selectedCategories.has(t.trim()));
+      const besoinOk = !selectedBesoins.size || (m.besoins || []).some(t => selectedBesoins.has(t.trim()));
       return categoryOk && besoinOk && matchesSearch(m, query);
     });
     renderMembers(filtered, allEvents);
