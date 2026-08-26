@@ -1,0 +1,22 @@
+{
+  "villes": [
+    "Plan-d’Aups-Ste-Baume ",
+    "Toulon",
+    "Marseille"
+  ],
+  "prenom": "Anastasia ",
+  "is_speaker": true,
+  "nom": "AILLAUD",
+  "besoins": [
+    "valoriser-son-activité-professionnelle-et-son-image",
+    "développer-sa-confiance-en-soi",
+    "se-réconcilier-avec-son-image",
+    "créer-des-souvenirs"
+  ],
+  "photo": "/images/uploads/amelie-marzouk-anastasia-4_pp-anastasia-aillaud.jpeg",
+  "titre": "Photographe",
+  "instagram": "https://www.instagram.com/aio_studiophoto/",
+  "mots_cles": [
+    "photographe"
+  ]
+}
