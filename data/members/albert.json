@@ -1,0 +1,31 @@
+{
+  "villes": [
+    "Toulon",
+    "Marseille",
+    "Nice"
+  ],
+  "facebook": "https://www.facebook.com/profile.php?id=61571655696946",
+  "prenom": "Emmanuelle",
+  "is_speaker": true,
+  "nom": "Albert",
+  "besoins": [
+    "apaiser-sa-surcharge-mentale",
+    "comprendre-et-sortir-de-ses-schémas-répétitifs",
+    "dépasser-ses-blocages",
+    "développer-sa-confiance-en-soi",
+    "gagner-en-clarté",
+    "mieux-se-comprendre-et-mieux-accueillir-ses-émotions",
+    "oser-prendre-sa-place",
+    "renforcer-son-estime-de-soi",
+    "se-reconnecter-à-soi-et-à-son-corps",
+    "guérir-de-ses-traumatismes-et-blessures-d’enfance"
+  ],
+  "photo": "/images/uploads/copie-de-format-logo-8-.png",
+  "titre": "Aurathérapeute et praticienne en soins énergétiques",
+  "instagram": "https://www.instagram.com/luminame.83",
+  "mots_cles": [
+    "développement-personnel",
+    "soins-énergétiques",
+    "thérapie"
+  ]
+}
