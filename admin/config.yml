@@ -168,7 +168,9 @@ collections:
                 default: "entre_elles"
                 options:
                   - { label: "Organisé par L'Entre-Elles", value: "entre_elles" }
+                  - { label: "Organisé par L'Entre-Elles en partenariat avec une autre structure", value: "partenariat" }
                   - { label: "Organisé par une intervenante qui loue l'espace", value: "intervenante" }
+              - { label: "Nom de la structure partenaire", name: "partner_name", widget: "string", required: false, hint: "Rempli uniquement si \"En partenariat avec une autre structure\" est choisi ci-dessus. Ex: Synergie Féminine → affichera \"Proposé par L'Entre-Elles × Synergie Féminine\"." }
               - label: "Si organisé par L'Entre-Elles : par qui ?"
                 name: "founders_organizers"
                 widget: "select"
@@ -188,7 +190,16 @@ collections:
                 multiple: true
                 required: false
                 hint: "Choisis une ou plusieurs fiches déjà créées dans \"Communauté\". Si l'intervenante n'a pas encore de fiche, crée-la d'abord dans l'onglet Communauté."
-              - { label: "Lien de réservation", name: "link", widget: "string", hint: "URL vers la page de réservation" }
+              - label: "Réservation"
+                name: "reservation_type"
+                widget: "select"
+                default: "lien"
+                options:
+                  - { label: "Lien de réservation", value: "lien" }
+                  - { label: "Réservable prochainement (billetterie pas encore prête)", value: "a_venir" }
+                  - { label: "Réservable par téléphone ou email", value: "contact" }
+              - { label: "Lien de réservation", name: "link", widget: "string", required: false, hint: "Rempli uniquement si \"Lien de réservation\" est choisi ci-dessus." }
+              - { label: "Téléphone ou email de réservation", name: "reservation_contact", widget: "string", required: false, hint: "Rempli uniquement si \"Réservable par téléphone ou email\" est choisi ci-dessus. Ex: 06 12 34 56 78 ou contact@exemple.fr" }
 
   - name: "membres"
     label: "Communauté"
