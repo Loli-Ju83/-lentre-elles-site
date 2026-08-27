@@ -170,6 +170,24 @@
       "founders_organizers": [
         "Bizz de Femmes"
       ]
+    },
+    {
+      "funding_available": false,
+      "start_time": "08:30",
+      "start_date": "2026-09-22",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "11:00",
+      "end_date": "2026-09-22",
+      "organized_by": "entre_elles",
+      "title": "L’IA au service de ton business",
+      "categories": [
+        "ia"
+      ],
+      "description": "Découvre comment utiliser concrètement l’intelligence artificielle pour gagner du temps et faciliter ton quotidien d’entrepreneure.",
+      "founders_organizers": [
+        "Coleen Group"
+      ]
     }
   ]
 }
