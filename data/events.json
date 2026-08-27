@@ -76,6 +76,23 @@
         "coworking"
       ],
       "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-09-21",
+      "reservation_type": "lien",
+      "price_amount": "10,00 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-09-21",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
     }
   ]
 }
