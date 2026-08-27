@@ -4,6 +4,7 @@
       "funding_available": false,
       "start_time": "09:30",
       "start_date": "2026-09-12",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "12:00",
       "end_date": "2026-09-12",
@@ -28,6 +29,7 @@
       "funding_available": false,
       "start_time": "08:30",
       "start_date": "2026-09-10",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "11:00",
       "end_date": "2026-09-10",
@@ -40,6 +42,23 @@
         "comptabilité"
       ],
       "description": "Pour les femmes entrepreneures qui entendent parler de la facturation électronique, mais qui ne savent pas encore précisément ce qui va changer pour leur entreprise, ni comment s’y préparer."
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-09-11",
+      "reservation_type": "lien",
+      "price_amount": "10,00 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-09-11",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\n\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles "
     }
   ]
 }
