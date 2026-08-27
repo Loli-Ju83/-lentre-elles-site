@@ -353,7 +353,9 @@
   }
   .event-date .day{ font-size:19px; font-weight:700; line-height:1.15; }
   .event-date .month{ font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin-top:4px; }
-  .event-body .orgs{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+  .event-body .orgs-row{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+  .event-body .orgs-label{ font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--brown-300); }
+  .event-body .orgs{ display:flex; gap:6px; flex-wrap:wrap; }
   .org-badge{
     display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono);
     font-size:10.5px; text-transform:uppercase; letter-spacing:.06em;
@@ -375,6 +377,11 @@
     font-size:13px; font-weight:600; color: var(--fuchsia-200);
     display:inline-flex; align-items:center; gap:6px;
   }
+  .event-body .reserve-pending{
+    font-size:12.5px; font-weight:600; color: var(--brown-300);
+    font-style:italic; display:inline-flex; align-items:center; gap:6px;
+  }
+  .event-card.event-card-intervenante .reserve-pending{ color: var(--brown-500); }
   .event-card.hidden{ display:none; }
 
   .event-type-badge{
@@ -395,6 +402,7 @@
   .event-card.event-card-intervenante .event-price{ color: var(--heading); }
   .event-card.event-card-intervenante .event-body .reserve{ color: var(--fuchsia-700); }
   .event-card.event-card-intervenante .org-badge.neutral{ background: var(--brown-900); color: var(--cream-soft); }
+  .event-card.event-card-intervenante .orgs-label{ color: var(--brown-500); }
 
   .event-tooltip{
     position:absolute; left:20px; right:20px; top:100%; margin-top:8px;
@@ -1177,6 +1185,9 @@
       const name = m ? ((m.prenom || '') + ' ' + (m.nom || '')).trim() : 'une intervenante';
       return '<span class="event-type-badge intervenante">Organisé par ' + name + '</span>';
     }
+    if (ev.organized_by === 'partenariat' && ev.partner_name){
+      return '<span class="event-type-badge entre-elles">Proposé par L\'Entre-Elles × ' + ev.partner_name + '</span>';
+    }
     return '<span class="event-type-badge entre-elles">Proposé par L\'Entre-Elles</span>';
   }
 
@@ -1200,24 +1211,42 @@
 
       const orgEntries = eventOrgEntries(ev);
       const orgBadges = orgEntries.map(e => '<a class="org-badge ' + e.colorClass + '" href="' + e.href + '">' + e.label + '</a>').join('');
+      const orgBlock = orgBadges
+        ? '<div class="orgs-row"><span class="orgs-label">Animé par</span><div class="orgs">' + orgBadges + '</div></div>'
+        : '';
 
       const isIntervenante = ev.organized_by === 'intervenante';
       const card = document.createElement('div');
       card.className = 'event-card' + (isIntervenante ? ' event-card-intervenante' : '');
       card.dataset.orgs = orgEntries.map(e => e.key).join('|');
 
+      let reservationHtml = '';
+      if (ev.reservation_type === 'a_venir'){
+        reservationHtml = '<span class="reserve-pending">Réservation bientôt disponible</span>';
+      } else if (ev.reservation_type === 'contact' && ev.reservation_contact){
+        const contact = ev.reservation_contact.trim();
+        const isEmail = contact.includes('@');
+        const isPhone = /^[0-9+ .()-]{6,}$/.test(contact);
+        const href = isEmail ? 'mailto:' + contact : (isPhone ? 'tel:' + contact.replace(/[^0-9+]/g, '') : null);
+        reservationHtml = href
+          ? '<a class="reserve" href="' + href + '">Réserver par ' + (isEmail ? 'email' : 'téléphone') + ' — ' + contact + '</a>'
+          : '<span class="reserve-pending">Réserver via ' + contact + '</span>';
+      } else if (ev.link){
+        reservationHtml = '<a class="reserve" href="' + ev.link + '" target="_blank" rel="noopener">Réserver ma place →</a>';
+      }
+
       card.innerHTML = `
         <div class="event-date"><div class="day">${day}</div><div class="month">${month}</div></div>
         <div class="event-body">
           ${eventTypeMention(ev)}
-          <div class="orgs">${orgBadges}</div>
+          ${orgBlock}
           <h3>${ev.title}</h3>
           <div class="meta">${categoryNames.join(' · ')}${timeRange ? ' · ' + timeRange : ''} · Ollioules</div>
           <div class="price-row">
             <span class="event-price">${price}</span>
             ${ev.funding_available ? '<span class="funding-badge">Financement possible</span>' : ''}
           </div>
-          <a class="reserve" href="${ev.link}" target="_blank" rel="noopener">Réserver ma place →</a>
+          ${reservationHtml}
         </div>
         ${ev.description ? '<div class="event-tooltip">' + ev.description + '</div>' : ''}
       `;
