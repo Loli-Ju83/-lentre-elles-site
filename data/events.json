@@ -96,7 +96,7 @@
     },
     {
       "funding_available": false,
-      "start_time": "9:00",
+      "start_time": "09:00",
       "start_date": "2026-09-25",
       "reservation_type": "lien",
       "price_amount": "10,00 €",
@@ -127,6 +127,25 @@
         "coworking"
       ],
       "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-09-19",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-09-19",
+      "organized_by": "entre_elles",
+      "title": "Déclic pro : 30 minutes pour faire le point sur ta situation professionnelle",
+      "categories": [
+        "reconversion-professionnelle",
+        "carrière"
+      ],
+      "description": "Tu te questionnes sur la suite de ton parcours professionnel ? Tu envisages une évolution, une reconversion, un bilan de compétences, une VAE ou une formation, sans savoir par où commencer ? Un échange bienveillant, confidentiel et sans engagement pour t’apporter une nouvelle perspective et enclencher le bon mouvement.",
+      "founders_organizers": [
+        "Coleen Group"
+      ]
     }
   ]
 }
