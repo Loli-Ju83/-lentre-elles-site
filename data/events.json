@@ -146,6 +146,30 @@
       "founders_organizers": [
         "Coleen Group"
       ]
+    },
+    {
+      "organizers": [
+        "aillaud",
+        "miault"
+      ],
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-09-26",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-09-27",
+      "organized_by": "entre_elles",
+      "title": "Boost ton image professionnelle",
+      "categories": [
+        "shooting-photo",
+        "communication",
+        "réseaux-sociaux"
+      ],
+      "description": "Révélez votre personnalité à travers des clichés qui vous ressemblent et des postures qui transmettent les bons messages !\nCoaching personnalisé offert en marketing et communication afin de travailler votre branding personnel et vous démarquer\nSéance photo professionnelle en studio offerte (sans obligation d’achat)\nOption mise en beauté flash (coiffure OU maquillage) au tarif exceptionnel de 25 €",
+      "founders_organizers": [
+        "Bizz de Femmes"
+      ]
     }
   ]
 }
