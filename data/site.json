@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Ollioules · Var",
     "title": "Un lieu où les expertises se rencontrent",
-    "subtitle": "Formations, consulting, coworking, ateliers et développement personnel — une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui viennent s'y former, découvrir et échanger."
+    "subtitle": "Une safe place pensée par deux amies, née pour s'expandre et ouverte à tous ceux qui veulent entreprendre, créer, apprendre, évoluer, et se rencontrer. "
   },
   "lieu": {
     "title": "Un espace chaleureux à taille humaine",
@@ -24,27 +24,27 @@
   "activites": [
     {
       "title": "Formations professionnelles, accompagnement & coaching",
-      "text": "Des parcours individuels ou collectifs pour développer tes compétences, structurer ton activité et faire évoluer ton projet professionnel."
+      "text": "Des parcours individuels ou collectifs pour développer ses compétences, structurer son activité et faire évoluer son projet professionnel."
     },
     {
       "title": "Ateliers thématiques",
-      "text": "Des formats courts et concrets, en petits groupes, pour apprendre, découvrir et partager."
+      "text": "Des formats courts et concrets, en petits groupes, pour découvrir, apprendre, grandir et partager."
     },
     {
       "title": "Événements & réseautage",
-      "text": "S'inspirer, élargir son réseau, avec des rencontres qui font avancer les métiers de l'humain."
+      "text": "S'inspirer, connecter, élargir son réseau, créer des liens, avec des rencontres qui font avancer les métiers de l'humain."
     },
     {
       "title": "Coworking femmes entrepreneures",
-      "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec des femmes qui impactent."
+      "text": "Des journées pour travailler entourée, dans la sororité, sortir de l'isolement et échanger avec d’autres femmes qui vivent les mêmes réalités que nous."
     },
     {
       "title": "Espace de création de contenu",
-      "text": "Un espace équipé pour créer facilement tes photos, vidéos et contenus pour les réseaux sociaux."
+      "text": "Un espace équipé pour créer facilement des photos, des vidéos, des interviews et des contenus pour les réseaux sociaux."
     },
     {
       "title": "Développement personnel",
-      "text": "Des temps pour revenir à soi : conférences et ateliers animés par des expertes de l'évolution personnelle."
+      "text": "Des temps pour revenir à soi : des conférences, ateliers et cercles animés par des experts avec la volonté d’accompagner en profondeur."
     }
   ],
   "fondatrices": {
