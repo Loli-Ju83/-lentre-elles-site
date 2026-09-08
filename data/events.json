@@ -176,12 +176,13 @@
       "funding_available": false,
       "start_time": "08:30",
       "start_date": "2026-09-22",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "11:00",
       "end_date": "2026-09-22",
       "organized_by": "entre_elles",
       "title": "L’IA au service de ton business",
+      "link": "https://planify.coleengroup.fr/l-ia-au-service-de-ton-business",
       "categories": [
         "ia"
       ],
