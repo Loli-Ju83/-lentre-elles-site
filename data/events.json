@@ -132,12 +132,13 @@
       "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-09-19",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "18:00",
       "end_date": "2026-09-19",
       "organized_by": "entre_elles",
       "title": "Déclic pro : 30 minutes pour faire le point sur ta situation professionnelle",
+      "link": "https://planify.coleengroup.fr/declic-pro",
       "categories": [
         "reconversion-professionnelle",
         "carrière"
