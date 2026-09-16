@@ -2,66 +2,6 @@
   "events": [
     {
       "funding_available": false,
-      "start_time": "09:30",
-      "start_date": "2026-09-12",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "12:00",
-      "end_date": "2026-09-12",
-      "organized_by": "entre_elles",
-      "title": "Bien utiliser les réseaux sociaux en 2026",
-      "link": "https://calendly.com/lentre-elles/bien-utiliser-les-reseaux-sociaux/2026-09-12T09:30:00+02:00",
-      "categories": [
-        "atelier",
-        "communication",
-        "marketing",
-        "réseaux-sociaux"
-      ],
-      "description": "Pour les femmes entrepreneures de l’aire toulonnaise qui savent que les réseaux sociaux peuvent les aider à développer leur activité, mais qui ne savent pas où publier, quoi partager, ni comment les utiliser pour attirer des clients et convertir sans perdre leur temps et leur énergie.",
-      "founders_organizers": [
-        "Bizz de Femmes"
-      ]
-    },
-    {
-      "organizers": [
-        "levec"
-      ],
-      "funding_available": false,
-      "start_time": "08:30",
-      "start_date": "2026-09-10",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "11:00",
-      "end_date": "2026-09-10",
-      "organized_by": "entre_elles",
-      "title": "Prête pour la facturation électronique ?",
-      "link": "https://calendly.com/lentre-elles/facturation-electronique",
-      "categories": [
-        "atelier",
-        "administratif",
-        "comptabilité"
-      ],
-      "description": "Pour les femmes entrepreneures qui entendent parler de la facturation électronique, mais qui ne savent pas encore précisément ce qui va changer pour leur entreprise, ni comment s’y préparer."
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-09-11",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-09-11",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\n\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles "
-    },
-    {
-      "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-09-17",
       "reservation_type": "lien",
@@ -156,12 +96,13 @@
       "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-09-26",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "18:00",
       "end_date": "2026-09-27",
       "organized_by": "entre_elles",
       "title": "Boost ton image professionnelle",
+      "link": "https://calendly.com/lentre-elles/boost-ton-image-professionnelle",
       "categories": [
         "shooting-photo",
         "communication",
