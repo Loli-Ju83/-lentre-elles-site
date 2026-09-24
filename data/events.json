@@ -1,94 +1,6 @@
 {
   "events": [
     {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-09-17",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-09-17",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-09-21",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-09-21",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-09-25",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-09-25",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-10-02",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-10-02",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-09-19",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "18:00",
-      "end_date": "2026-09-19",
-      "organized_by": "entre_elles",
-      "title": "Déclic pro : 30 minutes pour faire le point sur ta situation professionnelle",
-      "link": "https://planify.coleengroup.fr/declic-pro",
-      "categories": [
-        "reconversion-professionnelle",
-        "carrière"
-      ],
-      "description": "Tu te questionnes sur la suite de ton parcours professionnel ? Tu envisages une évolution, une reconversion, un bilan de compétences, une VAE ou une formation, sans savoir par où commencer ? Un échange bienveillant, confidentiel et sans engagement pour t’apporter une nouvelle perspective et enclencher le bon mouvement.",
-      "founders_organizers": [
-        "Coleen Group"
-      ]
-    },
-    {
       "organizers": [
         "aillaud",
         "miault"
@@ -115,21 +27,240 @@
     },
     {
       "funding_available": false,
-      "start_time": "08:30",
-      "start_date": "2026-09-22",
+      "start_time": "09:00",
+      "start_date": "2026-10-02",
+      "reservation_type": "lien",
+      "price_amount": "10,00 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-10-02",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
+    },
+    {
+      "organizers": [
+        "laura"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-10-06",
+      "reservation_contact": "https://calendly.com/laurajoly/comprendrelelienparentsetnotrevieamoureux?month=2026-10&date=2026-10-06",
       "reservation_type": "lien",
       "price_type": "free",
-      "end_time": "11:00",
-      "end_date": "2026-09-22",
+      "end_time": "21:30",
+      "end_date": "2026-10-06",
+      "organized_by": "intervenante",
+      "title": "Conférence : comprendre comment les relations avec nos parents influencent nos choix amoureux",
+      "categories": [
+        "developpement-personnel"
+      ],
+      "description": "Découvrez ce que vos choix amoureux racontent de votre histoire !\nEt si certaines difficultés que vous rencontrez aujourd’hui dans votre couple avaient des racines bien plus anciennes que votre relation actuelle ? "
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-10-07",
+      "reservation_type": "lien",
+      "price_amount": "10,00 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-10-07",
       "organized_by": "entre_elles",
-      "title": "L’IA au service de ton business",
-      "link": "https://planify.coleengroup.fr/l-ia-au-service-de-ton-business",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
+    },
+    {
+      "organizers": [
+        "levec"
+      ],
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-10-09",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "11:30",
+      "end_date": "2026-10-09",
+      "organized_by": "entre_elles",
+      "title": "Atelier : Perdue avec la facturation électronique ?",
+      "link": "https://calendly.com/lentre-elles/facturation-electronique",
+      "categories": [
+        "gestion-dentreprise",
+        "comptabilité",
+        "administratif"
+      ],
+      "description": "Pour les femmes entrepreneures qui entendent parler de la facturation électronique, mais qui ne savent pas encore précisément ce qui va changer pour leur entreprise, ni comment s’y préparer."
+    },
+    {
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-10-13",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "21:30",
+      "end_date": "2026-10-13",
+      "organized_by": "entre_elles",
+      "title": "Atelier : L’IA au service de ton business",
+      "link": "",
       "categories": [
         "ia"
       ],
-      "description": "Découvre comment utiliser concrètement l’intelligence artificielle pour gagner du temps et faciliter ton quotidien d’entrepreneure.",
+      "description": "Découvrez comment utiliser concrètement l’intelligence artificielle pour gagner du temps et faciliter votre quotidien d’entrepreneure.",
       "founders_organizers": [
         "Coleen Group"
+      ]
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-10-15",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "11:30",
+      "end_date": "2026-10-15",
+      "organized_by": "entre_elles",
+      "title": "Atelier : Créer du contenu impactant sur Instagram",
+      "categories": [
+        "communication",
+        "marketing",
+        "réseaux-sociaux"
+      ],
+      "description": "Venez découvrir les bases du neuromarketing et de la psychologie d’achat pour créer du contenu sur Instagram qui vous ressemble, connecte profondément et qui convertit — tout en restant 100 % VOUS !",
+      "founders_organizers": [
+        "Bizz de Femmes"
+      ]
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-10-16",
+      "reservation_type": "lien",
+      "price_amount": "10,00 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-10-16",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-10-20",
+      "reservation_type": "lien",
+      "price_amount": "10,00 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-10-20",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
+    },
+    {
+      "organizers": [
+        "aillaud"
+      ],
+      "funding_available": false,
+      "start_time": "09:30",
+      "start_date": "2026-10-21",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-09-21",
+      "organized_by": "intervenante",
+      "title": "Shooting Automne en Famille",
+      "categories": [
+        "shooting-photo"
+      ],
+      "description": "Une parenthèse en famille : participez gratuitement à une mini-séance photo en studio avec vos enfants et profitez d’un joli moment de complicité en famille 🤎\nDans une ambiance automnale, douce et bohème, venez créer de beaux souvenirs, capturer vos sourires et garder une trace de ces petits instants précieux qui passent si vite."
+    },
+    {
+      "organizers": [
+        "aillaud"
+      ],
+      "funding_available": false,
+      "start_time": "09:30",
+      "start_date": "2026-10-28",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-10-28",
+      "organized_by": "intervenante",
+      "title": "Shooting Automne en Famille",
+      "categories": [
+        "shooting-photo"
+      ],
+      "description": "Une parenthèse en famille : participez gratuitement à une mini-séance photo en studio avec vos enfants et profitez d’un joli moment de complicité en famille 🤎\nDans une ambiance automnale, douce et bohème, venez créer de beaux souvenirs, capturer vos sourires et garder une trace de ces petits instants précieux qui passent si vite."
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-10-30",
+      "reservation_type": "lien",
+      "price_amount": "10 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-10-30",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes 6 places disponibles"
+    },
+    {
+      "organizers": [
+        "albert"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-10-27",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "21:30",
+      "end_date": "2026-10-27",
+      "organized_by": "intervenante",
+      "title": "Atelier : décode ton enfant, ce que son aura peut révéler de sa personnalité, ses émotions et ses besoins",
+      "categories": [
+        "developpement-personnel"
+      ],
+      "description": "Et si vous pouviez porter un nouveau regard sur votre enfant, sa personnalité, ses émotions et ses besoins ? Lors de cet atelier, découvrez la lecture d’aura et assistez à des lectures en direct à partir de photos de vos enfants, pour explorer concrètement ce que cette approche peut révéler de leur fonctionnement et vous aider à mieux les comprendre et les accompagner au quotidien."
+    },
+    {
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-10-29",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "21:30",
+      "end_date": "2026-10-29",
+      "organized_by": "entre_elles",
+      "title": "Conférence : La petite fille blessée derrière la femme entrepreneure (Comment votre histoire impacte votre business ?)",
+      "categories": [
+        "cercle-de-femmes",
+        "developpement-personnel",
+        "communication"
+      ],
+      "description": "Et si certaines difficultés que vous rencontrez dans votre business ne venaient pas seulement de votre stratégie… mais aussi de votre histoire ?\nPeur de l’échec ou du jugement, besoin de reconnaissance, difficulté à vous montrer, à vendre, à poser vos limites ou à prendre pleinement votre place… Lors de cette conférence, découvrez comment **vos blessures d’enfance et votre histoire personnelle peuvent influencer votre façon d’entreprendre**, vos décisions et votre rapport à votre business.\nUn moment pour prendre conscience de certains schémas, comprendre ce qui se rejoue dans votre vie d’entrepreneure et ouvrir la voie à une posture plus consciente et plus alignée.",
+      "founders_organizers": [
+        "Bizz de Femmes"
       ]
     }
   ]
