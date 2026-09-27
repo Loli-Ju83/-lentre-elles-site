@@ -235,12 +235,13 @@
       "funding_available": false,
       "start_time": "18:30",
       "start_date": "2026-10-27",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "21:30",
       "end_date": "2026-10-27",
       "organized_by": "intervenante",
       "title": "Atelier : Décode ton enfant, ce que son aura peut révéler de sa personnalité, ses émotions et ses besoins",
+      "link": "https://calendly.com/luminame83/decode-ton-enfant-ollioules",
       "categories": [
         "developpement-personnel",
         "famille"
