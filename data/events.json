@@ -104,13 +104,13 @@
       "funding_available": false,
       "start_time": "18:30",
       "start_date": "2026-10-13",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "21:30",
       "end_date": "2026-10-13",
       "organized_by": "entre_elles",
       "title": "Atelier : L’IA au service de ton business",
-      "link": "",
+      "link": "https://planify.coleengroup.fr/l-ia-au-service-de-ton-business",
       "categories": [
         "ia"
       ],
@@ -160,12 +160,13 @@
       "funding_available": false,
       "start_time": "09:30",
       "start_date": "2026-10-21",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "18:00",
       "end_date": "2026-10-21",
       "organized_by": "intervenante",
       "title": "Shooting Automne en Famille    ",
+      "link": "https://calendly.com/aiostudiophoto/shooting-famille-offert-souvenirs-d-automne",
       "categories": [
         "shooting-photo",
         "famille"
@@ -179,12 +180,14 @@
       "funding_available": false,
       "start_time": "09:30",
       "start_date": "2026-10-28",
-      "reservation_type": "a_venir",
+      "reservation_contact": "",
+      "reservation_type": "contact",
       "price_type": "free",
       "end_time": "18:00",
       "end_date": "2026-10-28",
       "organized_by": "intervenante",
       "title": "Shooting Automne en Famille",
+      "link": "https://calendly.com/aiostudiophoto/shooting-famille-offert-souvenirs-d-automne",
       "categories": [
         "shooting-photo",
         "famille"
