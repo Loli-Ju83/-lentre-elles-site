@@ -122,26 +122,6 @@
     {
       "funding_available": false,
       "start_time": "09:00",
-      "start_date": "2026-10-15",
-      "reservation_type": "a_venir",
-      "price_type": "free",
-      "end_time": "11:30",
-      "end_date": "2026-10-15",
-      "organized_by": "entre_elles",
-      "title": "Atelier : Créer du contenu impactant sur Instagram",
-      "categories": [
-        "communication",
-        "marketing",
-        "réseaux-sociaux"
-      ],
-      "description": "Venez découvrir les bases du neuromarketing et de la psychologie d’achat pour créer du contenu sur Instagram qui vous ressemble, connecte profondément et qui convertit — tout en restant 100 % VOUS !",
-      "founders_organizers": [
-        "Bizz de Femmes"
-      ]
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
       "start_date": "2026-10-16",
       "reservation_type": "lien",
       "price_amount": "10,00 €",
