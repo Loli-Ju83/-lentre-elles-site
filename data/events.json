@@ -2,25 +2,6 @@
   "events": [
     {
       "funding_available": false,
-      "start_time": "18:30",
-      "start_date": "2026-10-13",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "21:30",
-      "end_date": "2026-10-13",
-      "organized_by": "entre_elles",
-      "title": "Atelier : L’IA au service de ton business",
-      "link": "https://planify.coleengroup.fr/l-ia-au-service-de-ton-business",
-      "categories": [
-        "ia"
-      ],
-      "description": "Découvrez comment utiliser concrètement l’intelligence artificielle pour gagner du temps et faciliter votre quotidien d’entrepreneure.",
-      "founders_organizers": [
-        "Coleen Group"
-      ]
-    },
-    {
-      "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-10-16",
       "reservation_type": "lien",
