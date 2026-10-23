@@ -1,60 +1,6 @@
 {
   "events": [
     {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-10-16",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-10-16",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-10-20",
-      "reservation_type": "lien",
-      "price_amount": "10,00 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-10-20",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités.\nAccessible de 9h à 17h\nWi-Fi, thé, café et boissons chaudes\n6 places disponibles"
-    },
-    {
-      "organizers": [
-        "aillaud"
-      ],
-      "funding_available": false,
-      "start_time": "09:30",
-      "start_date": "2026-10-21",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "18:00",
-      "end_date": "2026-10-21",
-      "organized_by": "intervenante",
-      "title": "Shooting Automne en Famille    ",
-      "link": "https://calendly.com/aiostudiophoto/shooting-famille-offert-souvenirs-d-automne",
-      "categories": [
-        "shooting-photo",
-        "famille"
-      ],
-      "description": "Une parenthèse en famille : participez gratuitement à une mini-séance photo en studio avec vos enfants et profitez d’un joli moment de complicité en famille 🤎\nDans une ambiance automnale, douce et bohème, venez créer de beaux souvenirs, capturer vos sourires et garder une trace de ces petits instants précieux qui passent si vite."
-    },
-    {
       "organizers": [
         "aillaud"
       ],
@@ -111,26 +57,6 @@
         "famille"
       ],
       "description": "Et si vous pouviez porter un nouveau regard sur votre enfant, sa personnalité, ses émotions et ses besoins ? Lors de cet atelier, découvrez la lecture d’aura et assistez à des lectures en direct à partir de photos de vos enfants, pour explorer concrètement ce que cette approche peut révéler de leur fonctionnement et vous aider à mieux les comprendre et les accompagner au quotidien."
-    },
-    {
-      "funding_available": false,
-      "start_time": "18:30",
-      "start_date": "2026-10-29",
-      "reservation_type": "a_venir",
-      "price_type": "free",
-      "end_time": "21:30",
-      "end_date": "2026-10-29",
-      "organized_by": "entre_elles",
-      "title": "Conférence : La petite fille blessée derrière la femme entrepreneure",
-      "categories": [
-        "cercle-de-femmes",
-        "developpement-personnel",
-        "communication"
-      ],
-      "description": "Comment votre histoire impacte votre business ?\n\nEt si certaines difficultés que vous rencontrez dans votre business ne venaient pas seulement de votre stratégie… mais aussi de votre histoire ?\nPeur de l’échec ou du jugement, besoin de reconnaissance, difficulté à vous montrer, à vendre, à poser vos limites ou à prendre pleinement votre place… Lors de cette conférence, découvrez comment **vos blessures d’enfance et votre histoire personnelle peuvent influencer votre façon d’entreprendre**, vos décisions et votre rapport à votre business.\nUn moment pour prendre conscience de certains schémas, comprendre ce qui se rejoue dans votre vie d’entrepreneure et ouvrir la voie à une posture plus consciente et plus alignée.",
-      "founders_organizers": [
-        "Bizz de Femmes"
-      ]
     }
   ]
 }
