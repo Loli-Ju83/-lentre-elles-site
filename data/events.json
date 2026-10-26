@@ -39,24 +39,311 @@
       "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes 6 places disponibles"
     },
     {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-02",
+      "reservation_type": "lien",
+      "price_amount": "10 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-11-02",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
+    },
+    {
+      "organizers": [
+        "bentaouza"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-11-03",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "20:30",
+      "end_date": "2026-11-03",
+      "organized_by": "intervenante",
+      "title": "Les loyautés invisibles : quand rester fidèle à sa famille nous empêche d’avancer",
+      "link": "https://calendly.com/kbformationscontact/conference?month=2026-11&date=2026-11-03",
+      "categories": [
+        "atelier",
+        "conférence"
+      ],
+      "description": "Et si certaines de vos difficultés ne vous appartenaient pas entièrement ?\nAmour, argent, travail, relations… Pourquoi avons-nous parfois l’impression de revivre les mêmes scénarios, malgré nos prises de conscience et notre volonté de changer ? Et si certaines de ces répétitions trouvaient leurs racines dans votre histoire familiale ?"
+    },
+    {
+      "partner_name": "Zoé L'Huillier",
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-06",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "11:30",
+      "end_date": "2026-11-06",
+      "organized_by": "partenariat",
+      "title": "Affirme ta posture d’entrepreneure : prends la parole avec impact !",
+      "link": "https://calendly.com/lentre-elles/atelier-prise-de-parole",
+      "categories": [
+        "atelier",
+        "marketing"
+      ],
+      "description": "Tu connais ton métier, tu sais ce que tu vaux… mais dès qu'il faut prendre la parole pour parler de ton activité, c'est une autre histoire ?\nEt si tu apprenais à prendre ta place, à affirmer ta posture de cheffe d'entreprise et à t'exprimer avec assurance et impact ?"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-10",
+      "reservation_type": "lien",
+      "price_amount": "10 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-11-10",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
+    },
+    {
+      "organizers": [
+        "laura"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-11-10",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "20:30",
+      "end_date": "2026-11-10",
+      "organized_by": "intervenante",
+      "title": "Fatiguée d'être celle qui porte tout ? Et si tu pouvais enfin te libérer de ce qui ne t'appartient pas ?",
+      "link": "https://calendly.com/laurajoly/fatigueedetoutporter",
+      "categories": [
+        "conférence",
+        "atelier",
+        "cercle-de-femmes",
+        "developpement-personnel"
+      ],
+      "description": "Tu es toujours celle qui tient bon ? Celle qui gère, qui rassure, qui prend soin des autres… même quand, à l'intérieur, tu es épuisée ?\nEt si cette obligation d'être forte ne venait pas uniquement de toi ?\nParfois, sans même en avoir conscience, nous reproduisons des croyances, des rôles et des façons de fonctionner qui se transmettent au fil des générations.\nMais aujourd'hui, as-tu encore besoin de tout porter ?"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-12",
+      "reservation_type": "lien",
+      "price_amount": "10 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-11-12",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-13",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "11:30",
+      "end_date": "2026-11-13",
+      "organized_by": "entre_elles",
+      "title": "Quoi publier sur les réseaux sociaux pour développer son entreprise ?",
+      "link": "https://calendly.com/lentre-elles/atelier-reseaux-sociaux",
+      "categories": [
+        "atelier",
+        "marketing",
+        "réseaux-sociaux"
+      ],
+      "description": "Tu sais qu'aujourd'hui, les réseaux sociaux sont devenus un levier incontournable pour faire connaître et développer ton activité.\n\nMais entre le manque d'idées, de savoir-faire, les conseils contradictoires et les exemples d'autres entrepreneures que tu essaies de suivre… tu ne sais plus vraiment par où commencer, quoi publier, ni même pourquoi tu le fais !\n\nEt si tu arrêtais de publier simplement pour être présente et que tu commençais à créer du contenu qui a du sens pour toi, qui transmet les messages que tu souhaites faire passer aux personnes que tu veux aider… tout en servant réellement le développement de ton entreprise ?",
+      "founders_organizers": [
+        "Bizz de Femmes"
+      ]
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-16",
+      "reservation_type": "lien",
+      "price_amount": "10 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-11-16",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
+    },
+    {
       "organizers": [
         "albert"
       ],
       "funding_available": false,
       "start_time": "18:30",
-      "start_date": "2026-10-27",
+      "start_date": "2026-11-17",
       "reservation_type": "lien",
       "price_type": "free",
-      "end_time": "21:30",
-      "end_date": "2026-10-27",
+      "end_time": "20:30",
+      "end_date": "2026-11-17",
       "organized_by": "intervenante",
-      "title": "Atelier : Décode ton enfant, ce que son aura peut révéler de sa personnalité, ses émotions et ses besoins",
+      "title": "Décode ton enfant : ce que son aura peut révéler de sa personnalité, ses émotions et ses besoins",
       "link": "https://calendly.com/luminame83/decode-ton-enfant-ollioules",
       "categories": [
+        "atelier",
+        "conférence",
         "developpement-personnel",
         "famille"
       ],
-      "description": "Et si vous pouviez porter un nouveau regard sur votre enfant, sa personnalité, ses émotions et ses besoins ? Lors de cet atelier, découvrez la lecture d’aura et assistez à des lectures en direct à partir de photos de vos enfants, pour explorer concrètement ce que cette approche peut révéler de leur fonctionnement et vous aider à mieux les comprendre et les accompagner au quotidien."
+      "description": "Et si l’aura de votre enfant pouvait vous aider à mieux comprendre sa personnalité, ses émotions, ses besoins et certaines de ses réactions ?"
+    },
+    {
+      "organizers": [
+        "aillaud"
+      ],
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-19",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-11-20",
+      "organized_by": "intervenante",
+      "title": "Boost ton image professionnelle",
+      "categories": [
+        "shooting-photo",
+        "communication"
+      ],
+      "description": "Shooting photo professionnel individuel découverte avec Anastasia, sans obligation d’achat, pour bâtir une image de marque solide et se démarquer grâce à une identité visuelle authentique, alignée et impactante !"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-21",
+      "reservation_type": "a_venir",
+      "price_amount": "30 €",
+      "price_type": "amount",
+      "end_time": "18:00",
+      "end_date": "2026-11-21",
+      "organized_by": "entre_elles",
+      "title": "2026 en conscience, 2027 en confiance ! Une parenthèse avec le Tarot de Marseille pour faire le point et avancer sereinement",
+      "categories": [
+        "developpement-personnel"
+      ],
+      "description": "Et si vous preniez un temps pour vous, pour regarder le chemin parcouru en 2026, mettre en lumière vos apprentissages et accueillir 2027 avec un regard neuf ?\n\nJulie vous invite à découvrir l’univers du Tarot de Marseille, le temps d’une séance découverte accessible à tous, même si vous n’avez jamais tiré les cartes.\nBien plus qu’un simple jeu de cartes, le Tarot de Marseille peut devenir un support d’introspection, d’écoute de soi et de réflexion, pour explorer ses ressentis, questionner ses aspirations et ouvrir de nouvelles perspectives.\nSon intention ? Vous offrir un espace pour prendre du recul sur l’année écoulée, mieux comprendre ce qui vous anime aujourd’hui et avancer vers 2027 avec davantage de clarté et de sérénité.",
+      "founders_organizers": [
+        "Coleen Group"
+      ]
+    },
+    {
+      "organizers": [
+        "lavaix"
+      ],
+      "funding_available": false,
+      "start_time": "15:00",
+      "start_date": "2026-11-22",
+      "reservation_type": "a_venir",
+      "price_amount": "30 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-11-22",
+      "organized_by": "intervenante",
+      "title": "Méditation aux énergies de l'hiver & découverte des onctions sacrées",
+      "categories": [
+        "developpement-personnel"
+      ],
+      "description": "Stressée, fatiguée, surchargée… Et si tu t'accordais enfin une parenthèse pour toi ?\nTu te sens épuisée, le mental toujours en ébullition, avec cette impression de devoir penser à tout, tout le temps ?\nTu avances, tu gères, tu prends soin des autres… mais cela fait combien de temps que tu ne t'es pas réellement accordé un moment pour toi ?\n\nEt si, pendant deux heures, tu t'autorisais simplement à ralentir, à déposer ce qui te pèse et à revenir à l'essentiel : TOI !"
+    },
+    {
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-24",
+      "reservation_type": "lien",
+      "price_amount": "10 €",
+      "price_type": "amount",
+      "end_time": "17:00",
+      "end_date": "2026-11-24",
+      "organized_by": "entre_elles",
+      "title": "Journée coworking entre femmes entrepreneures",
+      "link": "https://calendly.com/lentre-elles/coworking",
+      "categories": [
+        "coworking"
+      ],
+      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
+    },
+    {
+      "partner_name": "Anthony Fournier du Studio Alphafilms",
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-11-24",
+      "reservation_type": "a_venir",
+      "price_amount": "35 €",
+      "price_type": "amount",
+      "end_time": "22:30",
+      "end_date": "2026-11-24",
+      "organized_by": "partenariat",
+      "title": "Afterwork Entrepreneures : Viens tourner ta vidéo de présentation pour les réseaux sociaux !",
+      "categories": [
+        "communication",
+        "réseaux-sociaux",
+        "réseautage"
+      ],
+      "description": "Un afterwork entre entrepreneures pour passer devant la caméra et mettre ton business en lumière !\n\nTu sais qu'une vidéo de présentation pourrait faire toute la différence sur tes réseaux sociaux… mais tu repousses toujours le moment de passer devant la caméra ?\nTu ne sais pas quoi dire, comment te présenter, tu n'aimes pas te filmer ou tu n'arrives tout simplement pas à obtenir un résultat professionnel ?\nEt si tu profitais d'un afterwork convivial pour enfin tourner LA vidéo qui présente qui tu es, ce que tu fais et ce qui rend ton entreprise unique ?",
+      "founders_organizers": [
+        "Bizz de Femmes"
+      ]
+    },
+    {
+      "organizers": [
+        "bentaouza"
+      ],
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-27",
+      "reservation_type": "lien",
+      "price_amount": "35 €",
+      "price_type": "amount",
+      "end_time": "12:30",
+      "end_date": "2026-11-27",
+      "organized_by": "intervenante",
+      "title": "Accompagner au-delà du symptôme avec le transgénérationnel",
+      "link": "https://calendly.com/kbformationscontact/atelier-accompagner-au-dela-du-symptome?month=2026-11&date=2026-11-27",
+      "categories": [
+        "atelier",
+        "developpement-personnel"
+      ],
+      "description": "Pour les professionnels de la relation d’aide\nAccompagner au-delà du symptôme : quand le transgénérationnel apporte une nouvelle lecture à des problématiques rencontrées en accompagnement"
+    },
+    {
+      "organizers": [
+        "aillaud"
+      ],
+      "funding_available": false,
+      "start_time": "09:00",
+      "start_date": "2026-11-28",
+      "reservation_type": "a_venir",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-11-29",
+      "organized_by": "intervenante",
+      "title": "Shooting Photo de Noël en Famille",
+      "categories": [
+        "shooting-photo",
+        "famille"
+      ],
+      "description": "Shooting photo découverte de Noël en famille avec Anastasia, sans obligation d’achat, pour immortaliser de précieux moments de complicité, capturer la magie des fêtes et créer de merveilleux souvenirs à partager et à conserver au fil des années ! 🎄📸"
     }
   ]
 }
