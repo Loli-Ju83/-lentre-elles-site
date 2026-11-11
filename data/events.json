@@ -1,139 +1,6 @@
 {
   "events": [
     {
-      "organizers": [
-        "aillaud"
-      ],
-      "funding_available": false,
-      "start_time": "09:30",
-      "start_date": "2026-10-28",
-      "reservation_contact": "",
-      "reservation_type": "contact",
-      "price_type": "free",
-      "end_time": "18:00",
-      "end_date": "2026-10-28",
-      "organized_by": "intervenante",
-      "title": "Shooting Automne en Famille",
-      "link": "https://calendly.com/aiostudiophoto/shooting-famille-offert-souvenirs-d-automne",
-      "categories": [
-        "shooting-photo",
-        "famille"
-      ],
-      "description": "Une parenthèse en famille : participez gratuitement à une mini-séance photo en studio avec vos enfants et profitez d’un joli moment de complicité en famille 🤎\nDans une ambiance automnale, douce et bohème, venez créer de beaux souvenirs, capturer vos sourires et garder une trace de ces petits instants précieux qui passent si vite."
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-10-30",
-      "reservation_type": "lien",
-      "price_amount": "10 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-10-30",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes 6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-02",
-      "reservation_type": "lien",
-      "price_amount": "10 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-11-02",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
-    },
-    {
-      "organizers": [
-        "bentaouza"
-      ],
-      "funding_available": false,
-      "start_time": "18:30",
-      "start_date": "2026-11-03",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "20:30",
-      "end_date": "2026-11-03",
-      "organized_by": "intervenante",
-      "title": "Les loyautés invisibles : quand rester fidèle à sa famille nous empêche d’avancer",
-      "link": "https://calendly.com/kbformationscontact/conference?month=2026-11&date=2026-11-03",
-      "categories": [
-        "atelier",
-        "transgénérationnel"
-      ],
-      "description": "Et si certaines de vos difficultés ne vous appartenaient pas entièrement ?\nAmour, argent, travail, relations… Pourquoi avons-nous parfois l’impression de revivre les mêmes scénarios, malgré nos prises de conscience et notre volonté de changer ? Et si certaines de ces répétitions trouvaient leurs racines dans votre histoire familiale ?"
-    },
-    {
-      "partner_name": "Zoé L'Huillier",
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-06",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "11:30",
-      "end_date": "2026-11-06",
-      "organized_by": "partenariat",
-      "title": "Affirme ta posture d’entrepreneure : prends la parole avec impact !",
-      "link": "https://calendly.com/lentre-elles/atelier-prise-de-parole",
-      "categories": [
-        "atelier",
-        "marketing",
-        "mindset-entrepreneurial"
-      ],
-      "description": "Tu connais ton métier, tu sais ce que tu vaux… mais dès qu'il faut prendre la parole pour parler de ton activité, c'est une autre histoire ?\nEt si tu apprenais à prendre ta place, à affirmer ta posture de cheffe d'entreprise et à t'exprimer avec assurance et impact ?"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-10",
-      "reservation_type": "lien",
-      "price_amount": "10 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-11-10",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
-    },
-    {
-      "organizers": [
-        "laura"
-      ],
-      "funding_available": false,
-      "start_time": "18:30",
-      "start_date": "2026-11-10",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "20:30",
-      "end_date": "2026-11-10",
-      "organized_by": "intervenante",
-      "title": "Fatiguée d'être celle qui porte tout ? Et si tu pouvais enfin te libérer de ce qui ne t'appartient pas ?",
-      "link": "https://calendly.com/laurajoly/fatigueedetoutporter",
-      "categories": [
-        "conférence",
-        "atelier",
-        "cercle-de-femmes",
-        "developpement-personnel"
-      ],
-      "description": "Tu es toujours celle qui tient bon ? Celle qui gère, qui rassure, qui prend soin des autres… même quand, à l'intérieur, tu es épuisée ?\nEt si cette obligation d'être forte ne venait pas uniquement de toi ?\nParfois, sans même en avoir conscience, nous reproduisons des croyances, des rôles et des façons de fonctionner qui se transmettent au fil des générations.\nMais aujourd'hui, as-tu encore besoin de tout porter ?"
-    },
-    {
       "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-11-12",
@@ -258,13 +125,14 @@
       "funding_available": false,
       "start_time": "15:00",
       "start_date": "2026-11-22",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_amount": "30 €",
       "price_type": "amount",
       "end_time": "17:00",
       "end_date": "2026-11-22",
       "organized_by": "intervenante",
       "title": "Méditation aux énergies de l'hiver & découverte des onctions sacrées",
+      "link": "https://calendly.com/lm_therapie/retrouver-sa-force-interieure-meditation-1",
       "categories": [
         "developpement-personnel",
         "méditation"
@@ -340,12 +208,13 @@
       "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-11-28",
-      "reservation_type": "a_venir",
+      "reservation_type": "lien",
       "price_type": "free",
       "end_time": "18:00",
       "end_date": "2026-11-29",
       "organized_by": "intervenante",
       "title": "Shooting Photo de Noël en Famille",
+      "link": "https://calendly.com/aiostudiophoto/noel-en-famille-seance-photo-decouverte-ollioules-novembre",
       "categories": [
         "shooting-photo",
         "famille"
