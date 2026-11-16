@@ -1,61 +1,6 @@
 {
   "events": [
     {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-12",
-      "reservation_type": "lien",
-      "price_amount": "10 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-11-12",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-13",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "11:30",
-      "end_date": "2026-11-13",
-      "organized_by": "entre_elles",
-      "title": "Quoi publier sur les réseaux sociaux pour développer son entreprise ?",
-      "link": "https://calendly.com/lentre-elles/atelier-reseaux-sociaux",
-      "categories": [
-        "atelier",
-        "marketing",
-        "réseaux-sociaux"
-      ],
-      "description": "Tu sais qu'aujourd'hui, les réseaux sociaux sont devenus un levier incontournable pour faire connaître et développer ton activité.\n\nMais entre le manque d'idées, de savoir-faire, les conseils contradictoires et les exemples d'autres entrepreneures que tu essaies de suivre… tu ne sais plus vraiment par où commencer, quoi publier, ni même pourquoi tu le fais !\n\nEt si tu arrêtais de publier simplement pour être présente et que tu commençais à créer du contenu qui a du sens pour toi, qui transmet les messages que tu souhaites faire passer aux personnes que tu veux aider… tout en servant réellement le développement de ton entreprise ?",
-      "founders_organizers": [
-        "Bizz de Femmes"
-      ]
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-16",
-      "reservation_type": "lien",
-      "price_amount": "10 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-11-16",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
-    },
-    {
       "organizers": [
         "albert"
       ],
@@ -140,15 +85,16 @@
     {
       "partner_name": "Anthony Fournier du Studio Alphafilms",
       "funding_available": false,
-      "start_time": "18:30",
+      "start_time": "18:00",
       "start_date": "2026-11-24",
-      "reservation_type": "a_venir",
-      "price_amount": "35 €",
+      "reservation_type": "lien",
+      "price_amount": "45 €",
       "price_type": "amount",
-      "end_time": "22:30",
+      "end_time": "21:30",
       "end_date": "2026-11-24",
       "organized_by": "partenariat",
       "title": "Afterwork Entrepreneures : Viens tourner ta vidéo de présentation pour les réseaux sociaux !",
+      "link": "https://calendly.com/lentre-elles/viens-tourner-ta-video-de-presentation-pour-les-reseaux",
       "categories": [
         "communication",
         "réseaux-sociaux",
