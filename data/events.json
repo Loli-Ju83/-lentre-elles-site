@@ -1,28 +1,6 @@
 {
   "events": [
     {
-      "organizers": [
-        "albert"
-      ],
-      "funding_available": false,
-      "start_time": "18:30",
-      "start_date": "2026-11-17",
-      "reservation_type": "lien",
-      "price_type": "free",
-      "end_time": "20:30",
-      "end_date": "2026-11-17",
-      "organized_by": "intervenante",
-      "title": "Décode ton enfant : ce que son aura peut révéler de sa personnalité, ses émotions et ses besoins",
-      "link": "https://calendly.com/luminame83/decode-ton-enfant-ollioules",
-      "categories": [
-        "atelier",
-        "conférence",
-        "developpement-personnel",
-        "famille"
-      ],
-      "description": "Et si l’aura de votre enfant pouvait vous aider à mieux comprendre sa personnalité, ses émotions, ses besoins et certaines de ses réactions ?"
-    },
-    {
       "funding_available": false,
       "start_time": "09:00",
       "start_date": "2026-11-21",
@@ -43,27 +21,6 @@
       "founders_organizers": [
         "Coleen Group"
       ]
-    },
-    {
-      "organizers": [
-        "lavaix"
-      ],
-      "funding_available": false,
-      "start_time": "15:00",
-      "start_date": "2026-11-22",
-      "reservation_type": "lien",
-      "price_amount": "30 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-11-22",
-      "organized_by": "intervenante",
-      "title": "Méditation aux énergies de l'hiver & découverte des onctions sacrées",
-      "link": "https://calendly.com/lm_therapie/retrouver-sa-force-interieure-meditation-1",
-      "categories": [
-        "developpement-personnel",
-        "méditation"
-      ],
-      "description": "Stressée, fatiguée, surchargée… Et si tu t'accordais enfin une parenthèse pour toi ?\nTu te sens épuisée, le mental toujours en ébullition, avec cette impression de devoir penser à tout, tout le temps ?\nTu avances, tu gères, tu prends soin des autres… mais cela fait combien de temps que tu ne t'es pas réellement accordé un moment pour toi ?\n\nEt si, pendant deux heures, tu t'autorisais simplement à ralentir, à déposer ce qui te pèse et à revenir à l'essentiel : TOI !"
     },
     {
       "funding_available": false,
