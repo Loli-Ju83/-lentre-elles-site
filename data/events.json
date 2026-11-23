@@ -1,69 +1,6 @@
 {
   "events": [
     {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-21",
-      "reservation_type": "contact",
-      "price_amount": "30 €",
-      "price_type": "amount",
-      "end_time": "18:00",
-      "end_date": "2026-11-21",
-      "organized_by": "entre_elles",
-      "title": "2026 en conscience, 2027 en confiance ! Une parenthèse avec le Tarot de Marseille pour faire le point et avancer sereinement",
-      "link": "https://planify.coleengroup.fr/faire-le-point-sur-2026-avancer-sereinement-vers-2027-avec-la-lecture-du-tarot-de-marseille",
-      "categories": [
-        "developpement-personnel",
-        "arts-divinatoires",
-        "cartomancie"
-      ],
-      "description": "Et si vous preniez un temps pour vous, pour regarder le chemin parcouru en 2026, mettre en lumière vos apprentissages et accueillir 2027 avec un regard neuf ?\n\nJulie vous invite à découvrir l’univers du Tarot de Marseille, le temps d’une séance découverte accessible à tous, même si vous n’avez jamais tiré les cartes.\nBien plus qu’un simple jeu de cartes, le Tarot de Marseille peut devenir un support d’introspection, d’écoute de soi et de réflexion, pour explorer ses ressentis, questionner ses aspirations et ouvrir de nouvelles perspectives.\nSon intention ? Vous offrir un espace pour prendre du recul sur l’année écoulée, mieux comprendre ce qui vous anime aujourd’hui et avancer vers 2027 avec davantage de clarté et de sérénité.",
-      "founders_organizers": [
-        "Coleen Group"
-      ]
-    },
-    {
-      "funding_available": false,
-      "start_time": "09:00",
-      "start_date": "2026-11-24",
-      "reservation_type": "lien",
-      "price_amount": "10 €",
-      "price_type": "amount",
-      "end_time": "17:00",
-      "end_date": "2026-11-24",
-      "organized_by": "entre_elles",
-      "title": "Journée coworking entre femmes entrepreneures",
-      "link": "https://calendly.com/lentre-elles/coworking",
-      "categories": [
-        "coworking"
-      ],
-      "description": "Pour les femmes entrepreneures qui ont besoin de sortir de chez elles, de retrouver de la motivation et de consacrer une vraie journée à leur entreprise, entourées de femmes qui vivent les mêmes réalités. Accessible de 9h à 17h Wi-Fi, thé, café et boissons chaudes - 6 places disponibles"
-    },
-    {
-      "partner_name": "Anthony Fournier du Studio Alphafilms",
-      "funding_available": false,
-      "start_time": "18:00",
-      "start_date": "2026-11-24",
-      "reservation_type": "lien",
-      "price_amount": "40 €",
-      "price_type": "amount",
-      "end_time": "21:30",
-      "end_date": "2026-11-24",
-      "organized_by": "partenariat",
-      "title": "Afterwork Entrepreneures : Viens tourner ta vidéo de présentation pour les réseaux sociaux !",
-      "link": "https://calendly.com/lentre-elles/viens-tourner-ta-video-de-presentation-pour-les-reseaux",
-      "categories": [
-        "communication",
-        "réseaux-sociaux",
-        "réseautage",
-        "création-de-contenu"
-      ],
-      "description": "Un afterwork entre entrepreneures pour passer devant la caméra et mettre ton business en lumière !\n\nTu sais qu'une vidéo de présentation pourrait faire toute la différence sur tes réseaux sociaux… mais tu repousses toujours le moment de passer devant la caméra ?\nTu ne sais pas quoi dire, comment te présenter, tu n'aimes pas te filmer ou tu n'arrives tout simplement pas à obtenir un résultat professionnel ?\nEt si tu profitais d'un afterwork convivial pour enfin tourner LA vidéo qui présente qui tu es, ce que tu fais et ce qui rend ton entreprise unique ?",
-      "founders_organizers": [
-        "Bizz de Femmes"
-      ]
-    },
-    {
       "organizers": [
         "bentaouza"
       ],
@@ -104,6 +41,157 @@
         "famille"
       ],
       "description": "Shooting photo découverte de Noël en famille avec Anastasia, sans obligation d’achat, pour immortaliser de précieux moments de complicité, capturer la magie des fêtes et créer de merveilleux souvenirs à partager et à conserver au fil des années ! 🎄📸"
+    },
+    {
+      "organizers": [
+        "levec"
+      ],
+      "funding_available": false,
+      "start_time": "9:00",
+      "start_date": "2026-12-03",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "11:30",
+      "end_date": "2026-12-03",
+      "organized_by": "entre_elles",
+      "title": "Atelier :  Tu fais du chiffre… mais est-ce que tu gagnes vraiment de l’argent ?",
+      "link": "https://calendly.com/lentre-elles/facturation-electronique",
+      "categories": [
+        "gestion-dentreprise",
+        "comptabilité",
+        "administratif"
+      ],
+      "description": "Tu encaisses du chiffre d’affaires, tu paies tes cotisations, tu investis dans ton activité… Mais sais-tu réellement combien ton entreprise te rapporte ?\n\nMicro-entreprise, rentabilité et fiscalité : es-tu sûre d’avoir fait les bons choix ?\nEt si ton statut juridique ou ton régime fiscal actuel n’était pas le plus adapté à ta situation ?"
+    },
+    {
+      "organizers": [
+        "laura"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-12-08",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "21:00",
+      "end_date": "2026-12-08",
+      "organized_by": "intervenante",
+      "title": "Conférence : Fatiguée d'être celle qui porte tout ?",
+      "link": "https://calendly.com/laurajoly/fatigueedetoutporter?month=2026-12",
+      "categories": [
+        "conférence",
+        "developpement-personnel",
+        "cercle-de-femmes"
+      ],
+      "description": "Et si tu pouvais enfin te libérer de ce qui ne t'appartient pas ?\nTu es toujours celle qui tient bon ? Celle qui gère, qui rassure, qui prend soin des autres… même quand, à l'intérieur, tu es épuisée ?"
+    },
+    {
+      "organizers": [
+        "albert"
+      ],
+      "funding_available": false,
+      "start_time": "14:00",
+      "start_date": "2026-12-09",
+      "reservation_type": "a_venir",
+      "price_amount": "12 €",
+      "price_type": "amount",
+      "end_time": "15:30",
+      "end_date": "2026-12-09",
+      "organized_by": "intervenante",
+      "title": "Atelier créatif \"Ma déco de Noël personnalisée\" ",
+      "categories": [
+        "atelier",
+        "famille"
+      ],
+      "description": "Et si cette année, votre enfant créait lui-même sa décoration de Noël ?"
+    },
+    {
+      "funding_available": false,
+      "start_time": "10:00",
+      "start_date": "2026-12-12",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "12:30",
+      "end_date": "2026-12-12",
+      "organized_by": "entre_elles",
+      "title": "Atelier : Viens préparer ta communication pour 2027 !",
+      "link": "https://calendly.com/lentre-elles/viens-preparer-ta-communication-pour-2027-clone",
+      "categories": [
+        "communication",
+        "création-de-contenu",
+        "marketing"
+      ],
+      "description": "Tu as créé une activité qui te passionne. Tu y as investi du temps, de l'énergie et de l'argent… Mais les clientes ne sont toujours pas au rendez-vous et ton chiffre d'affaires peine à décoller ?\nEt si le problème n'était ni toi, ni tes prestations, ni tes tarifs, ni la conjoncture ?\nEt si personne ne t'avait simplement appris à construire une véritable stratégie de communication pour attirer des clientes et développer ton entreprise ?",
+      "founders_organizers": [
+        "Bizz de Femmes"
+      ]
+    },
+    {
+      "organizers": [
+        "bentaouza"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-12-15",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "21:00",
+      "end_date": "2026-12-15",
+      "organized_by": "intervenante",
+      "title": "Conférence : Les schémas répétitifs, ce que les familles transmettent sans le dire",
+      "link": "https://calendly.com/kbformationscontact/conference-les-schemas-repetitifs?month=2026-12",
+      "categories": [
+        "conférence",
+        "developpement-personnel",
+        "famille"
+      ],
+      "description": "Pourquoi retrouve-t-on parfois les mêmes scénarios dans l'amour, l'argent ou le travail, de génération en génération ? Et si certains de ces schémas répétitifs devaient quelque chose à ce qui n'a jamais été dit ?"
+    },
+    {
+      "organizers": [
+        "albert"
+      ],
+      "funding_available": false,
+      "start_time": "14:00",
+      "start_date": "2026-12-16",
+      "reservation_type": "a_venir",
+      "price_amount": "12 €",
+      "price_type": "amount",
+      "end_time": "15:30",
+      "end_date": "2026-12-16",
+      "organized_by": "entre_elles",
+      "title": "Atelier créatif \"Ma déco de Noël personnalisée\" ",
+      "categories": [
+        "atelier",
+        "famille"
+      ],
+      "description": "Et si cette année, votre enfant créait lui-même sa décoration de Noël ?"
+    },
+    {
+      "organizers": [
+        "aillaud",
+        "benoit",
+        "albert",
+        "miault"
+      ],
+      "funding_available": false,
+      "start_time": "18:30",
+      "start_date": "2026-12-17",
+      "reservation_type": "lien",
+      "price_amount": "35 €",
+      "price_type": "amount",
+      "end_time": "22:00",
+      "end_date": "2026-12-17",
+      "organized_by": "entre_elles",
+      "title": "🎄 Afterwork de Noël chez L'Entre-Elles",
+      "link": "https://calendly.com/lentre-elles/afterwork-de-noel-chez-l-entre-elles",
+      "categories": [
+        "réseautage"
+      ],
+      "description": "Et si on terminait l'année ensemble autour d'une soirée entre badass, pleine de belles rencontres ? ✨\n\nPour célébrer cette fin d'année, Julie et Lolita ouvrent les portes de L'Entre-Elles le jeudi 17 décembre dés 18h30 pour un afterwork de Noël !",
+      "founders_organizers": [
+        "Coleen Group",
+        "Bizz de Femmes"
+      ]
     }
   ]
 }
