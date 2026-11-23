@@ -192,6 +192,26 @@
         "Coleen Group",
         "Bizz de Femmes"
       ]
+    },
+    {
+      "organizers": [
+        "aillaud"
+      ],
+      "funding_available": false,
+      "start_time": "9:00",
+      "start_date": "2026-12-19",
+      "reservation_type": "lien",
+      "price_type": "free",
+      "end_time": "18:00",
+      "end_date": "2026-12-20",
+      "organized_by": "intervenante",
+      "title": "Shooting Photo de Noël en Famille",
+      "link": "https://calendly.com/aiostudiophoto/noel-en-famille-seance-photo-decouverte-ollioules-decembre?month=2026-12&date=2026-12-19",
+      "categories": [
+        "création-de-contenu",
+        "famille"
+      ],
+      "description": "Shooting photo découverte de Noël en famille avec Anastasia, sans obligation d’achat, pour immortaliser de précieux moments de complicité, capturer la magie des fêtes et créer de merveilleux souvenirs à partager et à conserver au fil des années ! 🎄📸"
     }
   ]
 }
